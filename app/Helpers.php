@@ -1110,87 +1110,253 @@ if (!function_exists('generateHistoryChart')) {
                     'stack' => 'police-violence',
                     'hidden' => false,
                     'data' => array()
-                ),
-                array(
-                    'minBarLength' => 5,
-                    'maxBarThickness' => 20,
-                    'label' => 'Other Police Weapons',
-                    'backgroundColor' => '#dc4646',
-                    'stack' => 'police-violence',
-                    'hidden' => true,
-                    'data' => array()
                 )
             )
         );
 
-        if (isset($scorecard['police_violence']['less_lethal_force_2013']) || isset($scorecard['police_violence']['police_shootings_2013'])) {
+        if (isset($scorecard['police_violence']['police_shootings_2013'])) {
             $output['labels'][] = '2013';
 
             $output['datasets'][0]['data'][] = $scorecard['police_violence']['police_shootings_2013'];
-            $output['datasets'][1]['data'][] = $scorecard['police_violence']['less_lethal_force_2013'];
         }
 
-        if (isset($scorecard['police_violence']['less_lethal_force_2014']) || isset($scorecard['police_violence']['police_shootings_2014'])) {
+        if (isset($scorecard['police_violence']['police_shootings_2014'])) {
             $output['labels'][] = '2014';
 
             $output['datasets'][0]['data'][] = $scorecard['police_violence']['police_shootings_2014'];
-            $output['datasets'][1]['data'][] = $scorecard['police_violence']['less_lethal_force_2014'];
         }
 
-        if (isset($scorecard['police_violence']['less_lethal_force_2015']) || isset($scorecard['police_violence']['police_shootings_2015'])) {
+        if (isset($scorecard['police_violence']['police_shootings_2015'])) {
             $output['labels'][] = '2015';
 
             $output['datasets'][0]['data'][] = $scorecard['police_violence']['police_shootings_2015'];
-            $output['datasets'][1]['data'][] = $scorecard['police_violence']['less_lethal_force_2015'];
         }
 
-        if (isset($scorecard['police_violence']['less_lethal_force_2016']) || isset($scorecard['police_violence']['police_shootings_2016'])) {
+        if (isset($scorecard['police_violence']['police_shootings_2016'])) {
             $output['labels'][] = '2016';
 
             $output['datasets'][0]['data'][] = $scorecard['police_violence']['police_shootings_2016'];
-            $output['datasets'][1]['data'][] = $scorecard['police_violence']['less_lethal_force_2016'];
         }
 
-        if (isset($scorecard['police_violence']['less_lethal_force_2017']) || isset($scorecard['police_violence']['police_shootings_2017'])) {
+        if (isset($scorecard['police_violence']['police_shootings_2017'])) {
             $output['labels'][] = '2017';
 
             $output['datasets'][0]['data'][] = $scorecard['police_violence']['police_shootings_2017'];
-            $output['datasets'][1]['data'][] = $scorecard['police_violence']['less_lethal_force_2017'];
         }
 
-        if (isset($scorecard['police_violence']['less_lethal_force_2018']) || isset($scorecard['police_violence']['police_shootings_2018'])) {
+        if (isset($scorecard['police_violence']['police_shootings_2018'])) {
             $output['labels'][] = '2018';
 
             $output['datasets'][0]['data'][] = $scorecard['police_violence']['police_shootings_2018'];
-            $output['datasets'][1]['data'][] = $scorecard['police_violence']['less_lethal_force_2018'];
         }
 
-        if (isset($scorecard['police_violence']['less_lethal_force_2019']) || isset($scorecard['police_violence']['police_shootings_2019'])) {
+        if (isset($scorecard['police_violence']['police_shootings_2019'])) {
             $output['labels'][] = '2019';
 
             $output['datasets'][0]['data'][] = $scorecard['police_violence']['police_shootings_2019'];
-            $output['datasets'][1]['data'][] = $scorecard['police_violence']['less_lethal_force_2019'];
         }
 
-        if (isset($scorecard['police_violence']['less_lethal_force_2020']) || isset($scorecard['police_violence']['police_shootings_2020'])) {
+        if (isset($scorecard['police_violence']['police_shootings_2020'])) {
             $output['labels'][] = '2020';
 
             $output['datasets'][0]['data'][] = $scorecard['police_violence']['police_shootings_2020'];
-            $output['datasets'][1]['data'][] = $scorecard['police_violence']['less_lethal_force_2020'];
         }
 
-        if (isset($scorecard['police_violence']['less_lethal_force_2021']) || isset($scorecard['police_violence']['police_shootings_2021'])) {
+        if (isset($scorecard['police_violence']['police_shootings_2021'])) {
             $output['labels'][] = '2021';
 
             $output['datasets'][0]['data'][] = $scorecard['police_violence']['police_shootings_2021'];
-            $output['datasets'][1]['data'][] = $scorecard['police_violence']['less_lethal_force_2021'];
         }
 
-        if (isset($scorecard['police_violence']['less_lethal_force_2022']) || isset($scorecard['police_violence']['police_shootings_2022'])) {
+        if (isset($scorecard['police_violence']['police_shootings_2022'])) {
             $output['labels'][] = '2022';
 
             $output['datasets'][0]['data'][] = $scorecard['police_violence']['police_shootings_2022'];
-            $output['datasets'][1]['data'][] = $scorecard['police_violence']['less_lethal_force_2022'];
+        }
+
+        return json_encode($output);
+    }
+}
+
+/**
+ * Generate Police Violence Chart
+ *
+ * @param object $scorecard
+ *
+ * @return string
+ */
+if (!function_exists('generateViolenceChart')) {
+    function generateViolenceChart($scorecard) {
+        $output = array(
+            'categories' => array(),
+            'series' => array()
+        );
+
+        $output['series'][] = array(
+            'name' => 'Taser',
+            'data' => array()
+        );
+
+        $output['series'][] = array(
+            'name' => 'Projectiles',
+            'data' => array()
+        );
+
+        $output['series'][] = array(
+            'name' => 'Chemical Spray',
+            'data' => array()
+        );
+
+        $output['series'][] = array(
+            'name' => 'K9 Deployments',
+            'data' => array()
+        );
+
+        $output['series'][] = array(
+            'name' => 'Neck Restraints',
+            'data' => array()
+        );
+
+        // Build 2013 Data
+        if (isset($scorecard['police_violence']['taser_2013']) || isset($scorecard['police_violence']['impact_weapons_and_projectiles_2013']) || isset($scorecard['police_violence']['chemical_spray_2013']) || isset($scorecard['police_violence']['K9_deployments_2013']) || isset($scorecard['police_violence']['neck_restraints_2013'])) {
+            $output['categories'][] = '2013';
+
+            $output['series'][0]['data'][] = intval($scorecard['police_violence']['taser_2013']);
+            $output['series'][1]['data'][] = intval($scorecard['police_violence']['impact_weapons_and_projectiles_2013']);
+            $output['series'][2]['data'][] = intval($scorecard['police_violence']['chemical_spray_2013']);
+            $output['series'][3]['data'][] = intval($scorecard['police_violence']['K9_deployments_2013']);
+            $output['series'][4]['data'][] = intval($scorecard['police_violence']['neck_restraints_2013']);
+        }
+
+        // Build 2014 Data
+        if (isset($scorecard['police_violence']['taser_2014']) || isset($scorecard['police_violence']['impact_weapons_and_projectiles_2014']) || isset($scorecard['police_violence']['chemical_spray_2014']) || isset($scorecard['police_violence']['K9_deployments_2014']) || isset($scorecard['police_violence']['neck_restraints_2014'])) {
+            $output['categories'][] = '2014';
+
+            $output['series'][0]['data'][] = intval($scorecard['police_violence']['taser_2014']);
+            $output['series'][1]['data'][] = intval($scorecard['police_violence']['impact_weapons_and_projectiles_2014']);
+            $output['series'][2]['data'][] = intval($scorecard['police_violence']['chemical_spray_2014']);
+            $output['series'][3]['data'][] = intval($scorecard['police_violence']['K9_deployments_2014']);
+            $output['series'][4]['data'][] = intval($scorecard['police_violence']['neck_restraints_2014']);
+        }
+
+        // Build 2015 Data
+        if (isset($scorecard['police_violence']['taser_2015']) || isset($scorecard['police_violence']['impact_weapons_and_projectiles_2015']) || isset($scorecard['police_violence']['chemical_spray_2015']) || isset($scorecard['police_violence']['K9_deployments_2015']) || isset($scorecard['police_violence']['neck_restraints_2015'])) {
+            $output['categories'][] = '2015';
+
+            $output['series'][0]['data'][] = intval($scorecard['police_violence']['taser_2015']);
+            $output['series'][1]['data'][] = intval($scorecard['police_violence']['impact_weapons_and_projectiles_2015']);
+            $output['series'][2]['data'][] = intval($scorecard['police_violence']['chemical_spray_2015']);
+            $output['series'][3]['data'][] = intval($scorecard['police_violence']['K9_deployments_2015']);
+            $output['series'][4]['data'][] = intval($scorecard['police_violence']['neck_restraints_2015']);
+        }
+
+        // Build 2016 Data
+        if (isset($scorecard['police_violence']['taser_2016']) || isset($scorecard['police_violence']['impact_weapons_and_projectiles_2016']) || isset($scorecard['police_violence']['chemical_spray_2016']) || isset($scorecard['police_violence']['K9_deployments_2016']) || isset($scorecard['police_violence']['neck_restraints_2016'])) {
+            $output['categories'][] = '2016';
+
+            $output['series'][0]['data'][] = intval($scorecard['police_violence']['taser_2016']);
+            $output['series'][1]['data'][] = intval($scorecard['police_violence']['impact_weapons_and_projectiles_2016']);
+            $output['series'][2]['data'][] = intval($scorecard['police_violence']['chemical_spray_2016']);
+            $output['series'][3]['data'][] = intval($scorecard['police_violence']['K9_deployments_2016']);
+            $output['series'][4]['data'][] = intval($scorecard['police_violence']['neck_restraints_2016']);
+        }
+
+        // Build 2017 Data
+        if (isset($scorecard['police_violence']['taser_2017']) || isset($scorecard['police_violence']['impact_weapons_and_projectiles_2017']) || isset($scorecard['police_violence']['chemical_spray_2017']) || isset($scorecard['police_violence']['K9_deployments_2017']) || isset($scorecard['police_violence']['neck_restraints_2017'])) {
+            $output['categories'][] = '2017';
+
+            $output['series'][0]['data'][] = intval($scorecard['police_violence']['taser_2017']);
+            $output['series'][1]['data'][] = intval($scorecard['police_violence']['impact_weapons_and_projectiles_2017']);
+            $output['series'][2]['data'][] = intval($scorecard['police_violence']['chemical_spray_2017']);
+            $output['series'][3]['data'][] = intval($scorecard['police_violence']['K9_deployments_2017']);
+            $output['series'][4]['data'][] = intval($scorecard['police_violence']['neck_restraints_2017']);
+        }
+
+        // Build 2018 Data
+        if (isset($scorecard['police_violence']['taser_2018']) || isset($scorecard['police_violence']['impact_weapons_and_projectiles_2018']) || isset($scorecard['police_violence']['chemical_spray_2018']) || isset($scorecard['police_violence']['K9_deployments_2018']) || isset($scorecard['police_violence']['neck_restraints_2018'])) {
+            $output['categories'][] = '2018';
+
+            $output['series'][0]['data'][] = intval($scorecard['police_violence']['taser_2018']);
+            $output['series'][1]['data'][] = intval($scorecard['police_violence']['impact_weapons_and_projectiles_2018']);
+            $output['series'][2]['data'][] = intval($scorecard['police_violence']['chemical_spray_2018']);
+            $output['series'][3]['data'][] = intval($scorecard['police_violence']['K9_deployments_2018']);
+            $output['series'][4]['data'][] = intval($scorecard['police_violence']['neck_restraints_2018']);
+        }
+
+        // Build 2019 Data
+        if (isset($scorecard['police_violence']['taser_2019']) || isset($scorecard['police_violence']['impact_weapons_and_projectiles_2019']) || isset($scorecard['police_violence']['chemical_spray_2019']) || isset($scorecard['police_violence']['K9_deployments_2019']) || isset($scorecard['police_violence']['neck_restraints_2019'])) {
+            $output['categories'][] = '2019';
+
+            $output['series'][0]['data'][] = intval($scorecard['police_violence']['taser_2019']);
+            $output['series'][1]['data'][] = intval($scorecard['police_violence']['impact_weapons_and_projectiles_2019']);
+            $output['series'][2]['data'][] = intval($scorecard['police_violence']['chemical_spray_2019']);
+            $output['series'][3]['data'][] = intval($scorecard['police_violence']['K9_deployments_2019']);
+            $output['series'][4]['data'][] = intval($scorecard['police_violence']['neck_restraints_2019']);
+        }
+
+        // Build 2020 Data
+        if (isset($scorecard['police_violence']['taser_2020']) || isset($scorecard['police_violence']['impact_weapons_and_projectiles_2020']) || isset($scorecard['police_violence']['chemical_spray_2020']) || isset($scorecard['police_violence']['K9_deployments_2020']) || isset($scorecard['police_violence']['neck_restraints_2020'])) {
+            $output['categories'][] = '2020';
+
+            $output['series'][0]['data'][] = intval($scorecard['police_violence']['taser_2020']);
+            $output['series'][1]['data'][] = intval($scorecard['police_violence']['impact_weapons_and_projectiles_2020']);
+            $output['series'][2]['data'][] = intval($scorecard['police_violence']['chemical_spray_2020']);
+            $output['series'][3]['data'][] = intval($scorecard['police_violence']['K9_deployments_2020']);
+            $output['series'][4]['data'][] = intval($scorecard['police_violence']['neck_restraints_2020']);
+        }
+
+        // Build 2021 Data
+        if (isset($scorecard['police_violence']['taser_2021']) || isset($scorecard['police_violence']['impact_weapons_and_projectiles_2021']) || isset($scorecard['police_violence']['chemical_spray_2021']) || isset($scorecard['police_violence']['K9_deployments_2021']) || isset($scorecard['police_violence']['neck_restraints_2021'])) {
+            $output['categories'][] = '2021';
+
+            $output['series'][0]['data'][] = intval($scorecard['police_violence']['taser_2021']);
+            $output['series'][1]['data'][] = intval($scorecard['police_violence']['impact_weapons_and_projectiles_2021']);
+            $output['series'][2]['data'][] = intval($scorecard['police_violence']['chemical_spray_2021']);
+            $output['series'][3]['data'][] = intval($scorecard['police_violence']['K9_deployments_2021']);
+            $output['series'][4]['data'][] = intval($scorecard['police_violence']['neck_restraints_2021']);
+        }
+
+        // Build 2022 Data
+        if (isset($scorecard['police_violence']['taser_2022']) || isset($scorecard['police_violence']['impact_weapons_and_projectiles_2022']) || isset($scorecard['police_violence']['chemical_spray_2022']) || isset($scorecard['police_violence']['K9_deployments_2022']) || isset($scorecard['police_violence']['neck_restraints_2022'])) {
+            $output['categories'][] = '2022';
+
+            $output['series'][0]['data'][] = intval($scorecard['police_violence']['taser_2022']);
+            $output['series'][1]['data'][] = intval($scorecard['police_violence']['impact_weapons_and_projectiles_2022']);
+            $output['series'][2]['data'][] = intval($scorecard['police_violence']['chemical_spray_2022']);
+            $output['series'][3]['data'][] = intval($scorecard['police_violence']['K9_deployments_2022']);
+            $output['series'][4]['data'][] = intval($scorecard['police_violence']['neck_restraints_2022']);
+        }
+
+        // Build 2023 Data
+        if (isset($scorecard['police_violence']['taser_2023']) || isset($scorecard['police_violence']['impact_weapons_and_projectiles_2023']) || isset($scorecard['police_violence']['chemical_spray_2023']) || isset($scorecard['police_violence']['K9_deployments_2023']) || isset($scorecard['police_violence']['neck_restraints_2023'])) {
+            $output['categories'][] = '2023';
+
+            $output['series'][0]['data'][] = intval($scorecard['police_violence']['taser_2023']);
+            $output['series'][1]['data'][] = intval($scorecard['police_violence']['impact_weapons_and_projectiles_2023']);
+            $output['series'][2]['data'][] = intval($scorecard['police_violence']['chemical_spray_2023']);
+            $output['series'][3]['data'][] = intval($scorecard['police_violence']['K9_deployments_2023']);
+            $output['series'][4]['data'][] = intval($scorecard['police_violence']['neck_restraints_2023']);
+        }
+
+        // Clean up Empty Reports
+        if (array_sum($output['series'][4]['data']) === 0) {
+            array_splice($output['series'], 4, 1);
+        }
+
+        if (array_sum($output['series'][3]['data']) === 0) {
+            array_splice($output['series'], 3, 1);
+        }
+
+        if (array_sum($output['series'][2]['data']) === 0) {
+            array_splice($output['series'], 2, 1);
+        }
+
+        if (array_sum($output['series'][1]['data']) === 0) {
+            array_splice($output['series'], 1, 1);
+        }
+
+        if (array_sum($output['series'][0]['data']) === 0) {
+            array_splice($output['series'], 0, 1);
         }
 
         return json_encode($output);
