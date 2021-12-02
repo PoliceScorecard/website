@@ -1198,7 +1198,7 @@ if (!function_exists('generateViolenceChart')) {
         );
 
         $output['series'][] = array(
-            'name' => 'Projectiles',
+            'name' => 'Impact Weapons',
             'data' => array()
         );
 
