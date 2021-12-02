@@ -1,3 +1,4 @@
+
 <script>
   var SCORECARD_STATE = '{{ $state }}';
   var SCORECARD_DATA = {!! json_encode($scorecard) !!};
@@ -75,55 +76,135 @@
 
 @if(isset($scorecard['police_violence']['police_shootings_2016']) && isset($scorecard['police_violence']['police_shootings_2017']) && isset($scorecard['police_violence']['police_shootings_2018']))
 <script>
-  window.addEventListener('load', function() {
-    var $chart = document.getElementById('bar-chart-history');
-    if ($chart) {
-        var ctx = $chart.getContext('2d');
+window.addEventListener('load', function() {
+    var $historyChart = document.getElementById('bar-chart-history');
+    if ($historyChart) {
+        var ctx = $historyChart.getContext('2d');
         var historyChartData = {!! generateHistoryChart($scorecard) !!};
         window.myBarHistory = new Chart(ctx, {
-        type: 'bar',
-        data: historyChartData,
-        options: {
-            animation: {
-            duration: 0,
-            },
-            maintainAspectRatio: false,
-            responsive: document.documentElement.clientWidth > 940 ? false : true,
-            legend: {
-            display: false,
-            },
-            title: {
-            display: false,
-            },
-            tooltips: {
-            mode: 'index',
-            intersect: false
-            },
-            scales: {
-            xAxes: [{
-                stacked: true,
-                gridLines: {
-                color: "rgba(0, 0, 0, 0)",
-                }
-            }],
-            yAxes: [{
-                stacked: true,
-                gridLines: {
-                color: "rgba(0, 0, 0, 0)",
+            type: 'bar',
+            data: historyChartData,
+            options: {
+                animation: {
+                    duration: 0,
                 },
-                ticks: {
-                beginAtZero: true,
-                maxTicksLimit: 2,
-                callback: function(value, index, values) {
-                    return (value === 0) ? '' : Math.round(value);
+                maintainAspectRatio: false,
+                responsive: document.documentElement.clientWidth > 940 ? false : true,
+                legend: {
+                    display: false,
+                },
+                title: {
+                    display: false,
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false
+                },
+                scales: {
+                    xAxes: [{
+                        stacked: true,
+                        gridLines: {
+                            color: "rgba(0, 0, 0, 0)",
+                        }
+                    }],
+                    yAxes: [{
+                        stacked: true,
+                        gridLines: {
+                            color: "rgba(0, 0, 0, 0)",
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                            maxTicksLimit: 2,
+                            callback: function(value, index, values) {
+                                return (value === 0) ? '' : Math.round(value);
+                            }
+                        }
+                    }]
                 }
-                }
-            }]
             }
-        }
         });
     }
-  });
+
+    var $violenceChart = document.getElementById('bar-violence-history');
+    if ($violenceChart) {
+        var violenceChartData = {!! generateViolenceChart($scorecard) !!};
+
+        if (violenceChartData.series && violenceChartData.series.length > 0) {
+            Highcharts.chart($violenceChart, {
+                chart: {
+                    type: 'column'
+                },
+                colors: [
+                    '#b02424',
+                    '#f19975',
+                    '#9a9b9f',
+                    '#a7cc84',
+                    '#d4d9e4'
+                ],
+                title: {
+                    enabled: false,
+                    text: ''
+                },
+                xAxis: {
+                    categories: violenceChartData.categories
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        enabled: false,
+                        text: ''
+                    },
+                    stackLabels: {
+                        enabled: true,
+                        style: {
+                            fontWeight: 'bold',
+                            color: ( // theme
+                                Highcharts.defaultOptions.title.style &&
+                                Highcharts.defaultOptions.title.style.color
+                            ) || 'gray'
+                        }
+                    }
+                },
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'top',
+                    layout: 'horizontal',
+                    width: '100%',
+                    margin: 30,
+                    padding: 0
+                },
+                tooltip: {
+                    className: 'police-funding',
+                    followPointer: false,
+                    shared: false,
+                    borderWidth: 0,
+                    backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                    borderRadius: 8,
+                    padding: 16,
+                    shadow: false,
+                    style: {
+                        color: '#FFF',
+                        padding: 8
+                    },
+                    headerFormat: '<b>YEAR:</b> {point.x}<br/>',
+                    pointFormat: '<b>{series.name}</b>: {point.y}<br/><b>Total</b>: {point.stackTotal}'
+                },
+                plotOptions: {
+                    column: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true
+                        }
+                    },
+                    series: {
+                        pointWidth: 20
+                    }
+                },
+                series: violenceChartData.series
+            });
+        }
+    }
+});
 
 </script>
 @endif
@@ -173,6 +254,7 @@
             }
           }],
           yAxes: [{
+            reversedStacks: true,
             stacked: true,
             gridLines: {
               color: "rgba(0, 0, 0, 0)",

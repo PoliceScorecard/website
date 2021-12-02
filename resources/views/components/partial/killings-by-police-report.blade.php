@@ -88,7 +88,7 @@
       <h2><strong>{{ num($scorecard['report']['total_arrests']) }}</strong> arrests made</h2>
 
       <div class="text">
-        <p><strong>{{ num($scorecard['report']['percent_misdemeanor_arrests'], 0, '%') }}</strong> of all arrests were for low-level, non-violent offenses from 2013-19.</p>
+        <p><strong>{{ num($scorecard['report']['percent_misdemeanor_arrests'], 0, '%') }}</strong> of all arrests were for low-level, non-violent offenses from 2013-20.</p>
       </div>
 
       <div class="chart chart-3">
