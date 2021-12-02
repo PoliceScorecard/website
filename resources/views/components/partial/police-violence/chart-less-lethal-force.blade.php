@@ -20,6 +20,8 @@
         @endif
     </p>
 
+    <div id="bar-violence-history"></div>
+
     @if (!isset($scorecard['report']['percentile_less_lethal_force']) || (isset($scorecard['report']['percentile_less_lethal_force']) && empty($scorecard['report']['percentile_less_lethal_force'])))
     <div class="progress-bar-wrapper">
         <div class="progress-bar no-data" style="width: 0"></div>
@@ -30,7 +32,7 @@
         <div class="progress-bar animate-bar {{ progressBar(100 - intval($scorecard['report']['percentile_less_lethal_force']), 'reverse') }}" data-percent="{{ num($scorecard['report']['percentile_less_lethal_force'], 0, '%', true) }}"></div>
     </div>
     <p class="note">
-        ^&nbsp; Includes batons, strangleholds, tasers & other police weapons &nbsp;&nbsp;
+        ^&nbsp; Includes batons, neck restraints, K9s, tasers & other police weapons &nbsp;&nbsp;
     </p>
     @endif
 
