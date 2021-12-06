@@ -1359,7 +1359,7 @@ if (!function_exists('generateViolenceChart')) {
             array_splice($output['series'], 0, 1);
         }
 
-        return json_encode($output);
+        return $output;
     }
 }
 

@@ -127,7 +127,7 @@ window.addEventListener('load', function() {
 
     var $violenceChart = document.getElementById('bar-violence-history');
     if ($violenceChart) {
-        var violenceChartData = {!! generateViolenceChart($scorecard) !!};
+        var violenceChartData = {!! json_encode(generateViolenceChart($scorecard)) !!};
 
         if (violenceChartData.series && violenceChartData.series.length > 0) {
             Highcharts.chart($violenceChart, {
