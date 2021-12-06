@@ -1,3 +1,7 @@
+@php
+    $violenceData = generateViolenceChart($scorecard);
+    $hasViolenceData = (isset($violenceData) && isset($violenceData['series']) && count($violenceData['series']) > 0);
+@endphp
 @if ($scorecard['report']['total_less_lethal_force_estimated'] !== null)
 <div class="stat-wrapper">
     <a href="https://docs.google.com/document/d/1FIeprYO7E8_2JjQzrcMNrQqqVt_YdTAoOEqmHia96sI" rel="noopener" target="_blank" class="external-link" {!! trackData('External Nav', 'Less-Lethal Force', 'Source Data') !!}>
@@ -20,14 +24,16 @@
         @endif
     </p>
 
+    @if($hasViolenceData)
     <div id="bar-violence-history"></div>
+    @endif
 
     @if (!isset($scorecard['report']['percentile_less_lethal_force']) || (isset($scorecard['report']['percentile_less_lethal_force']) && empty($scorecard['report']['percentile_less_lethal_force'])))
     <div class="progress-bar-wrapper">
         <div class="progress-bar no-data" style="width: 0"></div>
     </div>
     <x-partial.no-data-found />
-    @else
+    @elseif(!$hasViolenceData)
     <div class="progress-bar-wrapper">
         <div class="progress-bar animate-bar {{ progressBar(100 - intval($scorecard['report']['percentile_less_lethal_force']), 'reverse') }}" data-percent="{{ num($scorecard['report']['percentile_less_lethal_force'], 0, '%', true) }}"></div>
     </div>
