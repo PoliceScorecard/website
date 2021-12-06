@@ -16,9 +16,7 @@
     @endif
 
     @if (output($scorecard['police_violence']['all_deadly_force_incidents']) === '0' || output($scorecard['report']['total_people_killed']) === '0')
-    <div class="progress-bar-wrapper">
-        <div class="progress-bar bright-green" style="width: 0"></div>
-    </div>
+        <!-- No Chart to Show -->
     @elseif (!isset($scorecard['report']['total_people_killed']) || (isset($scorecard['report']['killed_by_police_per_10k_arrests']) && empty($scorecard['report']['killed_by_police_per_10k_arrests'])))
     <div class="progress-bar-wrapper">
         <div class="progress-bar no-data" style="width: 0"></div>
