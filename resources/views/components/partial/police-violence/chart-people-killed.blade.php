@@ -1,4 +1,4 @@
-@if (output($scorecard['report']['total_people_killed']) !== '0')
+@if ($scorecard['report']['total_people_killed'] && output($scorecard['report']['total_people_killed']) !== '0')
 <div class="stat-wrapper">
     <h3>Deadly Force by Armed Status</h3>
 

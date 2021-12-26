@@ -6,6 +6,7 @@ use Illuminate\View\Component;
 
 class ChartViolenceByRace extends Component
 {
+    public $type;
     public $location;
     public $scorecard;
 
@@ -14,8 +15,9 @@ class ChartViolenceByRace extends Component
      *
      * @return void
      */
-    public function __construct($location = null, $scorecard = [])
+    public function __construct($type = null, $location = null, $scorecard = [])
     {
+        $this->type = $type;
         $this->location = $location;
         $this->scorecard = $scorecard;
     }

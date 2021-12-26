@@ -476,8 +476,8 @@ p {
         content: attr(data-tooltip);
         display: none;
         position: absolute;
-        top: -7px;
-        left: -150px;
+        top: -4px;
+        left: -180px;
         background: black;
         color: white;
         white-space: nowrap;
@@ -486,8 +486,10 @@ p {
         font-size: $font-default;
         line-height: 12px;
         font-family: 'Lato', sans-serif;
-        width: 140px;
+        width: 170px;
         text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
     }
 
     &:focus,

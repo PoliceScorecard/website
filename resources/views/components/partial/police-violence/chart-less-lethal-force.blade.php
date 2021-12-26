@@ -20,7 +20,7 @@
 
         @if ($scorecard['report']['less_lethal_force_change'])
         <span class="divider">&nbsp;|&nbsp;</span>
-        {!! getChange($scorecard['report']['less_lethal_force_change'], false, 'since 2016-20') !!}
+        {!! getChange($scorecard['report']['less_lethal_force_change'], false, 'since 2016-20', $scorecard['police_violence']) !!}
         @endif
     </p>
 

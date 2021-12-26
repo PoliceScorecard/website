@@ -14,7 +14,7 @@
         <span class="key key-white tooltip" data-tooltip="White"></span> White
     </div>
 
-    <p>Population of Jurisdiction</p>
+    <p>Population of {{ $scorecard['agency']['name'] }}</p>
     <div class="progress-bar-wrapper">
         <div class="progress-bar animate-bar grouped key-red" data-percent="{{ output(floatval($scorecard['agency']['black_population']), 0, '%') }}">
             <span>{{ (intval($scorecard['agency']['black_population']) > 5) ? num(intval($scorecard['agency']['black_population']), 0, '%') : '' }}</span>
@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <p>Police Department Demographics</p>
+    <p>{{ $scorecard['agency']['name'] }} {{ $type === 'police-department' ? 'Police Dept' : 'Sheriff\'s Dept' }} Demographics</p>
     <div class="progress-bar-wrapper">
         <div class="progress-bar animate-bar grouped key-red" data-percent="{{ output(floatval($scorecard['report']['percent_officers_black']), 0, '%') }}">
             <span>{{ (intval($scorecard['report']['percent_officers_black']) > 5) ? num(intval($scorecard['report']['percent_officers_black']), 0, '%') : '' }}</span>
