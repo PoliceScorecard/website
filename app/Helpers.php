@@ -816,11 +816,110 @@ if (!function_exists('getGradeClass')) {
  * @return string
  */
 if (!function_exists('getChange')) {
-    function getChange($change, $reverse = false, $label = 'since 2016') {
+    function getChange($change, $reverse = false, $label = 'from 2016', $police_violence = null) {
         $change = intval($change);
         $text = '';
         $tooltip = '';
         $class = '';
+
+        if ($police_violence) {
+            $start = null;
+            $end = null;
+
+            if (isset($police_violence['less_lethal_force_2013'])) {
+                if (!$start) {
+                    $start = '2013';
+                }
+
+                $end = '2013';
+            }
+
+            if (isset($police_violence['less_lethal_force_2014'])) {
+                if (!$start) {
+                    $start = '2014';
+                }
+
+                $end = '2014';
+            }
+
+            if (isset($police_violence['less_lethal_force_2015'])) {
+                if (!$start) {
+                    $start = '2015';
+                }
+
+                $end = '2015';
+            }
+
+            if (isset($police_violence['less_lethal_force_2016'])) {
+                if (!$start) {
+                    $start = '2016';
+                }
+
+                $end = '2016';
+            }
+
+            if (isset($police_violence['less_lethal_force_2017'])) {
+                if (!$start) {
+                    $start = '2017';
+                }
+
+                $end = '2017';
+            }
+
+            if (isset($police_violence['less_lethal_force_2018'])) {
+                if (!$start) {
+                    $start = '2018';
+                }
+
+                $end = '2018';
+            }
+
+            if (isset($police_violence['less_lethal_force_2019'])) {
+                if (!$start) {
+                    $start = '2019';
+                }
+
+                $end = '2019';
+            }
+
+            if (isset($police_violence['less_lethal_force_2020'])) {
+                if (!$start) {
+                    $start = '2020';
+                }
+
+                $end = '2020';
+            }
+
+            if (isset($police_violence['less_lethal_force_2021'])) {
+                if (!$start) {
+                    $start = '2021';
+                }
+
+                $end = '2021';
+            }
+
+            if (isset($police_violence['less_lethal_force_2022'])) {
+                if (!$start) {
+                    $start = '2022';
+                }
+
+                $end = '2022';
+            }
+
+            if (isset($police_violence['less_lethal_force_2023'])) {
+                if (!$start) {
+                    $start = '2023';
+                }
+
+                $end = '2023';
+            }
+
+            if ($start && $end && $start !== $end) {
+                $label = "from {$start}-" . substr($end, -2);
+            } else if ($start && $end && $start === $end) {
+                $label = "from {$start}";
+            }
+        }
 
         if ($change && $change !== 0) {
             $text = ($change > 0) ? "<span class=\"grade-arrow\"><span>▶</span><small>+{$change}%</small></span>" : "<span class=\"grade-arrow\"><span>▶</span><small>{$change}%</small></span>";

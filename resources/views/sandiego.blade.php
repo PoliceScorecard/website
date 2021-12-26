@@ -35,7 +35,7 @@
         <div class="content padded text-white no-pad-bottom">
             <div class="left">
                 <p>
-                    <strong>Campaign Zero</strong> evaluated the policing practices of San Diego Police Department (SDPD) and
+                    <strong>Police Scorecard</strong> evaluated the policing practices of San Diego Police Department (SDPD) and
                     San Diego Sheriff's Department (SDSD).
                 </p>
                 <p>

@@ -16,7 +16,7 @@
         </span>
 
         @if(isset($scorecard['report']['change_police_funding_score']))
-        {!! getChange($scorecard['report']['change_police_funding_score'], true) !!}
+        {!! getChange($scorecard['report']['change_police_funding_score'], true, null, $scorecard['police_violence']) !!}
         @endif
     </h2>
 </div>

@@ -65,7 +65,7 @@
                 <x-partial.police-violence.chart-people-killed :location="$location" :scorecard="$scorecard"  />
 
                 <!-- Police Violence by race -->
-                <x-partial.police-violence.chart-violence-by-race :location="$location" :scorecard="$scorecard"  />
+                <x-partial.police-violence.chart-violence-by-race :type="$type" :location="$location" :scorecard="$scorecard"  />
             </div>
         </div>
     </div>
