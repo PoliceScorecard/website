@@ -32,6 +32,14 @@
         #menu > ul > li > a {
             line-height: 110px;
             padding: 20px 0;
+
+            &.donate {
+                background: #FFF;
+                color: #464648;
+                padding: 8px 16px;
+                border-radius: 16px;
+                font-weight: 600;
+            }
         }
     }
 

@@ -988,10 +988,12 @@
         .right {
             padding-top: 14px;
             text-align: center;
+            padding-left: 0;
+            padding-right: 0;
 
             a {
                 line-height: 55px;
-                margin-right: 0;
+                margin: 0 8px;
             }
         }
 

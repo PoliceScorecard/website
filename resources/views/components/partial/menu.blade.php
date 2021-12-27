@@ -25,10 +25,11 @@
 
             <div id="menu">
                 <ul>
-                    <li><a href="/about" class="{{ (request()->is('about')) ? 'active' : '' }}" {!! trackData('Nav', 'Header', 'About the Data') !!}>About the Data</a></li>
+                    <li><a href="/about" class="{{ (request()->is('about')) ? 'active' : '' }}" {!! trackData('Nav', 'Header', 'About the Data') !!}>About</a></li>
                     <li><a href="/findings" class="{{ (request()->is('findings')) ? 'active' : '' }}" {!! trackData('Nav', 'Header', 'Key Findings') !!}>Key Findings</a></li>
                     <li><a href="/sandiego" class="{{ (request()->is('sandiego')) ? 'active' : '' }}" {!! trackData('Nav', 'Header', 'Reports') !!}>Reports</a></li>
-                    <li><a href="https://forms.gle/WPC2Z6A92tBqxGWZ8" rel="noopener" target="_blank" {!! trackData('Nav', 'Header', 'Contribute Data') !!}>Contribute Data</a></li>
+                    <li><a href="https://forms.gle/WPC2Z6A92tBqxGWZ8" rel="noopener" target="_blank" {!! trackData('Nav', 'Header', 'Contribute Data') !!}>Contribute</a></li>
+                    <li><a href="https://www.paypal.com/donate?hosted_button_id=U32Y7FCWBULNG" class="donate" title="Donate to Police Scorecard" rel="noopener" target="_blank" {!! trackData('Nav', 'Header', 'Donate') !!}>Donate</a></li>
                     <li class="menu-divider visible-lg">&nbsp;</li>
                     <li class="search-wrapper hide-mobile">
                         <a href="#search" aria-label="Toggle Search" class="toggle-search" {!! trackData('Nav', 'Header', 'Search') !!}>
