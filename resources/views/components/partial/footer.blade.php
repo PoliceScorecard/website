@@ -16,6 +16,7 @@
             </a>
         </div>
         <div class="right">
+            <a href="https://www.paypal.com/donate?hosted_button_id=U32Y7FCWBULNG" class="donate" title="Donate to Police Scorecard" rel="noopener" target="_blank" {!! trackData('External Nav', 'Footer', 'Donate') !!}>Donate</a>
             <a href="https://staywoke.typeform.com/to/jBvCkB" class="get-involved" rel="noopener" target="_blank" {!! trackData('External Nav', 'Footer', 'Get Involved') !!}>Get Involved</a>
         </div>
     </div>

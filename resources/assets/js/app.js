@@ -112,6 +112,7 @@ window.PoliceScorecard = window.PoliceScorecard || {
         PoliceScorecard.elm.$stateMapShadow = document.getElementById('state-map-shadow');
         PoliceScorecard.elm.$stateSelect = document.getElementById('state-select');
         PoliceScorecard.elm.$stateSelection = document.getElementById('state-selection');
+        PoliceScorecard.elm.$statsChange = document.querySelectorAll('a.stats-change');
         PoliceScorecard.elm.$toggleAnimate = document.getElementById('toggle-animate');
         PoliceScorecard.elm.$toggleSearch = document.querySelector('a.toggle-search');
         PoliceScorecard.elm.$toggleMobileSearch = document.querySelector('a.toggle-mobile-search');
@@ -135,6 +136,14 @@ window.PoliceScorecard = window.PoliceScorecard || {
         if (PoliceScorecard.elm.$menuToggle) {
             PoliceScorecard.elm.$menuToggle.addEventListener('click', function() {
                 PoliceScorecard.elm.$menu.classList.toggle('open')
+            });
+        }
+
+        // Disabled Tooltip Click
+        if (PoliceScorecard.elm.$statsChange) {
+            Array.prototype.forEach.call(PoliceScorecard.elm.$statsChange, function(el) {
+                el.removeEventListener('click', PoliceScorecard.statsChange);
+                el.addEventListener('click', PoliceScorecard.statsChange);
             });
         }
 
@@ -378,11 +387,6 @@ window.PoliceScorecard = window.PoliceScorecard || {
         }
 
         // Track Links
-        Array.prototype.forEach.call(PoliceScorecard.elm.$trackLinks, function(el) {
-            el.removeEventListener('click', PoliceScorecard.trackLinks);
-            el.addEventListener('click', PoliceScorecard.trackLinks);
-        });
-
         Array.prototype.forEach.call(PoliceScorecard.elm.$trackLinks, function(el) {
             el.removeEventListener('click', PoliceScorecard.trackLinks);
             el.addEventListener('click', PoliceScorecard.trackLinks);
@@ -1269,6 +1273,15 @@ window.PoliceScorecard = window.PoliceScorecard || {
                 focusable[0].focus();
             }
         }
+    },
+
+    /**
+     * Handle Stats Change Click
+     * @param {*} evt
+     */
+    statsChange: function (evt) {
+        evt.preventDefault();
+        evt.stopPropagation();
     },
 
     /**
