@@ -55,3 +55,13 @@
         top: 7px;
     }
 }
+
+@keyframes animate_mobile_search {
+    from {
+        width: calc(100% - 250px);
+    }
+
+    to {
+        width: calc(100% - 160px);
+    }
+}

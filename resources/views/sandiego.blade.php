@@ -215,8 +215,8 @@
                 California city police departments where we were able to obtain such data, we find <strong>San Diego police
                 used force at a higher rate than 95% of California law enforcement agencies in our analysis.</strong>
             </p>
-            <iframe title="San Diego Police Department uses Force at Higher Rates than Most CA Police Departments" aria-label="Column Chart" id="datawrapper-chart-oAOML" src="//datawrapper.dwcdn.net/oAOML/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>
-            <script type="text/javascript">! function() {"use strict";window.addEventListener("message", function(a) {if (void 0 !== a.data["datawrapper-height"])for (var e in a.data["datawrapper-height"]) {var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']");t && (t.style.height = a.data["datawrapper-height"][e] + "px")}})}();</script>
+            <iframe title="San Diego Police Department uses Force at Higher Rates than Most CA Police Departments" aria-label="Column Chart" id="datawrapper-chart-FCABO" src="https://datawrapper.dwcdn.net/FCABO/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe>
+            <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
         </div>
     </div>
 

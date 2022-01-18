@@ -119,6 +119,8 @@
             font-size: 16px;
             padding: 0;
             margin: 0;
+            line-height: 42px;
+            background: transparent;
 
             &.no-results {
                 text-decoration: line-through;
@@ -265,6 +267,10 @@
                     font-weight: 500;
                     color: #222;
                     line-height: 14px;
+                    text-overflow: ellipsis;
+                    width: 90%;
+                    display: block;
+                    overflow: hidden;
 
                     span {
                         color: #000;
@@ -320,6 +326,8 @@
         .search-form  {
             top: 0;
             position: absolute;
+            min-width: unset;
+            display: block;
         }
 
         #menu li.menu-divider {
@@ -327,13 +335,11 @@
         }
     }
 
-    #main.search-open {
-        .logo {
-            display: none;
-        }
-
+    #main {
         .mobile-search-wrapper {
-            width: calc(100% - 70px);
+            width: calc(100% - 250px);
+            animation: animate_mobile_search 1s ease-in-out 2s;
+            animation-fill-mode: forwards;
         }
 
         #mobile-search-form {
