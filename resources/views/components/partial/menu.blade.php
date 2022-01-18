@@ -10,7 +10,7 @@
                 <a href="#mobile-search" aria-label="Toggle Search" class="toggle-mobile-search" {!! trackData('Nav', 'Header', 'Mobile Search') !!}>
                     <i class="fa fa-search fa-lg"></i>
                 </a>
-                <form method="post" id="mobile-search-form" class="search-form animated fadeIn" autocomplete="off" onsubmit="return false;">
+                <form method="post" id="mobile-search-form" class="search-form" autocomplete="off" onsubmit="return false;">
                     <button type="button" title="Search" class="search-button" {!! trackData('Nav', 'Header', 'Mobile Search') !!}>
                         <i class="fa fa-search fa-lg" id="mobile-search-icon"></i>
                     </button>
