@@ -6,7 +6,7 @@
     <h3>Homicides Unsolved</h3>
 
     <p>
-        {{ num($scorecard['homicide']['homicides_2013_2019']) }} Homicides from 2013-19
+        {{ num($scorecard['homicide']['homicides_2013_2019']) }} Homicides from 2013-20
         <span class="divider">&nbsp;|&nbsp;</span>
         {{ (intval(str_replace(',', '', $scorecard['homicide']['homicides_2013_2019'])) - intval(str_replace(',', '', $scorecard['homicide']['homicides_2013_2019_solved']))) }}
         Unsolved
