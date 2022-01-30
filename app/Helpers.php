@@ -1708,18 +1708,6 @@ if (!function_exists('generateBarChart')) {
                     'data' => array($health_budget)
                 );
             }
-
-            if (isset($scorecard['police_funding']['education_budget'])) {
-                $education_budget = $scorecard['police_funding']['education_budget'];
-                $output['datasets'][] = array(
-                    'minBarLength' => 5,
-                    'maxBarThickness' => 20,
-                    'label' => 'Education',
-                    'backgroundColor' => '#9a9b9f',
-                    'borderWidth' => 0,
-                    'data' => array($education_budget)
-                );
-            }
         }
 
         return json_encode($output);
