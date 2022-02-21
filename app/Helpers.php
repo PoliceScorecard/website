@@ -1127,8 +1127,16 @@ if (!function_exists('generateArrestChart')) {
                 array(
                     'minBarLength' => 5,
                     'maxBarThickness' => 20,
+                    'label' => 'Low Level',
+                    'backgroundColor' => '#b02424',
+                    'stack' => 'arrests',
+                    'data' => array()
+                ),
+                array(
+                    'minBarLength' => 5,
+                    'maxBarThickness' => 20,
                     'label' => 'Arrests',
-                    'backgroundColor' => '#dc4646',
+                    'backgroundColor' => '#9a9b9f',
                     'stack' => 'arrests',
                     'data' => array()
                 )
@@ -1136,53 +1144,216 @@ if (!function_exists('generateArrestChart')) {
         );
 
         if (isset($scorecard['arrests']['arrests_2013'])) {
+            $arrests_2013 = intval($scorecard['arrests']['arrests_2013']);
+            $low_level_arrests_2013 = intval($scorecard['arrests']['low_level_arrests_2013']);
+
             $output['labels'][] = '2013';
-            $output['datasets'][0]['data'][] = $scorecard['arrests']['arrests_2013'];
+            $output['datasets'][1]['data'][] = $arrests_2013 - $low_level_arrests_2013;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2013;
         }
 
         if (isset($scorecard['arrests']['arrests_2014'])) {
+            $arrests_2014 = intval($scorecard['arrests']['arrests_2014']);
+            $low_level_arrests_2014 = intval($scorecard['arrests']['low_level_arrests_2014']);
+
             $output['labels'][] = '2014';
-            $output['datasets'][0]['data'][] = $scorecard['arrests']['arrests_2014'];
+            $output['datasets'][1]['data'][] = $arrests_2014 - $low_level_arrests_2014;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2014;
         }
 
         if (isset($scorecard['arrests']['arrests_2015'])) {
+            $arrests_2015 = intval($scorecard['arrests']['arrests_2015']);
+            $low_level_arrests_2015 = intval($scorecard['arrests']['low_level_arrests_2015']);
+
             $output['labels'][] = '2015';
-            $output['datasets'][0]['data'][] = $scorecard['arrests']['arrests_2015'];
+            $output['datasets'][1]['data'][] = $arrests_2015 - $low_level_arrests_2015;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2015;
         }
 
         if (isset($scorecard['arrests']['arrests_2016'])) {
+            $arrests_2016 = intval($scorecard['arrests']['arrests_2016']);
+            $low_level_arrests_2016 = intval($scorecard['arrests']['low_level_arrests_2016']);
+
             $output['labels'][] = '2016';
-            $output['datasets'][0]['data'][] = $scorecard['arrests']['arrests_2016'];
+            $output['datasets'][1]['data'][] = $arrests_2016 - $low_level_arrests_2016;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2016;
         }
 
         if (isset($scorecard['arrests']['arrests_2017'])) {
+            $arrests_2017 = intval($scorecard['arrests']['arrests_2017']);
+            $low_level_arrests_2017 = intval($scorecard['arrests']['low_level_arrests_2017']);
+
             $output['labels'][] = '2017';
-            $output['datasets'][0]['data'][] = $scorecard['arrests']['arrests_2017'];
+            $output['datasets'][1]['data'][] = $arrests_2017 - $low_level_arrests_2017;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2017;
         }
 
         if (isset($scorecard['arrests']['arrests_2018'])) {
+            $arrests_2018 = intval($scorecard['arrests']['arrests_2018']);
+            $low_level_arrests_2018 = intval($scorecard['arrests']['low_level_arrests_2018']);
+
             $output['labels'][] = '2018';
-            $output['datasets'][0]['data'][] = $scorecard['arrests']['arrests_2018'];
+            $output['datasets'][1]['data'][] = $arrests_2018 - $low_level_arrests_2018;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2018;
         }
 
         if (isset($scorecard['arrests']['arrests_2019'])) {
+            $arrests_2019 = intval($scorecard['arrests']['arrests_2019']);
+            $low_level_arrests_2019 = intval($scorecard['arrests']['low_level_arrests_2019']);
+
             $output['labels'][] = '2019';
-            $output['datasets'][0]['data'][] = $scorecard['arrests']['arrests_2019'];
+            $output['datasets'][1]['data'][] = $arrests_2019 - $low_level_arrests_2019;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2019;
         }
 
         if (isset($scorecard['arrests']['arrests_2020'])) {
+            $arrests_2020 = intval($scorecard['arrests']['arrests_2020']);
+            $low_level_arrests_2020 = intval($scorecard['arrests']['low_level_arrests_2020']);
+
             $output['labels'][] = '2020';
-            $output['datasets'][0]['data'][] = $scorecard['arrests']['arrests_2020'];
+            $output['datasets'][1]['data'][] = $arrests_2020 - $low_level_arrests_2020;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2020;
         }
 
         if (isset($scorecard['arrests']['arrests_2021'])) {
+            $arrests_2021 = intval($scorecard['arrests']['arrests_2021']);
+            $low_level_arrests_2021 = intval($scorecard['arrests']['low_level_arrests_2021']);
+
             $output['labels'][] = '2021';
-            $output['datasets'][0]['data'][] = $scorecard['arrests']['arrests_2021'];
+            $output['datasets'][1]['data'][] = $arrests_2021 - $low_level_arrests_2021;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2021;
         }
 
         if (isset($scorecard['arrests']['arrests_2022'])) {
+            $arrests_2022 = intval($scorecard['arrests']['arrests_2022']);
+            $low_level_arrests_2022 = intval($scorecard['arrests']['low_level_arrests_2022']);
+
             $output['labels'][] = '2022';
-            $output['datasets'][0]['data'][] = $scorecard['arrests']['arrests_2022'];
+            $output['datasets'][1]['data'][] = $arrests_2022 - $low_level_arrests_2022;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2022;
+        }
+
+        return json_encode($output);
+    }
+}
+
+/**
+ * Generate Arrest Chart
+ *
+ * @param object
+ */
+if (!function_exists('generateDisparityArrestChart')) {
+    function generateDisparityArrestChart($scorecard) {
+        $output = array(
+            'labels' => array(),
+            'datasets' => array(
+                array(
+                    'minBarLength' => 5,
+                    'maxBarThickness' => 20,
+                    'label' => 'Low Level',
+                    'backgroundColor' => '#b02424',
+                    'stack' => 'arrests',
+                    'data' => array()
+                ),
+                array(
+                    'minBarLength' => 5,
+                    'maxBarThickness' => 20,
+                    'label' => 'Arrests',
+                    'backgroundColor' => '#9a9b9f',
+                    'stack' => 'arrests',
+                    'data' => array()
+                )
+            )
+        );
+
+        if (isset($scorecard['arrests']['arrests_2013'])) {
+            $arrests_2013 = intval($scorecard['arrests']['arrests_2013']);
+            $low_level_arrests_2013 = intval($scorecard['arrests']['low_level_arrests_2013']);
+
+            $output['labels'][] = '2013';
+            $output['datasets'][1]['data'][] = $arrests_2013 - $low_level_arrests_2013;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2013;
+        }
+
+        if (isset($scorecard['arrests']['arrests_2014'])) {
+            $arrests_2014 = intval($scorecard['arrests']['arrests_2014']);
+            $low_level_arrests_2014 = intval($scorecard['arrests']['low_level_arrests_2014']);
+
+            $output['labels'][] = '2014';
+            $output['datasets'][1]['data'][] = $arrests_2014 - $low_level_arrests_2014;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2014;
+        }
+
+        if (isset($scorecard['arrests']['arrests_2015'])) {
+            $arrests_2015 = intval($scorecard['arrests']['arrests_2015']);
+            $low_level_arrests_2015 = intval($scorecard['arrests']['low_level_arrests_2015']);
+
+            $output['labels'][] = '2015';
+            $output['datasets'][1]['data'][] = $arrests_2015 - $low_level_arrests_2015;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2015;
+        }
+
+        if (isset($scorecard['arrests']['arrests_2016'])) {
+            $arrests_2016 = intval($scorecard['arrests']['arrests_2016']);
+            $low_level_arrests_2016 = intval($scorecard['arrests']['low_level_arrests_2016']);
+
+            $output['labels'][] = '2016';
+            $output['datasets'][1]['data'][] = $arrests_2016 - $low_level_arrests_2016;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2016;
+        }
+
+        if (isset($scorecard['arrests']['arrests_2017'])) {
+            $arrests_2017 = intval($scorecard['arrests']['arrests_2017']);
+            $low_level_arrests_2017 = intval($scorecard['arrests']['low_level_arrests_2017']);
+
+            $output['labels'][] = '2017';
+            $output['datasets'][1]['data'][] = $arrests_2017 - $low_level_arrests_2017;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2017;
+        }
+
+        if (isset($scorecard['arrests']['arrests_2018'])) {
+            $arrests_2018 = intval($scorecard['arrests']['arrests_2018']);
+            $low_level_arrests_2018 = intval($scorecard['arrests']['low_level_arrests_2018']);
+
+            $output['labels'][] = '2018';
+            $output['datasets'][1]['data'][] = $arrests_2018 - $low_level_arrests_2018;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2018;
+        }
+
+        if (isset($scorecard['arrests']['arrests_2019'])) {
+            $arrests_2019 = intval($scorecard['arrests']['arrests_2019']);
+            $low_level_arrests_2019 = intval($scorecard['arrests']['low_level_arrests_2019']);
+
+            $output['labels'][] = '2019';
+            $output['datasets'][1]['data'][] = $arrests_2019 - $low_level_arrests_2019;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2019;
+        }
+
+        if (isset($scorecard['arrests']['arrests_2020'])) {
+            $arrests_2020 = intval($scorecard['arrests']['arrests_2020']);
+            $low_level_arrests_2020 = intval($scorecard['arrests']['low_level_arrests_2020']);
+
+            $output['labels'][] = '2020';
+            $output['datasets'][1]['data'][] = $arrests_2020 - $low_level_arrests_2020;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2020;
+        }
+
+        if (isset($scorecard['arrests']['arrests_2021'])) {
+            $arrests_2021 = intval($scorecard['arrests']['arrests_2021']);
+            $low_level_arrests_2021 = intval($scorecard['arrests']['low_level_arrests_2021']);
+
+            $output['labels'][] = '2021';
+            $output['datasets'][1]['data'][] = $arrests_2021 - $low_level_arrests_2021;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2021;
+        }
+
+        if (isset($scorecard['arrests']['arrests_2022'])) {
+            $arrests_2022 = intval($scorecard['arrests']['arrests_2022']);
+            $low_level_arrests_2022 = intval($scorecard['arrests']['low_level_arrests_2022']);
+
+            $output['labels'][] = '2022';
+            $output['datasets'][1]['data'][] = $arrests_2022 - $low_level_arrests_2022;
+            $output['datasets'][0]['data'][] = $low_level_arrests_2022;
         }
 
         return json_encode($output);

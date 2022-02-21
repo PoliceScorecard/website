@@ -623,7 +623,12 @@ window.addEventListener('load', function() {
             animateScale: false
           },
           tooltips: {
-            display: false
+            callbacks: {
+              label: function(tooltip, data) {
+                var labels = ['Sustained', 'Reports'];
+                return ' ' + (data['datasets'][tooltip.datasetIndex]['data'][tooltip.index]).toLocaleString() + ' ' + labels[tooltip.index];
+              }
+            }
           },
           legend: {
             display: false

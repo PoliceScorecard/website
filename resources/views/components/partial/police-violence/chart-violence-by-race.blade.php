@@ -109,7 +109,7 @@
     <p class="source-link-wrapper">
         Source:
         <a href="https://crime-data-explorer.fr.cloud.gov/explorer/national/united-states/arrest" class="source-link" rel="noopener" target="_blank" {!! trackData('External Nav', 'Violence by Race', 'Uniform Crime Report') !!}>Uniform Crime Report</a>,
-        <a href="https://mappingpoliceviolence.org" class="source-link" rel="noopener" target="_blank" {!! trackData('External Nav', 'Violence by Race', 'Mapping Police Violence') !!}>Mapping Police Violence</a>,
+        <a href="https://http://mappingpoliceviolence.us/" class="source-link" rel="noopener" target="_blank" {!! trackData('External Nav', 'Violence by Race', 'Mapping Police Violence') !!}>Mapping Police Violence</a>,
         <a href="https://www.icpsr.umich.edu/web/NACJD/studies/37323" class="source-link" rel="noopener" target="_blank" {!! trackData('External Nav', 'Violence by Race', 'LEMAS') !!}>LEMAS</a>
     </p>
 </div>
