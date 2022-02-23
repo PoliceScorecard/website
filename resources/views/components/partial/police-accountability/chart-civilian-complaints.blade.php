@@ -22,4 +22,23 @@
     </div>
     <p class="note">&nbsp;</p>
     @endif
+
+    <h3>Complaints by Year</h3>
+
+    <div class="keys">
+        <span class="key key-red tooltip" data-tooltip="Black"></span> Civilian Reported
+        <span class="key key-orange tooltip" data-tooltip="Hispanic"></span> Use of Force Reported
+    </div>
+    <div class="keys" style="margin-top: 6px;">
+        <span class="key key-grey tooltip" data-tooltip="Native American"></span> Discrimination Reported
+        <span class="key key-black tooltip" data-tooltip="Asian Pacific Islander"></span> Criminal Reported
+    </div>
+    <div class="keys" style="margin-top: 6px;">
+        <span class="key key-green tooltip" data-tooltip="Other"></span> In Detention Reported
+        <span class="key key-white tooltip" data-tooltip="White"></span> Sustained
+    </div>
+
+    <p style="margin-top: 18px; margin-bottom: 6px;">
+        <canvas id="bar-chart-complaints" height="350"></canvas>
+    </p>
 </div>

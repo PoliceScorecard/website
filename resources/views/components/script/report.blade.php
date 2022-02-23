@@ -12,6 +12,76 @@
 <script src="/maps/us-{{ strtolower($state) }}-all.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
+@if (isset($scorecard['police_accountability']['civilian_complaints_reported_2016']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2017']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2018']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2019']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2020']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2021']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2022']))
+<script>
+  window.addEventListener('load', function() {
+    var ctx = document.getElementById('bar-chart-complaints').getContext('2d');
+    var complaintsData = {!! generateComplaintsChart($scorecard, $type) !!};
+    window.myBarArrests = new Chart(ctx, {
+      type: 'bar',
+      data: complaintsData,
+      options: {
+        maintainAspectRatio: false,
+        responsive: true,
+        legend: {
+          display: false,
+        },
+        title: {
+          display: false,
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            afterTitle: function() {
+                window.total = 0;
+            },
+            label: function(tooltipItem, data) {
+              var label = (data.datasets[tooltipItem.datasetIndex].label) ? ' ' + data.datasets[tooltipItem.datasetIndex].label : '';
+              var val = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+
+              window.total += val;
+
+              if (label) {
+                label += ': ';
+              }
+
+              label += PoliceScorecard.numberWithCommas(tooltipItem.yLabel);
+
+              return label;
+            },
+            footer: function() {
+                return 'Total Complaints: ' + PoliceScorecard.numberWithCommas(window.total);
+            }
+          },
+        },
+        scales: {
+          xAxes: [{
+            stacked: true,
+            gridLines: {
+              color: "rgba(0, 0, 0, 0)",
+            }
+          }],
+          yAxes: [{
+            stacked: true,
+            gridLines: {
+              color: "rgba(0, 0, 0, 0)",
+            },
+            ticks: {
+              beginAtZero: true,
+              maxTicksLimit: 5,
+              callback: function(value, index, values) {
+                return (value === 0) ? '' : PoliceScorecard.numberWithCommas(value);
+              }
+            }
+          }]
+        }
+      }
+    });
+  });
+</script>
+@endif
+
 @if (isset($scorecard['arrests']['arrests_2016']) && isset($scorecard['arrests']['arrests_2017']) && isset($scorecard['arrests']['arrests_2018']))
 <script>
   window.addEventListener('load', function() {
@@ -33,8 +103,14 @@
           mode: 'index',
           intersect: false,
           callbacks: {
+            afterTitle: function() {
+                window.total = 0;
+            },
             label: function(tooltipItem, data) {
               var label = (data.datasets[tooltipItem.datasetIndex].label) ? ' ' + data.datasets[tooltipItem.datasetIndex].label : '';
+              var val = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+
+              window.total += val;
 
               if (label) {
                 label += ': ';
@@ -43,6 +119,9 @@
               label += PoliceScorecard.numberWithCommas(tooltipItem.yLabel);
 
               return label;
+            },
+            footer: function() {
+                return 'Total Arrests: ' + PoliceScorecard.numberWithCommas(window.total);
             }
           },
         },
@@ -70,7 +149,6 @@
       }
     });
   });
-
 </script>
 @endif
 

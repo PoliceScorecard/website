@@ -22,8 +22,10 @@
         <span class="key key-orange tooltip" data-tooltip="Hispanic"></span> Latinx
         <span class="key key-white tooltip" data-tooltip="White"></span> White
     </div>
+
     <br><br>
-    TODO: Make Chart with These Values<br><br>
+
+    sTODO: Make Chart with These Values<br><br>
     black_low_level_arrest_rate: {{ $scorecard['arrests']['black_low_level_arrest_rate'] }}<br>
     hispanic_low_level_arrest_rate: {{ $scorecard['arrests']['hispanic_low_level_arrest_rate'] }}<br>
     white_low_level_arrest_rate: {{ $scorecard['arrests']['white_low_level_arrest_rate'] }}<br>

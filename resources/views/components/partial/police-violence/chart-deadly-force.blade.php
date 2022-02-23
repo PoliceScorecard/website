@@ -33,7 +33,7 @@
 
     <p class="source-link-wrapper">
         Source:
-        <a href="https://http://mappingpoliceviolence.us/" class="source-link" rel="noopener" target="_blank" {!! trackData('External Nav', 'Deadly Force', 'Mapping Police Violence') !!}>
+        <a href="https://mappingpoliceviolence.us" class="source-link" rel="noopener" target="_blank" {!! trackData('External Nav', 'Deadly Force', 'Mapping Police Violence') !!}>
             Mapping Police Violence
         </a>
     </p>
