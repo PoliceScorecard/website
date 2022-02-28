@@ -20,25 +20,15 @@
     <div class="progress-bar-wrapper">
         <div class="progress-bar animate-bar {{ progressBar(100 - intval($scorecard['report']['complaints_sustained']), 'reverse') }}" data-percent="{{ output(intval($scorecard['report']['complaints_sustained']), 0, '%') }}"></div>
     </div>
-    <p class="note">&nbsp;</p>
-    @endif
-
-    <h3>Complaints by Year</h3>
-
+    <p class="note" style="margin-bottom: 0;">&nbsp;</p>
     <div class="keys">
-        <span class="key key-red tooltip" data-tooltip="Black"></span> Civilian Reported
-        <span class="key key-orange tooltip" data-tooltip="Hispanic"></span> Use of Force Reported
-    </div>
-    <div class="keys" style="margin-top: 6px;">
-        <span class="key key-grey tooltip" data-tooltip="Native American"></span> Discrimination Reported
-        <span class="key key-black tooltip" data-tooltip="Asian Pacific Islander"></span> Criminal Reported
-    </div>
-    <div class="keys" style="margin-top: 6px;">
-        <span class="key key-green tooltip" data-tooltip="Other"></span> In Detention Reported
-        <span class="key key-white tooltip" data-tooltip="White"></span> Sustained
+        <strong style="font-weight: 600;">YEARLY:</strong>
+        <span class="key key-red tooltip" data-tooltip="Reported"></span> Reported
+        <span class="key key-green tooltip" data-tooltip="Sustained"></span> Sustained
     </div>
 
     <p style="margin-top: 18px; margin-bottom: 6px;">
-        <canvas id="bar-chart-complaints" height="350"></canvas>
+        <canvas id="bar-chart-civilian"></canvas>
     </p>
+    @endif
 </div>

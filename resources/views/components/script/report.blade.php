@@ -15,69 +15,143 @@
 @if (isset($scorecard['police_accountability']['civilian_complaints_reported_2016']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2017']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2018']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2019']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2020']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2021']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2022']))
 <script>
   window.addEventListener('load', function() {
-    var ctx = document.getElementById('bar-chart-complaints').getContext('2d');
-    var complaintsData = {!! generateComplaintsChart($scorecard, $type) !!};
-    window.myBarArrests = new Chart(ctx, {
-      type: 'bar',
-      data: complaintsData,
-      options: {
-        maintainAspectRatio: false,
-        responsive: true,
-        legend: {
-          display: false,
-        },
-        title: {
-          display: false,
-        },
-        tooltips: {
-          mode: 'index',
-          intersect: false,
-          callbacks: {
-            afterTitle: function() {
-                window.total = 0;
-            },
-            label: function(tooltipItem, data) {
-              var label = (data.datasets[tooltipItem.datasetIndex].label) ? ' ' + data.datasets[tooltipItem.datasetIndex].label : '';
-              var val = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
-
-              window.total += val;
-
-              if (label) {
-                label += ': ';
-              }
-
-              label += PoliceScorecard.numberWithCommas(tooltipItem.yLabel);
-
-              return label;
-            },
-            footer: function() {
-                return 'Total Complaints: ' + PoliceScorecard.numberWithCommas(window.total);
-            }
+    var renderCompaintsChart = function(complaintsCTX, complaintsData){
+      return new Chart(complaintsCTX, {
+        type: 'bar',
+        data: complaintsData,
+        options: {
+          maintainAspectRatio: false,
+          responsive: true,
+          legend: {
+            display: false,
           },
-        },
-        scales: {
-          xAxes: [{
-            stacked: true,
-            gridLines: {
-              color: "rgba(0, 0, 0, 0)",
-            }
-          }],
-          yAxes: [{
-            stacked: true,
-            gridLines: {
-              color: "rgba(0, 0, 0, 0)",
-            },
-            ticks: {
-              beginAtZero: true,
-              maxTicksLimit: 5,
-              callback: function(value, index, values) {
-                return (value === 0) ? '' : PoliceScorecard.numberWithCommas(value);
+          title: {
+            display: false,
+          },
+          tooltips: {
+            mode: 'index',
+            intersect: false,
+            callbacks: {
+              afterTitle: function() {
+                  window.total = 0;
+              },
+              label: function(tooltipItem, data) {
+                var label = (data.datasets[tooltipItem.datasetIndex].label) ? ' ' + data.datasets[tooltipItem.datasetIndex].label : '';
+                var val = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+
+                window.total += val;
+
+                if (label) {
+                  label += ': ';
+                }
+
+                label += PoliceScorecard.numberWithCommas(tooltipItem.yLabel);
+
+                return label;
+              },
+              footer: function() {
+                  return 'Total Complaints: ' + PoliceScorecard.numberWithCommas(window.total);
               }
-            }
-          }]
+            },
+          },
+          scales: {
+            xAxes: [{
+              stacked: true,
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+              }
+            }],
+            yAxes: [{
+              stacked: true,
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+              },
+              ticks: {
+                beginAtZero: true,
+                maxTicksLimit: 5,
+                callback: function(value, index, values) {
+                  return (value === 0) ? '' : PoliceScorecard.numberWithCommas(value);
+                }
+              }
+            }]
+          }
         }
-      }
-    });
+      });
+    };
+
+    var civilianCTX = document.getElementById('bar-chart-civilian').getContext('2d');
+    var civilianData = {!! generateCivilianChart($scorecard, $type) !!};
+    renderCompaintsChart(civilianCTX, civilianData);
+
+    var useOfForceCTX = document.getElementById('bar-chart-use-of-force').getContext('2d');
+    var useOfForceData = {!! generateUseOfForceChart($scorecard, $type) !!};
+    renderCompaintsChart(useOfForceCTX, useOfForceData);
+
+    var discriminiationCTX = document.getElementById('bar-chart-discriminiation').getContext('2d');
+    var discriminiationData = {!! generateDiscriminationChart($scorecard, $type) !!};
+    renderCompaintsChart(discriminiationCTX, discriminiationData);
+
+    var criminalCTX = document.getElementById('bar-chart-criminal').getContext('2d');
+    var criminalData = {!! generateCriminalChart($scorecard, $type) !!};
+    renderCompaintsChart(criminalCTX, criminalData);
+
+    var detentionCTX = document.getElementById('bar-chart-detention').getContext('2d');
+    var detentionData = {!! generateDetentionChart($scorecard, $type) !!};
+    renderCompaintsChart(detentionCTX, detentionData);
+
+  });
+</script>
+@endif
+
+@if (isset($scorecard['arrests']['black_low_level_arrest_rate']) || isset($scorecard['arrests']['hispanic_low_level_arrest_rate']) || isset($scorecard['arrests']['white_low_level_arrest_rate']))
+<script>
+  window.addEventListener('load', function() {
+    var lowLevelDisparityCTX = document.getElementById('bar-chart-low-level-disparity').getContext('2d');
+    var lowLevelDisparityData = {!! generateArrestDisparityChart($scorecard, $type) !!};
+
+    var renderlowLevelDisparityChart = function(disparityCTX, disparityData){
+      return new Chart(disparityCTX, {
+        type: 'bar',
+        data: disparityData,
+        options: {
+          maintainAspectRatio: false,
+          responsive: true,
+          legend: {
+            display: false,
+          },
+          title: {
+            display: false,
+          },
+          tooltips: {
+            mode: 'index',
+            intersect: false
+          },
+          scales: {
+            xAxes: [{
+              stacked: true,
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+              }
+            }],
+            yAxes: [{
+              stacked: true,
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+              },
+              ticks: {
+                beginAtZero: true,
+                maxTicksLimit: 5,
+                callback: function(value, index, values) {
+                  return (value === 0) ? '' : PoliceScorecard.numberWithCommas(value);
+                }
+              }
+            }]
+          }
+        }
+      });
+    };
+
+    renderlowLevelDisparityChart(lowLevelDisparityCTX, lowLevelDisparityData);
   });
 </script>
 @endif

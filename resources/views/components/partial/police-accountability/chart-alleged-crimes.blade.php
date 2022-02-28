@@ -24,7 +24,16 @@
     <div class="progress-bar-wrapper">
         <div class="progress-bar animate-bar {{ progressBar(intval($scorecard['report']['percent_criminal_complaints_sustained'])) }}" data-percent="{{ output(intval($scorecard['report']['percent_criminal_complaints_sustained']), 0, '%') }}"></div>
     </div>
-    <p class="note">&nbsp;</p>
+    <p class="note" style="margin-bottom: 0;">&nbsp;</p>
+    <div class="keys">
+        <strong style="font-weight: 600;">YEARLY:</strong>
+        <span class="key key-red tooltip" data-tooltip="Reported"></span> Reported
+        <span class="key key-green tooltip" data-tooltip="Sustained"></span> Sustained
+    </div>
+
+    <p style="margin-top: 18px; margin-bottom: 6px;">
+        <canvas id="bar-chart-criminal"></canvas>
+    </p>
     @endif
 @endif
 </div>

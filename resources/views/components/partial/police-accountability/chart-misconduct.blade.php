@@ -27,7 +27,16 @@
     <div class="progress-bar-wrapper">
         <div class="progress-bar animate-bar {{ progressBar(100 - intval($scorecard['report']['percent_complaints_in_detention_sustained']), 'reverse') }}" data-percent="{{ output(intval($scorecard['report']['percent_complaints_in_detention_sustained']), 0, '%') }}"></div>
     </div>
-    <p class="note">&nbsp;</p>
+    <p class="note" style="margin-bottom: 0;">&nbsp;</p>
+    <div class="keys">
+        <strong style="font-weight: 600;">YEARLY:</strong>
+        <span class="key key-red tooltip" data-tooltip="Reported"></span> Reported
+        <span class="key key-green tooltip" data-tooltip="Sustained"></span> Sustained
+    </div>
+
+    <p style="margin-top: 18px; margin-bottom: 6px;">
+        <canvas id="bar-chart-detention"></canvas>
+    </p>
     @endif
 </div>
 @endif

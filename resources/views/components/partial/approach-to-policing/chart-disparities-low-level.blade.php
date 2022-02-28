@@ -17,16 +17,13 @@
         to be arrested for low level, non-violent offenses than a white person.
     </p>
 
-    <div class="keys">
+    <div class="keys" style="margin-top: 18px;">
         <span class="key key-red tooltip" data-tooltip="Black"></span> Black
         <span class="key key-orange tooltip" data-tooltip="Hispanic"></span> Latinx
         <span class="key key-white tooltip" data-tooltip="White"></span> White
     </div>
 
-    <br><br>
-
-    sTODO: Make Chart with These Values<br><br>
-    black_low_level_arrest_rate: {{ $scorecard['arrests']['black_low_level_arrest_rate'] }}<br>
-    hispanic_low_level_arrest_rate: {{ $scorecard['arrests']['hispanic_low_level_arrest_rate'] }}<br>
-    white_low_level_arrest_rate: {{ $scorecard['arrests']['white_low_level_arrest_rate'] }}<br>
+    <p style="margin-top: 18px; margin-bottom: 6px;">
+        <canvas id="bar-chart-low-level-disparity"></canvas>
+    </p>
 </div>
