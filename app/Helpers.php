@@ -1249,15 +1249,15 @@ if (!function_exists('generateCivilianChart')) {
             'datasets' => array(
                 // Civilian Complaints
                 array(
-                    'minBarLength' => 5,
+                    'minBarLength' => 0,
                     'maxBarThickness' => 20,
                     'label' => 'Civilian Sustained',
-                    'backgroundColor' => '#a7cc84',
+                    'backgroundColor' => '#9a9b9f',
                     'stack' => 'civilian_complaints',
                     'data' => array()
                 ),
                 array(
-                    'minBarLength' => 5,
+                    'minBarLength' => 0,
                     'maxBarThickness' => 20,
                     'label' => 'Civilian Reported',
                     'backgroundColor' => '#b02424',
@@ -1326,15 +1326,15 @@ if (!function_exists('generateUseOfForceChart')) {
             'datasets' => array(
                 // Use of Force Complaints
                 array(
-                    'minBarLength' => 5,
+                    'minBarLength' => 0,
                     'maxBarThickness' => 20,
                     'label' => 'Use of Force Sustained',
-                    'backgroundColor' => '#a7cc84',
+                    'backgroundColor' => '#9a9b9f',
                     'stack' => 'use_of_force_complaints',
                     'data' => array()
                 ),
                 array(
-                    'minBarLength' => 5,
+                    'minBarLength' => 0,
                     'maxBarThickness' => 20,
                     'label' => 'Use of Force Reported',
                     'backgroundColor' => '#b02424',
@@ -1402,15 +1402,15 @@ if (!function_exists('generateDiscriminationChart')) {
             'datasets' => array(
                 // Discrimination Complaints
                 array(
-                    'minBarLength' => 5,
+                    'minBarLength' => 0,
                     'maxBarThickness' => 20,
                     'label' => 'Discrimination Sustained',
-                    'backgroundColor' => '#a7cc84',
+                    'backgroundColor' => '#9a9b9f',
                     'stack' => 'discrimination_complaints',
                     'data' => array()
                 ),
                 array(
-                    'minBarLength' => 5,
+                    'minBarLength' => 0,
                     'maxBarThickness' => 20,
                     'label' => 'Discrimination Reported',
                     'backgroundColor' => '#b02424',
@@ -1478,15 +1478,15 @@ if (!function_exists('generateCriminalChart')) {
             'datasets' => array(
                 // Criminal Complaints
                 array(
-                    'minBarLength' => 5,
+                    'minBarLength' => 0,
                     'maxBarThickness' => 20,
                     'label' => 'Criminal Sustained',
-                    'backgroundColor' => '#a7cc84',
+                    'backgroundColor' => '#9a9b9f',
                     'stack' => 'criminal_complaints',
                     'data' => array()
                 ),
                 array(
-                    'minBarLength' => 5,
+                    'minBarLength' => 0,
                     'maxBarThickness' => 20,
                     'label' => 'Criminal Reported',
                     'backgroundColor' => '#b02424',
@@ -1554,15 +1554,15 @@ if (!function_exists('generateDetentionChart')) {
             'datasets' => array(
                 // Complaints in Detention
                 array(
-                    'minBarLength' => 5,
+                    'minBarLength' => 0,
                     'maxBarThickness' => 20,
                     'label' => 'In Detention Sustained',
-                    'backgroundColor' => '#a7cc84',
+                    'backgroundColor' => '#9a9b9f',
                     'stack' => 'complaints_in_detention',
                     'data' => array()
                 ),
                 array(
-                    'minBarLength' => 5,
+                    'minBarLength' => 0,
                     'maxBarThickness' => 20,
                     'label' => 'In Detention Reported',
                     'backgroundColor' => '#b02424',
@@ -1718,7 +1718,7 @@ if (!function_exists('generateArrestDisparityChart')) {
             'datasets' => array(
                 // Complaints in Detention
                 array(
-                    'minBarLength' => 5,
+                    'minBarLength' => 0,
                     'maxBarThickness' => 20,
                     'label' => 'Black',
                     'backgroundColor' => '#b02424',
@@ -1726,7 +1726,7 @@ if (!function_exists('generateArrestDisparityChart')) {
                     'data' => array()
                 ),
                 array(
-                    'minBarLength' => 5,
+                    'minBarLength' => 0,
                     'maxBarThickness' => 20,
                     'label' => 'Hispanic',
                     'backgroundColor' => '#f19975',
@@ -1734,7 +1734,7 @@ if (!function_exists('generateArrestDisparityChart')) {
                     'data' => array()
                 ),
                 array(
-                    'minBarLength' => 5,
+                    'minBarLength' => 0,
                     'maxBarThickness' => 20,
                     'label' => 'White',
                     'backgroundColor' => '#d4d9e4',

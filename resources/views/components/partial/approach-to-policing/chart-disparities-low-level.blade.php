@@ -1,3 +1,4 @@
+@if(isset($scorecard['arrests']['black_low_level_arrest_rate']) || isset($scorecard['arrests']['hispanic_low_level_arrest_rate']) || isset($scorecard['arrests']['white_low_level_arrest_rate']))
 <div class="stat-wrapper no-border-mobile">
     <h3>Disparities in Arrests for Low Level Offenses by Race/Ethnicity</h3>
 
@@ -27,3 +28,4 @@
         <canvas id="bar-chart-low-level-disparity"></canvas>
     </p>
 </div>
+@endif
