@@ -7,8 +7,9 @@
         <p>
             <strong>This is the first nationwide evaluation of policing in the United States.</strong> It was built using data from state and federal databases, public records requests to local police departments, and media reports. While police data is never perfect, and there are additional indicators that still need to be tracked, the Police Scorecard is designed to provide insight into many important issues in policing.
         </p>
+        <p>&nbsp;</p>
         <p>
-            Police Scorecard is an independent 501(c)(3) organization, learn more about our team <a href="/about" {!! trackData('Nav', 'About', 'Team') !!}>here</a>. If you have feedback, questions about the project, or need support with an advocacy campaign, contact our Founder, <a href="mailto:samswey1@gmail.com" rel="noopener" target="_blank" {!! trackData('External Nav', 'About', 'Contact Founder') !!}>Samuel Sinyangwe</a>.
+            <strong>Police Scorecard is an independent 501(c)(3) organization, learn more about our team <a href="/about" {!! trackData('Nav', 'About', 'Team') !!}>here</a>.</strong> If you have feedback, questions about the project, or need support with an advocacy campaign, contact our Founder, <a href="mailto:samswey1@gmail.com" rel="noopener" target="_blank" {!! trackData('External Nav', 'About', 'Contact Founder') !!}>Samuel Sinyangwe</a>.
         </p>
         <p>
             <a href="/about" class="button" {!! trackData('Nav', 'About', 'Methodology') !!}>methodology</a>
