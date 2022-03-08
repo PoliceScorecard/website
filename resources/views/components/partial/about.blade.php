@@ -7,6 +7,10 @@
         <p>
             <strong>This is the first nationwide evaluation of policing in the United States.</strong> It was built using data from state and federal databases, public records requests to local police departments, and media reports. While police data is never perfect, and there are additional indicators that still need to be tracked, the Police Scorecard is designed to provide insight into many important issues in policing.
         </p>
+        <p>&nbsp;</p>
+        <p>
+            <strong>Police Scorecard is an independent 501(c)(3) organization, learn more about our team <a href="/about" {!! trackData('Nav', 'About', 'Team') !!}>here</a>.</strong> If you have feedback, questions about the project, or need support with an advocacy campaign, contact our Founder, <a href="mailto:samswey1@gmail.com" rel="noopener" target="_blank" {!! trackData('External Nav', 'About', 'Contact Founder') !!}>Samuel Sinyangwe</a>.
+        </p>
         <p>
             <a href="/about" class="button" {!! trackData('Nav', 'About', 'Methodology') !!}>methodology</a>
             <a href="https://drive.google.com/drive/folders/1XAT1uFPXj5AsvNTzFeNeeTXGLP09HEIh" rel="noopener" target="_blank" class="button" {!! trackData('External Nav', 'About', 'Source Data') !!}>Source Data</a>
@@ -110,9 +114,5 @@
                 <p><a href="https://staywoke.typeform.com/to/jBvCkB?ref=data-visualization" class="button" rel="noopener" target="_blank" {!! trackData('External Nav', 'About', 'Join Data Visualization') !!}>Join</a></p>
             </div>
         </div>
-    </div>
-    <div class="content">
-        <p>&nbsp;</p>
-        <p>If you have feedback, questions about the project, or need support with an advocacy campaign, contact our Project Lead, <a href="mailto:samswey1@gmail.com" {!! trackData('Nav', 'About', 'Email Sam') !!}>Samuel Sinyangwe</a>.</p>
     </div>
 </div>

@@ -110,6 +110,9 @@
                 <!-- Arrests for Low Level Offenses -->
                 <x-partial.approach-to-policing.chart-arrests-low-level :location="$location" :scorecard="$scorecard" />
 
+                <!-- Disparities in Arrests for Low Level Offenses by Race/Ethnicity -->
+                <x-partial.approach-to-policing.chart-disparities-low-level :location="$location" :scorecard="$scorecard" />
+
                 <!-- Percent of total arrests by type -->
                 <x-partial.approach-to-policing.chart-arrests-by-type :location="$location" :scorecard="$scorecard" />
             </div>
