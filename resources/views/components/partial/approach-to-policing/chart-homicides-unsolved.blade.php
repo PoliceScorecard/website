@@ -6,15 +6,15 @@
     <h3>Homicides Unsolved</h3>
 
     <p>
-        {{ num($scorecard['homicide']['homicides_2013_2019']) }} Homicides from 2013-20
+        {{ num($scorecard['homicide']['homicides_reported']) }} Homicides from 2013-20
         <span class="divider">&nbsp;|&nbsp;</span>
-        {{ (intval(str_replace(',', '', $scorecard['homicide']['homicides_2013_2019'])) - intval(str_replace(',', '', $scorecard['homicide']['homicides_2013_2019_solved']))) }}
+        {{ (intval(str_replace(',', '', $scorecard['homicide']['homicides_reported'])) - intval(str_replace(',', '', $scorecard['homicide']['homicides_solved']))) }}
         Unsolved
     </p>
 
-    @if(intval($scorecard['homicide']['homicides_2013_2019']) === 0)
+    @if(intval($scorecard['homicide']['homicides_reported']) === 0)
     <p class="good-job pad-bottom">No Homicides Reported</p>
-    @elseif(intval($scorecard['homicide']['homicides_2013_2019']) > 0 && (intval(str_replace(',', '', $scorecard['homicide']['homicides_2013_2019'])) - intval(str_replace(',', '', $scorecard['homicide']['homicides_2013_2019_solved']))) === 0)
+    @elseif(intval($scorecard['homicide']['homicides_reported']) > 0 && (intval(str_replace(',', '', $scorecard['homicide']['homicides_reported'])) - intval(str_replace(',', '', $scorecard['homicide']['homicides_solved']))) === 0)
     <p class="good-job pad-bottom">No Unsolved Homicides Reported</p>
     @elseif(!isset($scorecard['report']['percentile_murders_solved']) || (isset($scorecard['report']['percentile_murders_solved']) && empty($scorecard['report']['percentile_murders_solved'])))
     <div class="progress-bar-wrapper">
