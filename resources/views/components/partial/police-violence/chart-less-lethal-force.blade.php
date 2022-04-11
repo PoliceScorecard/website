@@ -2,6 +2,7 @@
     $violenceData = generateViolenceChart($scorecard);
     $hasViolenceData = (isset($violenceData) && isset($violenceData['series']) && count($violenceData['series']) > 0);
 @endphp
+
 @if ($scorecard['report']['total_less_lethal_force_estimated'] !== null)
 <div class="stat-wrapper">
     <a href="https://docs.google.com/document/d/1FIeprYO7E8_2JjQzrcMNrQqqVt_YdTAoOEqmHia96sI" rel="noopener" target="_blank" class="external-link" {!! trackData('External Nav', 'Less-Lethal Force', 'Source Data') !!}>

@@ -7,10 +7,10 @@
 
     <div class="content">
         <div class="one-third home-page">
-            <h1><strong>8,768</strong> Killings by Police</h1>
+            <h1><strong>9,911</strong> Killings by Police</h1>
 
             <div class="text">
-                <p>Based on population, a Black person was <strong>2.9x</strong> as likely and a Latinx person was <strong>1.4x</strong> as likely to be killed by police as a White person in America from 2013-20</p>
+                <p>Based on population, a Black person was <strong>2.7x</strong> as likely and a Latinx person was <strong>1.6x</strong> as likely to be killed by police as a White person in America from 2013-21.</p>
             </div>
 
             <div class="chart chart-1">

@@ -15,7 +15,7 @@
 @if (isset($scorecard['police_accountability']['civilian_complaints_reported_2016']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2017']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2018']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2019']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2020']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2021']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2022']))
 <script>
   window.addEventListener('load', function() {
-    var renderCompaintsChart = function(complaintsCTX, complaintsData){
+    var renderComplaintsChart = function(complaintsCTX, complaintsData){
       return new Chart(complaintsCTX, {
         type: 'bar',
         data: complaintsData,
@@ -79,26 +79,35 @@
       });
     };
 
-    var civilianCTX = document.getElementById('bar-chart-civilian').getContext('2d');
-    var civilianData = {!! generateCivilianChart($scorecard, $type) !!};
-    renderCompaintsChart(civilianCTX, civilianData);
+    var civilianCTX = document.getElementById('bar-chart-civilian');
+    if (civilianCTX) {
+      var civilianData = {!! generateCivilianChart($scorecard, $type) !!};
+      renderComplaintsChart(civilianCTX.getContext('2d'), civilianData);
+    }
 
-    var useOfForceCTX = document.getElementById('bar-chart-use-of-force').getContext('2d');
-    var useOfForceData = {!! generateUseOfForceChart($scorecard, $type) !!};
-    renderCompaintsChart(useOfForceCTX, useOfForceData);
+    var useOfForceCTX = document.getElementById('bar-chart-use-of-force');
+    if (useOfForceCTX) {
+      var useOfForceData = {!! generateUseOfForceChart($scorecard, $type) !!};
+      renderComplaintsChart(useOfForceCTX.getContext('2d'), useOfForceData);
+    }
 
-    var discriminiationCTX = document.getElementById('bar-chart-discriminiation').getContext('2d');
-    var discriminiationData = {!! generateDiscriminationChart($scorecard, $type) !!};
-    renderCompaintsChart(discriminiationCTX, discriminiationData);
+    var discriminationCTX = document.getElementById('bar-chart-discrimination');
+    if (discriminationCTX) {
+      var discriminationData = {!! generateDiscriminationChart($scorecard, $type) !!};
+      renderComplaintsChart(discriminationCTX.getContext('2d'), discriminationData);
+    }
 
-    var criminalCTX = document.getElementById('bar-chart-criminal').getContext('2d');
-    var criminalData = {!! generateCriminalChart($scorecard, $type) !!};
-    renderCompaintsChart(criminalCTX, criminalData);
+    var criminalCTX = document.getElementById('bar-chart-criminal');
+    if (criminalCTX) {
+      var criminalData = {!! generateCriminalChart($scorecard, $type) !!};
+      renderComplaintsChart(criminalCTX.getContext('2d'), criminalData);
+    }
 
-    var detentionCTX = document.getElementById('bar-chart-detention').getContext('2d');
-    var detentionData = {!! generateDetentionChart($scorecard, $type) !!};
-    renderCompaintsChart(detentionCTX, detentionData);
-
+    var detentionCTX = document.getElementById('bar-chart-detention');
+    if (detentionCTX) {
+      var detentionData = {!! generateDetentionChart($scorecard, $type) !!};
+      renderComplaintsChart(detentionCTX.getContext('2d'), detentionData);
+    }
   });
 </script>
 @endif
@@ -156,7 +165,7 @@
 </script>
 @endif
 
-@if (isset($scorecard['arrests']['arrests_2016']) && isset($scorecard['arrests']['arrests_2017']) && isset($scorecard['arrests']['arrests_2018']))
+@if (isset($scorecard['arrests']))
 <script>
   window.addEventListener('load', function() {
     var ctx = document.getElementById('bar-chart-arrests').getContext('2d');
@@ -226,7 +235,7 @@
 </script>
 @endif
 
-@if(isset($scorecard['police_violence']['police_shootings_2016']) && isset($scorecard['police_violence']['police_shootings_2017']) && isset($scorecard['police_violence']['police_shootings_2018']))
+@if(isset($scorecard['police_violence']))
 <script>
 window.addEventListener('load', function() {
     var $historyChart = document.getElementById('bar-chart-history');
@@ -361,7 +370,7 @@ window.addEventListener('load', function() {
 </script>
 @endif
 
-@if(isset($scorecard['police_funding']['fines_forfeitures_2010']) && isset($scorecard['police_funding']['fines_forfeitures_2011']) && isset($scorecard['police_funding']['fines_forfeitures_2012']))
+@if(isset($scorecard['police_funding']))
 <script>
   window.addEventListener('load', function() {
     var ctxFundsTaken = document.getElementById('bar-chart-funds-taken').getContext('2d');
@@ -425,9 +434,7 @@ window.addEventListener('load', function() {
   });
 
 </script>
-@endif
 
-@if(isset($scorecard['police_funding']['total_officers_2013']) && isset($scorecard['police_funding']['total_officers_2014']) && isset($scorecard['police_funding']['total_officers_2015']))
 <script>
   window.addEventListener('load', function() {
     var ctxOfficers = document.getElementById('bar-chart-officers-per-population').getContext('2d');
