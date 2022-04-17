@@ -914,6 +914,10 @@ if (!function_exists('getChange')) {
                 $end = '2023';
             }
 
+            // TODO: This is a temp fix to use 2016-2020 to resolve an issue with incorrect labels, need to fix this on the API side
+            $start = '2016';
+            $end = '2020';
+
             if ($start && $end && $start !== $end) {
                 $label = "from {$start}-" . substr($end, -2);
             } else if ($start && $end && $start === $end) {
