@@ -49,9 +49,10 @@
 
                 return label;
               },
-              footer: function() {
-                  return 'Total Complaints: ' + PoliceScorecard.numberWithCommas(window.total);
-              }
+              // TODO: Add this back in when the API is fixed
+              // footer: function() {
+              //     return 'Total Complaints: ' + PoliceScorecard.numberWithCommas(window.total);
+              // }
             },
           },
           scales: {
