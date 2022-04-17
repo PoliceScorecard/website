@@ -1,3 +1,7 @@
+@php
+    $useOfForceChart = generateUseOfForceChart($scorecard);
+    $hasUseOfForceChart = (isset($useOfForceChart) && isset($violenceData['labels']) && count($violenceData['labels']) > 0);
+@endphp
 <div class="stat-wrapper">
     <h3>Use of Force Complaints</h3>
 
@@ -32,6 +36,8 @@
     <div class="progress-bar-wrapper">
         <div class="progress-bar animate-bar {{ progressBar(100 - intval($scorecard['report']['percent_use_of_force_complaints_sustained']), 'reverse') }}" data-percent="{{ output(intval($scorecard['report']['percent_use_of_force_complaints_sustained']), 0, '%') }}"></div>
     </div>
+
+    @if($hasUseOfForceChart)
     <p class="note" style="margin-bottom: 0;">&nbsp;</p>
     <div class="keys">
         <span class="key key-red tooltip" data-tooltip="Complaints Reported"></span> Complaints Reported
@@ -41,5 +47,7 @@
     <p style="margin-top: 18px; margin-bottom: 6px;">
         <canvas id="bar-chart-use-of-force"></canvas>
     </p>
+    @endif
+
     @endif
 </div>

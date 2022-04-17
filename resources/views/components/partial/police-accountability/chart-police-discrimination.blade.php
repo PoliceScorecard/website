@@ -29,7 +29,7 @@
     </div>
 
     <p style="margin-top: 18px; margin-bottom: 6px;">
-        <canvas id="bar-chart-discriminiation"></canvas>
+        <canvas id="bar-chart-discrimination"></canvas>
     </p>
     @endif
 @endif
