@@ -39,7 +39,7 @@
                 var label = (data.datasets[tooltipItem.datasetIndex].label) ? ' ' + data.datasets[tooltipItem.datasetIndex].label : '';
                 var val = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
 
-                if (label && label.toLowerCase() === 'use of force reported') {
+                if (label && label.toLowerCase().indexOf('reported') !== -1) {
                   window.total += val;
                 }
 
