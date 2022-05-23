@@ -37,8 +37,7 @@
                 Ariel Matos<br/>
                 Kirby Phares<br/>
                 Emily Biondo<br/>
-                Mary Hammond<br/>
-                Frankie Wunschel
+                Mary Hammond
             </p>
 
             <p>
@@ -51,7 +50,7 @@
 
             <p>
                 <strong>Research Advisors</strong><br/>
-                Abdul Rad, Independent Researcher, PhD Candidate, University of Oxford<br/>
+                Independent Researcher, PhD Candidate, University of Oxford<br/>
                 Bocar Ba, Assistant Professor of Economics, UC Irvine<br/>
                 Jeffrey Fagan, Professor of Law, Columbia University
             </p>
@@ -248,11 +247,11 @@
             <h2 class="subtitle">KILLINGS BY POLICE</h2>
 
             <p>
-                DEFINITION: PEOPLE KILLED BY LAW ENFORCEMENT OFFICERS FROM 2013-2020.
+                DEFINITION: PEOPLE KILLED BY LAW ENFORCEMENT OFFICERS FROM 2013-2021.
             </p>
 
             <p>
-                We used the Mapping Police Violence database, which combines information on people killed by police from 2013-2020 sourced from public records requests, local media reports and other crowdsourced databases such as the Fatal Encounters database. This database includes information on 8,768 people killed by police nationwide from 2013-2020, 91% of whom were killed by one of the law enforcement agencies currently represented in the Police Scorecard. Importantly, this database allows for a more comprehensive evaluation of killings by police than would be possible using official data, since only about <a href="https://www.marketplace.org/2020/06/01/fbi-police-use-of-force-database/" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', '40% Reported') !!}>40%</a> of the nation's law enforcement reports data to the federal government's Use of Force Data Collection program and that data still has not been released publicly. The Mapping Police Violence database is also more expansive than the Washington Post's police shootings database because it includes cases where people are killed by types of police use of force in addition to fatal police shootings (i.e. killings by tasers, batons, chokeholds and intentional vehicle strikes) as well as cases that occurred prior to 2015. The database also evaluates whether each person killed by police was armed with a gun, armed with another weapon or vehicle, or unarmed at the time of the incident. Using the coding schema in the Mapping Police Violence database, cases were coded as unarmed when the person killed by police did not possess an actual weapon - which includes both people who had no object in their hands and people who had common/household objects like cell phones, spoons or a toy that may have been perceived to be a weapon but ended up not constituting a real threat.
+                We used the Mapping Police Violence database, which combines information on people killed by police from 2013-2021 sourced from public records requests, local media reports and other crowdsourced databases such as the Fatal Encounters database. This database includes information on 9,911 people killed by police nationwide from 2013-2021, 91% of whom were killed by one of the law enforcement agencies currently represented in the Police Scorecard. Importantly, this database allows for a more comprehensive evaluation of killings by police than would be possible using official data, since only about <a href="https://www.marketplace.org/2020/06/01/fbi-police-use-of-force-database/" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', '40% Reported') !!}>40%</a> of the nation's law enforcement reports data to the federal government's Use of Force Data Collection program and that data still has not been released publicly. The Mapping Police Violence database is also more expansive than the Washington Post's police shootings database because it includes cases where people are killed by types of police use of force in addition to fatal police shootings (i.e. killings by tasers, batons, chokeholds and intentional vehicle strikes) as well as cases that occurred prior to 2015. The database also evaluates whether each person killed by police was armed with a gun, armed with another weapon or vehicle, or unarmed at the time of the incident. Using the coding schema in the Mapping Police Violence database, cases were coded as unarmed when the person killed by police did not possess an actual weapon - which includes both people who had no object in their hands and people who had common/household objects like cell phones, spoons or a toy that may have been perceived to be a weapon but ended up not constituting a real threat.
             </p>
 
             <h2 class="subtitle">POLICE SHOOTINGS (BOTH FATAL AND NON-FATAL)</h2>
