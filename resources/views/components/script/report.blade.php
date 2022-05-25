@@ -39,7 +39,9 @@
                 var label = (data.datasets[tooltipItem.datasetIndex].label) ? ' ' + data.datasets[tooltipItem.datasetIndex].label : '';
                 var val = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
 
-                window.total += val;
+                if (label && label.toLowerCase().indexOf('reported') !== -1) {
+                  window.total += val;
+                }
 
                 if (label) {
                   label += ': ';
@@ -49,10 +51,9 @@
 
                 return label;
               },
-              // TODO: Add this back in when the API is fixed
-              // footer: function() {
-              //     return 'Total Complaints: ' + PoliceScorecard.numberWithCommas(window.total);
-              // }
+              footer: function() {
+                  return 'Total Complaints: ' + PoliceScorecard.numberWithCommas(window.total);
+              }
             },
           },
           scales: {
