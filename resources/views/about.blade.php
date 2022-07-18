@@ -96,7 +96,7 @@
             </p>
 
             <p>
-                Using this methodology, a police department received a higher grade if it made <em>fewer arrests</em> for low level offenses, <em>used less force</em> during arrest, left em in arrests and use of force, <em>spent less money</em> on policing, and <em>upheld civilian complaints of police misconduct more often</em> than other agencies. In order to ensure appropriate comparisons among agencies with different roles and jurisdictions, municipal police departments are evaluated in comparison to other municipal police departments of similar sized jurisdictions and county sheriff's departments are evaluated in comparison to other county sheriff's departments of similar sized jurisdictions (jurisdictions with over 250,000 population are compared to one another, as are jurisdictions with 100,000-249,999 population, jurisdictions with 50,000-99,999 population, and those with < 50,000 population).
+                Using this methodology, a police department received a higher grade if it made <em>fewer arrests</em> for low level offenses, <em>used less force</em> during arrest, fewer racial disparities in arrests and use of force, <em>spent less money</em> on policing, and <em>upheld civilian complaints of police misconduct more often</em> than other agencies. In order to ensure appropriate comparisons among agencies with different roles and jurisdictions, municipal police departments are evaluated in comparison to other municipal police departments of similar sized jurisdictions and county sheriff's departments are evaluated in comparison to other county sheriff's departments of similar sized jurisdictions (jurisdictions with over 250,000 population are compared to one another, as are jurisdictions with 100,000-249,999 population, jurisdictions with 50,000-99,999 population, and those with < 50,000 population).
             </p>
 
 
@@ -180,11 +180,11 @@
             </p>
 
             <p>
-                <strong>1. Percentile of Jail Incarceration Rates per 1,000 Residents, 2018</strong>
+                <strong>1. Percentile of Jail Incarceration Rates per 1,000 Residents, 2019</strong>
             </p>
 
             <p>
-                This indicator displays each County Sheriff's Department's Average Daily Jail Population in 2018 divided by the total population of the Sheriff's Jurisdiction. This data was obtained from the Bureau of Justice Statistics 2018 Annual Survey of Jails (the most recent survey we could find with data on this issue that has been made public). Importantly, since sheriff's departments have primary jurisdiction over unincorporated areas within counties and the cities that do not operate their own police departments (these cities contract with the sheriff's department for law enforcement services), we estimated the total population of each jurisdiction by subtracting from the total county population the populations of each city that has its own municipal police department.
+                This indicator displays each County Sheriff's Department's Average Daily Jail Population in 2019 divided by the total population of the Sheriff's Jurisdiction. This data was obtained from the Bureau of Justice Statistics 2019 Census of Jails (the most recent survey we could find with data on this issue that has been made public). Importantly, since sheriff's departments have primary jurisdiction over unincorporated areas within counties and the cities that do not operate their own police departments (these cities contract with the sheriff's department for law enforcement services), we estimated the total population of each jurisdiction by subtracting from the total county population the populations of each city that has its own municipal police department.
             </p>
 
             <p>
@@ -196,27 +196,27 @@
             </p>
 
             <p>
-                <strong>3. Percent of Civilian Complaints in Detention Sustained from 2016-2020</strong>
+                <strong>3. Percent of Civilian Complaints in Detention Sustained from 2016-2021</strong>
             </p>
 
             <p>
-                This indicator displays the percentage of reported complaints in detention that were sustained from 2016-2020, as determined by the California Department of Justice's CCOPA database and data obtained from county agencies via public records requests.
+                This indicator displays the percentage of reported complaints in detention that were sustained from 2016-2021, as determined by the California Department of Justice's CCOPA database and data obtained from county agencies via public records requests.
             </p>
 
             <p>
-                <strong>4. Number of People Transferred to ICE in 2018</strong>
+                <strong>4. Number of People Transferred to ICE in 2019</strong>
             </p>
 
             <p>
-                This indicator displays the number of people transferred to Immigration Enforcement from local jails in 2018 (previous years of data were unavailable), as reported to the Annual Survey of Jails 2018. Additionally, more detailed information on ICE transfers, including the proportion of transfers by alleged offense type is displayed for departments in California based on data obtained from the California Department of Justice's Values Act Transfers database.
+                This indicator displays the number of people transferred to Immigration Enforcement from local jails in 2019 (previous years of data were unavailable), as reported to the Census of Jails 2019. Additionally, more detailed information on ICE transfers, including the proportion of transfers by alleged offense type is displayed for departments in California based on data obtained from the California Department of Justice's Values Act Transfers database.
             </p>
 
             <p>
-                <strong>5. Percent of People in Jail Without Being Convicted, 2018</strong>
+                <strong>5. Percent of People in Jail Without Being Convicted, 2019</strong>
             </p>
 
             <p>
-                This indicator evaluates the use of pre-trial detention within each County Sheriff's Department's jail. It measures the total number of people in each jail who were not yet convicted of the crime associated with their incarceration divided by each agency's total jail population, as reported to the Bureau of Justice Statistics 2018 Annual Survey of Jails. Since this was a one-time snapshot of each jail population on June 29, 2018, we used the total jail populations reported to the survey rather than average daily jail populations to evaluate the percent of the total who were unconvicted.
+                This indicator evaluates the use of pre-trial detention within each County Sheriff's Department's jail. It measures the total number of people in each jail who were not yet convicted of the crime associated with their incarceration divided by each agency's total jail population, as reported to the Bureau of Justice Statistics 2019 Census of Jails. Since this was a one-time snapshot of each jail population on June 29, 2019, we used the total jail populations reported to the survey rather than average daily jail populations to evaluate the percent of the total who were unconvicted.
             </p>
 
 
@@ -384,7 +384,7 @@
             </p>
 
             <p>
-                This includes data on the total amount of city budget expenditures spent on policing in each city or county from 2010-2019 as reported to the Census Bureau's <a href="https://www.census.gov/data/datasets/2017/econ/local/public-use-datasets.html" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Annual Survey of State and Local Government Finances') !!}>Annual Survey of State and Local Government Finances</a>. For many cities, we were also able to obtain more recent data (2019-2020) from budgetary documents on local governments' websites and the <a href="https://www.vera.org/publications/what-policing-costs-in-americas-biggest-cities" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Police Funding Data for 72 Large Cities') !!}>police funding data for 72 large cities</a> created by the Vera Institute. The Scorecard also includes data on each local government's expenditures on other issues that impact public safety - such as funding for Health and for Housing and Community Development. In some cases, we found discrepancies between the Census Bureau's data and the data included in a city or county's budget documents. Where such discrepancies were found, we used the data in the city or county budget documents in our analysis, given they often provide more detail.
+                This includes data on the total amount of city budget expenditures spent on policing in each city or county from 2010-2021 as reported to the Census Bureau's <a href="https://www.census.gov/data/datasets/2017/econ/local/public-use-datasets.html" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Annual Survey of State and Local Government Finances') !!}>Annual Survey of State and Local Government Finances</a>. For many cities, we were also able to obtain more recent data (2021) from budgetary documents on local governments' websites and the <a href="https://www.vera.org/publications/what-policing-costs-in-americas-biggest-cities" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Police Funding Data for 72 Large Cities') !!}>police funding data for 72 large cities</a> created by the Vera Institute. The Scorecard also includes data on each local government's expenditures on other issues that impact public safety - such as funding for Health and for Housing and Community Development. In some cases, we found discrepancies between the Census Bureau's data and the data included in a city or county's budget documents. Where such discrepancies were found, we used the data in the city or county budget documents in our analysis, given they often provide more detail.
             </p>
 
             <p>
@@ -406,17 +406,17 @@
             <h2 class="subtitle">FINES AND FORFEITURES</h2>
 
             <p>
-                DEFINITION: THE TOTAL VALUE OF PROPERTY AND CASH CONFISCATED THROUGH ASSET FORFEITURE OR COLLECTED BY FINES, 2010-2019
+                DEFINITION: THE TOTAL VALUE OF PROPERTY AND CASH CONFISCATED THROUGH ASSET FORFEITURE OR COLLECTED BY FINES, 2010-2020
             </p>
 
             <p>
-                This includes data on the total amount of city budget revenues collected through fines or forfeitures in each city or county from 2010-2019 as reported to the Census Bureau's <a href="https://www.census.gov/data/datasets/2017/econ/local/public-use-datasets.html" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Annual Survey of State and Local Government Finances') !!}>Annual Survey of State and Local Government Finances</a>. This measure can be used to assess potential excessive use of ticketing, civil asset forfeiture and other policing practices that often supplement police budgets by imposing an additional economic burden on communities.
+                This includes data on the total amount of city budget revenues collected through fines or forfeitures in each city or county from 2010-2020 as reported to the Census Bureau's <a href="https://www.census.gov/data/datasets/2017/econ/local/public-use-datasets.html" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Annual Survey of State and Local Government Finances') !!}>Annual Survey of State and Local Government Finances</a>. This measure can be used to assess potential excessive use of ticketing, civil asset forfeiture and other policing practices that often supplement police budgets by imposing an additional economic burden on communities.
             </p>
 
             <h2 class="subtitle">TOTAL NUMBER OF OFFICERS</h2>
 
             <p>
-                DEFINITION: THE NUMBER OF SWORN LAW ENFORCEMENT OFFICERS EMPLOYED AT EACH AGENCY, 2013-2020
+                DEFINITION: THE NUMBER OF SWORN LAW ENFORCEMENT OFFICERS EMPLOYED AT EACH AGENCY, 2013-2021
             </p>
 
             <p>
