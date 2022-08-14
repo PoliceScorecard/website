@@ -278,6 +278,7 @@ if (!function_exists('getNationalGrades')) {
                             'grade_letter' => $department['grade_letter'],
                             'overall_score' => $department['overall_score'],
                             'change_overall_score' => $department['change_overall_score'],
+                            'title' => $department['title'],
                             'url_pretty' => $department['url_pretty'],
                             'url' => $department['url']
                         );
@@ -289,6 +290,7 @@ if (!function_exists('getNationalGrades')) {
                             'grade_letter' => $department['grade_letter'],
                             'overall_score' => $department['overall_score'],
                             'change_overall_score' => $department['change_overall_score'],
+                            'title' => $department['title'],
                             'url_pretty' => $department['url_pretty'],
                             'url' => $department['url']
                         );
@@ -306,6 +308,7 @@ if (!function_exists('getNationalGrades')) {
                             'grade_letter' => $department['grade_letter'],
                             'overall_score' => $department['overall_score'],
                             'change_overall_score' => $department['change_overall_score'],
+                            'title' => $department['title'],
                             'url_pretty' => $department['url_pretty'],
                             'url' => $department['url']
                         );
@@ -317,6 +320,7 @@ if (!function_exists('getNationalGrades')) {
                             'grade_letter' => $department['grade_letter'],
                             'overall_score' => $department['overall_score'],
                             'change_overall_score' => $department['change_overall_score'],
+                            'title' => $department['title'],
                             'url_pretty' => $department['url_pretty'],
                             'url' => $department['url']
                         );
