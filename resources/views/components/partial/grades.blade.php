@@ -2,7 +2,13 @@
 <div class="section bg-light-gray grades short" id="score-card">
     <div class="content grades-header">
         <h1 class="title">
-            {{ getStateName($state)  }} {{ $type === 'sheriff' ? "Sheriff's" : "Police" }} Department Scores
+            @if ($type === 'state')
+                {{ getStateName($state)  }} Statewide Scores
+            @elseif ($type === 'police-department')
+                {{ getStateName($state)  }} Police Department Scores
+            @elseif ($type === 'sheriff')
+                {{ getStateName($state)  }} Sheriff's Department Scores
+            @endif
         </h1>
 
         <div class="summary">
@@ -68,7 +74,15 @@
         <div class="left">
             <table>
                 <tr>
-                    <th width="80%">{{ $type === 'sheriff' ? "Sheriff's" : "Police" }} Department</th>
+                    <th width="80%">
+                    @if ($type === 'state')
+                        Statewide
+                    @elseif ($type === 'police-department')
+                        Police Department
+                    @elseif ($type === 'sheriff')
+                        Sheriff's Department
+                    @endif
+                    </th>
                     <th>Score</th>
                     <th>5YR</th>
                 </tr>
@@ -82,7 +96,7 @@
                 @foreach($grade_table as $index => $card) @if ($index < floor($length / 2))
                 <tr class="grade-row grade-{{ $card['complete'] ? $card['grade_class'] : 'incomplete' }}" data-grade="{{ $card['grade_class'] }}">
                     <td colspan="2">
-                        <a href="{{ $card['url_pretty'] }}"{!! ($index > 7) ? ' class="show-more-only" tabindex="-1" aria-hidden="true"' : '' !!} {!! trackData('Nav', 'Grades', $card['agency_name']) !!}>
+                        <a href="{{ $card['url_pretty'] }}" title="View Report: {{ $card['title'] }}"{!! ($index > 7) ? ' class="show-more-only" tabindex="-1" aria-hidden="true"' : '' !!} {!! trackData('Nav', 'Grades', $card['agency_name']) !!}>
                             <span class="agency-name">{{ $card['complete'] ? ($complete_length - $index) . '.' : '*' }} {{ $card['agency_name'] }}</span>
                             <span class="grade grade-{{ $card['complete'] ? $card['grade_class'] : 'incomplete' }}"></span>
                             <span class="percent">{{ $card['overall_score'] }}%</span>
@@ -100,14 +114,22 @@
         <div class="right">
             <table>
                 <tr>
-                    <th width="80%">{{ $type === 'sheriff' ? "Sheriff's" : "Police" }} Department</th>
+                    <th width="80%">
+                    @if ($type === 'state')
+                        Statewide
+                    @elseif ($type === 'police-department')
+                        Police Department
+                    @elseif ($type === 'sheriff')
+                        Sheriff's Department
+                    @endif
+                    </th>
                     <th>Score</th>
                     <th>5YR</th>
                 </tr>
                 @foreach($grade_table as $index => $card) @if ($index >= floor($length / 2))
                 <tr class="grade-row grade-{{ $card['complete'] ? $card['grade_class'] : 'incomplete' }}" data-grade="{{ $card['grade_class'] }}">
                     <td colspan="2">
-                        <a href="{{ $card['url_pretty'] }}"{!! ($index > (floor($length / 2) + 7)) ? ' class="show-more-only" tabindex="-1" aria-hidden="true"' : '' !!} {!! trackData('Nav', 'Grades', $card['agency_name']) !!}>
+                        <a href="{{ $card['url_pretty'] }}" title="View Report: {{ $card['title'] }}"{!! ($index > (floor($length / 2) + 7)) ? ' class="show-more-only" tabindex="-1" aria-hidden="true"' : '' !!} {!! trackData('Nav', 'Grades', $card['agency_name']) !!}>
                             <span class="agency-name">{{ $card['complete'] ? ($complete_length - $index) . '.' : '*' }} {{ $card['agency_name'] }}</span>
                             <span class="grade grade-{{ $card['complete'] ? $card['grade_class'] : 'incomplete' }}"></span>
                             <span class="percent">{{ $card['overall_score'] }}%</span>

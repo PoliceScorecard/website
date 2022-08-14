@@ -2,14 +2,14 @@
 <div id="modal-wrapper">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-label" id="dialog">
         <div id="modal-header-tabs">
-            <button id="modal-close" {!! trackData('Nav', 'Modal' , 'Close' ) !!}>✖</button>
+            <button title="Close Modal" id="modal-close" {!! trackData('Nav', 'Modal' , 'Close' ) !!}>✖</button>
 
             @if (isset($stateData['police-department']) && !empty($stateData['police-department']))
-            <button class="show-button{{ $type === 'police-department' ? ' active' : '' }}" id="show-police" {!! trackData('Nav', 'Modal' , 'Show Police' ) !!}>Police</button>
+            <button title="List Police Departments" class="show-button{{ ($type === 'state' || $type === 'police-department') ? ' active' : '' }}" id="show-police" {!! trackData('Nav', 'Modal' , 'Show Police' ) !!}>Police</button>
             @endif
 
             @if (isset($stateData['sheriff']) && !empty($stateData['sheriff']))
-            <button class="show-button{{ $type === 'sheriff' ? ' active' : '' }}" id="show-sheriff" {!! trackData('Nav', 'Modal' , 'Show Sheriffs' ) !!}>Sheriffs</button>
+            <button title="List Sheriff Departments" class="show-button{{ $type === 'sheriff' ? ' active' : '' }}" id="show-sheriff" {!! trackData('Nav', 'Modal' , 'Show Sheriffs' ) !!}>Sheriffs</button>
             @endif
         </div>
 
@@ -24,7 +24,7 @@
                 @php usort($stateData['police-department'], function($a, $b) { return strcmp($a['agency_name'], $b['agency_name']); }); @endphp
                 @foreach($stateData['police-department'] as $index => $department)
                 <li class="police-department">
-                <a href="{{ $department['url_pretty'] }}" {!! ($type === 'police-department' && $location === $department['slug']) ? ' class="selected-city"' : '' !!} {!! trackData('Nav', 'Modal Police' , $department['agency_name'] ) !!}>
+                <a href="{{ $department['url_pretty'] }}" title="View Report: {{ $department['title'] }}" {!! ($type === 'police-department' && $location === $department['slug']) ? ' class="selected-city"' : '' !!} {!! trackData('Nav', 'Modal Police' , $department['agency_name'] ) !!}>
                         {{ $department['agency_name'] }} Police
                     </a>
                 </li>
@@ -35,7 +35,7 @@
                 @php usort($stateData['sheriff'], function($a, $b) { return strcmp($a['agency_name'], $b['agency_name']); }); @endphp
                 @foreach($stateData['sheriff'] as $index => $department)
                 <li class="sheriff">
-                    <a href="{{ $department['url_pretty'] }}" {!! ($type === 'sheriff' && $location === $department['slug']) ? ' class="selected-city"' : '' !!} {!! trackData('Nav', 'Modal Sheriff' , $department['agency_name'] ) !!}>
+                    <a href="{{ $department['url_pretty'] }}" title="View Report: {{ $department['title'] }}" {!! ($type === 'sheriff' && $location === $department['slug']) ? ' class="selected-city"' : '' !!} {!! trackData('Nav', 'Modal Sheriff' , $department['agency_name'] ) !!}>
                         {{ $department['agency_name'] }} Sheriff
                     </a>
                 </li>

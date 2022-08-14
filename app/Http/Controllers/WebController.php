@@ -217,14 +217,14 @@ class WebController extends Controller
 
     public function state($state) {
         $api = new ApiController();
-        $grades = $api->fetchGrades($state, 'police-department');
-        $scorecard = $api->fetchLocationScorecard($state, 'police-department');
+        $grades = $api->fetchGrades($state, 'state');
+        $scorecard = $api->fetchStateOverview($state);
         $stateData = $api->fetchStateData($state);
         $states = $api->fetchStates();
         $total = getStateTotal($states, $state);
         $location = $scorecard['agency']['slug'];
 
-        return view('report', [
+        return view('state', [
             'title' => "Police Scorecard: {$scorecard['geo']['state']['name']}",
             'description' => "Get the facts about police violence and accountability in {$scorecard['geo']['state']['name']}. Evaluate each department and hold them accountable at PoliceScorecard.org",
             'grades' => sortGrades($grades),
@@ -233,7 +233,7 @@ class WebController extends Controller
             'state' => $state,
             'states' => $states,
             'stateData' => $stateData,
-            'type' => 'police-department',
+            'type' => 'state',
             'total' => $total
         ]);
     }

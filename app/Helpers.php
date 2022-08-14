@@ -1047,7 +1047,7 @@ if (!function_exists('getMapData')) {
             if ($type === 'police-department' && !empty($grade['latitude']) && !empty($grade['longitude'])) {
                 $index = getColorIndex($grade['overall_score'], $grade['complete']);
                 $map_scores[$index - 1][] = array(
-                    'className' => 'location-'.$grade['slug'],
+                    'className' => 'type-'.$type.' location-'.$grade['slug'],
                     'colorIndex' => getColorIndex($grade['overall_score'], $grade['complete']),
                     'name' => $grade['agency_name'],
                     'lat' => floatval($grade['latitude']),
@@ -1056,7 +1056,7 @@ if (!function_exists('getMapData')) {
                 );
             } else if ($type === 'sheriff' && !empty($grade['district'])) {
                 $map_data[] = array(
-                    'className' => 'location-'.$grade['slug'],
+                    'className' => 'type-'.$type.' location-'.$grade['slug'],
                     'colorIndex' => getColorIndex($grade['overall_score'], $grade['complete']),
                     'name' => $grade['agency_name'],
                     'hc-key' => $grade['district'],

@@ -27,3 +27,5 @@ bootstrap/cache
 storage/framework/cache
 storage/logs
 dist
+!police-scorecard.code-workspace
+!.nvmrc

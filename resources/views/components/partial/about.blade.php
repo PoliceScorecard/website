@@ -36,11 +36,12 @@
                 <div class="left number number-1">
                     <ul>
                         <li>
-                        @if ($type === 'sheriff')
-                            <strong>Contact Your County Sheriff</strong>, share your scorecard with them and urge them to enact policies to address the issues you've identified:
-                        @else
+                        @if ($type === 'state')
+                            <strong>Contact your State's Governor and Attorney General</strong>, share your scorecard with them and urge them to enact policies to address the issues you've identified:
+                        @elseif ($type === 'police-department')
                             <strong>Contact your Mayor and Police Chief</strong>, share your scorecard with them and urge them to enact policies to address the issues you've identified:
-
+                        @elseif ($type === 'sheriff')
+                            <strong>Contact Your County Sheriff</strong>, share your scorecard with them and urge them to enact policies to address the issues you've identified:
                         @endif
 
                         @if (!empty($scorecard['agency']))
