@@ -22,10 +22,10 @@
         <div class="content">
             <div class="left">
                 <!-- Police Funding -->
-                <x-partial.police-funding.chart-police-funding :location="$location" :scorecard="$scorecard" />
+                <x-partial.police-funding.chart-police-funding :type="$type" :location="$location" :scorecard="$scorecard" />
 
                 <!-- Funds Spent -->
-                <x-partial.police-funding.chart-funds-spent :location="$location" :scorecard="$scorecard" />
+                <x-partial.police-funding.chart-funds-spent :type="$type" :location="$location" :scorecard="$scorecard" />
             </div>
 
             <div class="right">
@@ -127,7 +127,7 @@
         </div>
     </div>
 
-    @if($type === 'sheriff' && $scorecard['jail']['avg_daily_jail_population'])
+    @if(($type === 'sheriff' || $type === 'state') && $scorecard['jail']['avg_daily_jail_population'])
     <!-- Jail -->
     <div class="section pad jail">
         <div class="content">

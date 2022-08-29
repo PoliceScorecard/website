@@ -11,7 +11,7 @@
 <div class="section hero report">
   <div class="content">
     <div class="right">
-      <h1>We obtained data on {{ num(count($stateData['police-department'])) }} Police Departments and {{ num(count($stateData['sheriff'])) }} Sheriff Departments for the state of {{ getStateName($state) }}.</h1>
+      <h1>We obtained data on {{ num(count($stateData['police-department'])) }} Police and {{ num(count($stateData['sheriff'])) }} Sheriff’s Depts in the state of {{ getStateName($state) }}.</h1>
     </div>
     <div class="left">
       <div class="map" id="state-map-layer">

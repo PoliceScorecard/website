@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <p>{{ $scorecard['agency']['name'] }} {{ $type === 'police-department' ? 'Police Dept' : 'Sheriff\'s Dept' }} Demographics</p>
+    <p>{{ $scorecard['agency']['name'] }} {{ $type === 'police-department' ? 'Police Dept' : ($type === 'state' ? 'Law Enforcement' : 'Sheriff\'s Dept') }} Demographics</p>
     <div class="progress-bar-wrapper">
         <div class="progress-bar animate-bar grouped key-red" data-percent="{{ output(floatval($scorecard['report']['percent_officers_black']), 0, '%') }}">
             <span>{{ (intval($scorecard['report']['percent_officers_black']) > 5) ? num(intval($scorecard['report']['percent_officers_black']), 0, '%') : '' }}</span>
