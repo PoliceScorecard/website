@@ -4,9 +4,10 @@
     $police_shootings_2018 = isset($scorecard['police_violence']['police_shootings_2018']) ? $scorecard['police_violence']['police_shootings_2018'] : 0;
     $police_shootings_2019 = isset($scorecard['police_violence']['police_shootings_2019']) ? $scorecard['police_violence']['police_shootings_2019'] : 0;
     $police_shootings_2020 = isset($scorecard['police_violence']['police_shootings_2020']) ? $scorecard['police_violence']['police_shootings_2020'] : 0;
+    $police_shootings_2021 = isset($scorecard['police_violence']['police_shootings_2021']) ? $scorecard['police_violence']['police_shootings_2021'] : 0;
     $shot_first = isset($scorecard['police_violence']['shot_first']) ? $scorecard['police_violence']['shot_first'] : 0;
 
-    $police_shootings_incidents = ($police_shootings_2016 + $police_shootings_2017 + $police_shootings_2018 + $police_shootings_2019 + $police_shootings_2020);
+    $police_shootings_incidents = ($police_shootings_2016 + $police_shootings_2017 + $police_shootings_2018 + $police_shootings_2019 + $police_shootings_2020 + $police_shootings_2021);
     $percent_shot_first = $police_shootings_incidents > 0 ? ($shot_first / $police_shootings_incidents) * 100 : 0;
 @endphp
 
@@ -16,7 +17,7 @@
 
     <p>
         {{ num($percent_shot_first, 0, '%') }}
-        of Shootings from 2016-20
+        of Shootings from 2016-21
         ({{ $shot_first }}/{{ $police_shootings_incidents }})
     </p>
 

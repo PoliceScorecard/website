@@ -43,7 +43,7 @@
     </div>
 
     <p class="note">^&nbsp; More Unarmed People Killed per Arrest than
-        {{ num($scorecard['report']['percentile_unarmed_killed_by_police'], 0, '%', true) }} of Depts &nbsp;&nbsp;
+        {{ num($scorecard['report']['percentile_unarmed_killed_by_police'], 0, '%', true) }} of {{ $type === 'state' ? 'States' : 'Depts'}} &nbsp;&nbsp;
     </p>
 </div>
 @endif

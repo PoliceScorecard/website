@@ -21,7 +21,7 @@
         <div class="progress-bar animate-bar {{ progressBar(100 - intval($scorecard['report']['percentile_low_level_arrests_per_1k_population']), 'reverse') }}" data-percent="{{ output(100 - intval($scorecard['report']['percentile_low_level_arrests_per_1k_population']), 0, '%') }}"></div>
     </div>
     <p class="note">
-        ^&nbsp; Higher Arrest Rate for Low Level Offenses than {{ num($scorecard['report']['percentile_low_level_arrests_per_1k_population'], 0, '%', true) }} of Depts &nbsp;&nbsp;
+        ^&nbsp; Higher Arrest Rate for Low Level Offenses than {{ num($scorecard['report']['percentile_low_level_arrests_per_1k_population'], 0, '%', true) }} of {{ $type === 'state' ? 'States' : 'Depts'}} &nbsp;&nbsp;
     </p>
     @endif
 </div>

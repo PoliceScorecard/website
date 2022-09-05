@@ -8,16 +8,18 @@ class Title extends Component
 {
     public $location;
     public $scorecard;
+    public $type;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($location = null, $scorecard = [])
+    public function __construct($location = null, $scorecard = [], $type = null)
     {
         $this->location = $location;
         $this->scorecard = $scorecard;
+        $this->type = $type;
     }
 
     /**

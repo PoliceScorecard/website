@@ -12,7 +12,7 @@
     <h3>Less-Lethal Force</h3>
 
     <p>
-        Used More Force per Arrest than {{ num($scorecard['report']['percentile_less_lethal_force'], 0, '%', true) }} of Depts
+        Used More Force per Arrest than {{ num($scorecard['report']['percentile_less_lethal_force'], 0, '%', true) }} of {{ $type === 'state' ? 'States' : 'Depts'}}
     </p>
     <p>
         {{ num($scorecard['report']['total_less_lethal_force_estimated'], 0) }} Incidents

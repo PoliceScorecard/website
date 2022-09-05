@@ -13,12 +13,12 @@
 
         <div class="summary">
             <p>
-                Rankings are based upon a 0 to 100 percentage scale. Departments with <strong>higher scores</strong> use
+                Rankings are based upon a 0 to 100 percentage scale. {{ $type === 'state' ? 'States' : 'Departments'}} with <strong>higher scores</strong> use
                 <strong>less force</strong>, make <strong>fewer arrests</strong> for low level offenses, <strong>solve</strong>
                 murder cases more often, hold officers <strong>more accountable</strong> and <strong>spend less on policing</strong> overall.
             </p>
 
-            <p>Overall Scores for Depts where We Have Obtained the Most Data.</p>
+            <p>Overall Scores for {{ $type === 'state' ? 'States' : 'Depts'}} where We Have Obtained the Most Data.</p>
 
             <p class="grade-scale-key">
                 <img src="{{ asset('/images/scale.png') }}" alt="Grade Scale" />

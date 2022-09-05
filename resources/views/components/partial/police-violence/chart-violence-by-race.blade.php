@@ -103,7 +103,7 @@
     </div>
 
     @if($scorecard['report']['percentile_overall_disparity_index'])
-    <p class="note" style="margin-top: 0">^&nbsp; More Racial Disparities in Deadly Force than {{ num((1 - intval($scorecard['report']['percentile_overall_disparity_index'])), 0, '%', true) }} of Depts &nbsp;&nbsp;</p>
+    <p class="note" style="margin-top: 0">^&nbsp; More Racial Disparities in Deadly Force than {{ num((1 - intval($scorecard['report']['percentile_overall_disparity_index'])), 0, '%', true) }} of {{ $type === 'state' ? 'States' : 'Depts'}} &nbsp;&nbsp;</p>
     @endif
 
     <p class="source-link-wrapper">
