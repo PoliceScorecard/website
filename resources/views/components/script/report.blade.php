@@ -84,31 +84,41 @@
     var civilianCTX = document.getElementById('bar-chart-civilian');
     if (civilianCTX) {
       var civilianData = {!! generateCivilianChart($scorecard, $type) !!};
-      renderComplaintsChart(civilianCTX.getContext('2d'), civilianData);
+      if (civilianData && civilianData.labels.length > 0) {
+        renderComplaintsChart(civilianCTX.getContext('2d'), civilianData);
+      }
     }
 
     var useOfForceCTX = document.getElementById('bar-chart-use-of-force');
     if (useOfForceCTX) {
       var useOfForceData = {!! generateUseOfForceChart($scorecard, $type) !!};
-      renderComplaintsChart(useOfForceCTX.getContext('2d'), useOfForceData);
+      if (useOfForceData && useOfForceData.labels.length > 0) {
+        renderComplaintsChart(useOfForceCTX.getContext('2d'), useOfForceData);
+      }
     }
 
     var discriminationCTX = document.getElementById('bar-chart-discrimination');
     if (discriminationCTX) {
       var discriminationData = {!! generateDiscriminationChart($scorecard, $type) !!};
-      renderComplaintsChart(discriminationCTX.getContext('2d'), discriminationData);
+      if (discriminationData && discriminationData.labels.length > 0) {
+        renderComplaintsChart(discriminationCTX.getContext('2d'), discriminationData);
+      }
     }
 
     var criminalCTX = document.getElementById('bar-chart-criminal');
     if (criminalCTX) {
       var criminalData = {!! generateCriminalChart($scorecard, $type) !!};
-      renderComplaintsChart(criminalCTX.getContext('2d'), criminalData);
+      if (criminalData && criminalData.labels.length > 0) {
+        renderComplaintsChart(criminalCTX.getContext('2d'), criminalData);
+      }
     }
 
     var detentionCTX = document.getElementById('bar-chart-detention');
     if (detentionCTX) {
       var detentionData = {!! generateDetentionChart($scorecard, $type) !!};
-      renderComplaintsChart(detentionCTX.getContext('2d'), detentionData);
+      if (detentionData && detentionData.labels.length > 0) {
+        renderComplaintsChart(detentionCTX.getContext('2d'), detentionData);
+      }
     }
   });
 </script>

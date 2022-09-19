@@ -26,7 +26,7 @@
     </p>
     <p class="source-link-wrapper">
         Source:
-        <a href="https://www.openicpsr.org/openicpsr/project/102180/version/V10/view" class="source-link" rel="noopener" target="_blank" {!! trackData('External Nav', 'Officers per Population', 'Federal LEOKA Database') !!}>
+        <a href="https://crime-data-explorer.fr.cloud.gov/pages/le/pe" class="source-link" rel="noopener" target="_blank" {!! trackData('External Nav', 'Officers per Population', 'Federal LEOKA Database') !!}>
             Federal LEOKA Database
         </a>
     </p>

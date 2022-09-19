@@ -137,7 +137,7 @@
             </div>
 
             <div class="right">
-                <!-- People Transferred to ICE in 2018 -->
+                <!-- People Transferred to ICE -->
                 <x-partial.jail.chart-transferred-to-ice :type="$type" :location="$location" :scorecard="$scorecard"  />
             </div>
         </div>

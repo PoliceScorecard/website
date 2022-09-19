@@ -12,7 +12,7 @@ $percent_other_transfers = ($total_ice_transfers > 0) ? ($other_ice_transfers / 
 
 @if ($total_ice_transfers && $percent_drug_transfers && $percent_drug_transfers && $percent_other_transfers)
 <div class="stat-wrapper">
-    <h3>People Transferred to ICE in 2018</h3>
+    <h3>People Transferred to ICE in 2018-2021</h3>
 
     <p>{{ num($total_ice_transfers) }} people were transferred to ICE</p>
 

@@ -12,6 +12,8 @@
         {{ nFormatter($scorecard['police_funding']['police_budget_2017'], 2) }}
     @endif
         <span class="divider">&nbsp;|&nbsp;</span>
+        {{ num($scorecard['agency']['total_population'], 0) }} Residents
+        <span class="divider">&nbsp;|&nbsp;</span>
         {{ nFormatter($scorecard['report']['police_spending_per_resident'], 2) }} per Resident
     </p>
     <p>
