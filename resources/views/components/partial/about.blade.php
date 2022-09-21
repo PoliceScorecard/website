@@ -48,7 +48,7 @@
                         <ul class="contacts">
                             @if (!empty($scorecard['agency']['mayor_name']))
                             <li>
-                                <strong>Mayor {{ $scorecard['agency']['mayor_name'] }}</strong>
+                                <strong>{{ ($type !== 'state') ? 'Mayor ' : '' }}{{ $scorecard['agency']['mayor_name'] }}</strong>
 
                                 @if (!empty($scorecard['agency']['mayor_phone']))
                                 <br> Phone:&nbsp;

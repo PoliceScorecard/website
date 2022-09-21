@@ -14,7 +14,7 @@
       @if (isset($stateData['police-department']) && isset($stateData['sheriff'])):
         <h1>We obtained data on {{ num(count($stateData['police-department'])) }} Police and {{ num(count($stateData['sheriff'])) }} Sheriff’s Depts in the state of {{ getStateName($state) }}.</h1>
       @elseif (isset($stateData['police-department'])):
-        <h1>We obtained data on {{ num(count($stateData['police-department'])) }} Police and Depts in the state of {{ getStateName($state) }}.</h1>
+        <h1>We obtained data on {{ num(count($stateData['police-department'])) }} Police Depts in the state of {{ getStateName($state) }}.</h1>
       @elseif (isset($stateData['sheriff'])):
         <h1>We obtained data on {{ num(count($stateData['sheriff'])) }} Sheriff’s Depts in the state of {{ getStateName($state) }}.</h1>
       @endif
