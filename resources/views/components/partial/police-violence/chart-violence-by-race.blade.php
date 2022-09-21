@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <p>{{ $scorecard['agency']['name'] }} {{ $type === 'police-department' ? 'Police Dept' : 'Sheriff\'s Dept' }} Demographics</p>
+    <p>{{ $scorecard['agency']['name'] }} {{ $type === 'police-department' ? 'Police Dept' : ($type === 'state' ? 'Law Enforcement' : 'Sheriff\'s Dept') }} Demographics</p>
     <div class="progress-bar-wrapper">
         <div class="progress-bar animate-bar grouped key-red" data-percent="{{ output(floatval($scorecard['report']['percent_officers_black']), 0, '%') }}">
             <span>{{ (intval($scorecard['report']['percent_officers_black']) > 5) ? num(intval($scorecard['report']['percent_officers_black']), 0, '%') : '' }}</span>
@@ -103,7 +103,7 @@
     </div>
 
     @if($scorecard['report']['percentile_overall_disparity_index'])
-    <p class="note" style="margin-top: 0">^&nbsp; More Racial Disparities in Deadly Force than {{ num((1 - intval($scorecard['report']['percentile_overall_disparity_index'])), 0, '%', true) }} of Depts &nbsp;&nbsp;</p>
+    <p class="note" style="margin-top: 0">^&nbsp; More Racial Disparities in Deadly Force than {{ num((1 - intval($scorecard['report']['percentile_overall_disparity_index'])), 0, '%', true) }} of {{ $type === 'state' ? 'States' : 'Depts'}} &nbsp;&nbsp;</p>
     @endif
 
     <p class="source-link-wrapper">

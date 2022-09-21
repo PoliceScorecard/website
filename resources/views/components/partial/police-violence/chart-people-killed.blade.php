@@ -19,7 +19,7 @@
     <?php
     $unarmed = floatval($scorecard['report']['percent_used_against_people_who_were_unarmed']);
     $alleged_gun = floatval($scorecard['report']['percent_used_against_people_who_were_not_armed_with_gun']);
-    $vehicle = floatval($scorecard['police_violence']['vehicle_people_killed']);
+    $vehicle = floatval($scorecard['report']['percent_people_killed_by_vehicle']);
 
     $red = $unarmed;
     $orange = (($alleged_gun - $unarmed - $vehicle) >= 0) ? (($alleged_gun - $unarmed - $vehicle)) : 0;
@@ -43,7 +43,7 @@
     </div>
 
     <p class="note">^&nbsp; More Unarmed People Killed per Arrest than
-        {{ num($scorecard['report']['percentile_unarmed_killed_by_police'], 0, '%', true) }} of Depts &nbsp;&nbsp;
+        {{ num($scorecard['report']['percentile_unarmed_killed_by_police'], 0, '%', true) }} of {{ $type === 'state' ? 'States' : 'Depts'}} &nbsp;&nbsp;
     </p>
 </div>
 @endif

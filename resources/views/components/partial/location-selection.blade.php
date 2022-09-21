@@ -3,7 +3,13 @@
     <div class="left">
       <div class="selected-location{{ (strlen($scorecard['agency']['name']) > 14) ? ' long' : '' }}{{ (strlen($scorecard['agency']['name']) > 25) ? ' really-long' : '' }}">
         <span class="selected-location-label">
-            {{ $type === 'police-department' ? 'Police Department' : 'Sheriff\'s Department' }}
+        @if ($type === 'state')
+          Statewide
+        @elseif ($type === 'police-department')
+          Police Department
+        @elseif ($type === 'sheriff')
+          Sheriff's Department
+        @endif
         </span>
         <a href="#" id="score-location" title="Select Other Departments in {{ getStateName($state) }}" {!! trackData('Nav', 'Location', 'Location Selection') !!}>
             {!! ($scorecard['agency']['complete']) ? '' : '<span class="incomplete">*</span>' !!}

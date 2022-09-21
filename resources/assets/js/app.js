@@ -278,11 +278,11 @@ window.PoliceScorecard = window.PoliceScorecard || {
 
                 PoliceScorecard.openModal();
 
-                if (PoliceScorecard.elm.$citySelect) {
+                if (PoliceScorecard.elm.$citySelect && PoliceScorecard.elm.$citySelect.length > 0) {
                     PoliceScorecard.elm.$citySelect.style.display = 'block';
                 }
 
-                if (PoliceScorecard.elm.$selectedCity) {
+                if (PoliceScorecard.elm.$selectedCity && PoliceScorecard.elm.$selectedCity.length > 0) {
                     PoliceScorecard.elm.$selectedCity[0].scrollIntoView();
                     PoliceScorecard.elm.$selectedCity[0].focus();
                 }
@@ -298,11 +298,11 @@ window.PoliceScorecard = window.PoliceScorecard || {
 
                 PoliceScorecard.openModal();
 
-                if (PoliceScorecard.elm.$citySelect) {
+                if (PoliceScorecard.elm.$citySelect && PoliceScorecard.elm.$citySelect.length > 0) {
                     PoliceScorecard.elm.$citySelect.style.display = 'none';
                 }
 
-                if (PoliceScorecard.elm.$selectedState) {
+                if (PoliceScorecard.elm.$selectedState && PoliceScorecard.elm.$selectedState.length > 0) {
                     PoliceScorecard.elm.$selectedState.scrollIntoView();
                     PoliceScorecard.elm.$selectedState.focus();
                 }
@@ -318,11 +318,11 @@ window.PoliceScorecard = window.PoliceScorecard || {
 
                 PoliceScorecard.openModal();
 
-                if (PoliceScorecard.elm.$citySelect) {
+                if (PoliceScorecard.elm.$citySelect && PoliceScorecard.elm.$citySelect.length > 0) {
                     PoliceScorecard.elm.$citySelect.style.display = 'block';
                 }
 
-                if (PoliceScorecard.elm.$selectedCity) {
+                if (PoliceScorecard.elm.$selectedCity && PoliceScorecard.elm.$selectedCity.length > 0) {
                     PoliceScorecard.elm.$selectedCity[0].scrollIntoView();
                     PoliceScorecard.elm.$selectedCity[0].focus();
                 }
@@ -872,41 +872,20 @@ window.PoliceScorecard = window.PoliceScorecard || {
                 }]
             });
 
-            if (map_data && map_data.selected && map_data.selected.type === 'sheriff') {
+            if (map_data && map_data.selected && (map_data.selected.type === 'sheriff' || map_data.selected.type === 'state')) {
                 window.SCORECARD_MAP.addSeries({
                     animation: false,
                     data: map_data.sheriff,
                     name: 'Sheriff Department',
+                    marker: null,
+                    zIndex: 0,
                     events: {
                         click: function(e) {
                             if (e.point && typeof e.point.className !== 'undefined') {
                                 var loc = e.point.className.replace('location-', '');
 
                                 if (loc && window.leftMouseClicked) {
-                                    window.location = '/' + SCORECARD_STATE + '/' + map_data.selected.type + '/' + loc;
-                                    e.preventDefault();
-                                    e.stopImmediatePropagation();
-                                }
-                            }
-                        }
-                    }
-                })
-            }
-
-            if (map_data && map_data.city && map_data.selected && map_data.selected.type === 'police-department') {
-                var MARKER_RADIUS = 8;
-
-                window.SCORECARD_MAP.addSeries({
-                    animation: false,
-                    data: map_data.sheriff,
-                    name: 'Police Department',
-                    events: {
-                        click: function(e) {
-                            if (e.point && typeof e.point.className !== 'undefined') {
-                                var loc = e.point.className.replace('location-', '');
-
-                                if (loc && window.leftMouseClicked) {
-                                    window.location = '/' + SCORECARD_STATE + '/' + map_data.selected.type + '/' + loc;
+                                    window.location = '/' + SCORECARD_STATE + '/sheriff/' + loc;
                                     e.preventDefault();
                                     e.stopImmediatePropagation();
                                 }
@@ -914,6 +893,10 @@ window.PoliceScorecard = window.PoliceScorecard || {
                         }
                     }
                 });
+            }
+
+            if (map_data && map_data.city && map_data.selected && (map_data.selected.type === 'police-department' || map_data.selected.type === 'state')) {
+                var MARKER_RADIUS = 8;
 
                 // INCOMPLETE GRADE
                 window.SCORECARD_MAP.addSeries({
@@ -939,7 +922,7 @@ window.PoliceScorecard = window.PoliceScorecard || {
                                 var loc = e.point.className.replace('location-', '');
 
                                 if (loc && window.leftMouseClicked) {
-                                    window.location = '/' + SCORECARD_STATE + '/' + map_data.selected.type + '/' + loc;
+                                    window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
                                     e.preventDefault();
                                     e.stopImmediatePropagation();
                                 }
@@ -972,7 +955,7 @@ window.PoliceScorecard = window.PoliceScorecard || {
                                 var loc = e.point.className.replace('location-', '');
 
                                 if (loc && window.leftMouseClicked) {
-                                    window.location = '/' + SCORECARD_STATE + '/' + map_data.selected.type + '/' + loc;
+                                    window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
                                     e.preventDefault();
                                     e.stopImmediatePropagation();
                                 }
@@ -1005,7 +988,7 @@ window.PoliceScorecard = window.PoliceScorecard || {
                                 var loc = e.point.className.replace('location-', '');
 
                                 if (loc && window.leftMouseClicked) {
-                                    window.location = '/' + SCORECARD_STATE + '/' + map_data.selected.type + '/' + loc;
+                                    window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
                                     e.preventDefault();
                                     e.stopImmediatePropagation();
                                 }
@@ -1038,7 +1021,7 @@ window.PoliceScorecard = window.PoliceScorecard || {
                                 var loc = e.point.className.replace('location-', '');
 
                                 if (loc && window.leftMouseClicked) {
-                                    window.location = '/' + SCORECARD_STATE + '/' + map_data.selected.type + '/' + loc;
+                                    window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
                                     e.preventDefault();
                                     e.stopImmediatePropagation();
                                 }
@@ -1071,7 +1054,7 @@ window.PoliceScorecard = window.PoliceScorecard || {
                                 var loc = e.point.className.replace('location-', '');
 
                                 if (loc && window.leftMouseClicked) {
-                                    window.location = '/' + SCORECARD_STATE + '/' + map_data.selected.type + '/' + loc;
+                                    window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
                                     e.preventDefault();
                                     e.stopImmediatePropagation();
                                 }
@@ -1104,7 +1087,7 @@ window.PoliceScorecard = window.PoliceScorecard || {
                                 var loc = e.point.className.replace('location-', '');
 
                                 if (loc && window.leftMouseClicked) {
-                                    window.location = '/' + SCORECARD_STATE + '/' + map_data.selected.type + '/' + loc;
+                                    window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
                                     e.preventDefault();
                                     e.stopImmediatePropagation();
                                 }
@@ -1137,7 +1120,7 @@ window.PoliceScorecard = window.PoliceScorecard || {
                                 var loc = e.point.className.replace('location-', '');
 
                                 if (loc && window.leftMouseClicked) {
-                                    window.location = '/' + SCORECARD_STATE + '/' + map_data.selected.type + '/' + loc;
+                                    window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
                                     e.preventDefault();
                                     e.stopImmediatePropagation();
                                 }
@@ -1146,20 +1129,22 @@ window.PoliceScorecard = window.PoliceScorecard || {
                     }
                 });
 
-                // Current Location Marker
-                window.SCORECARD_MAP.addSeries({
-                    id: 'current',
-                    type: 'mappoint',
-                    name: map_data.selected.name,
-                    data: map_data.selected.data,
-                    zIndex: 9,
-                    className: 'current-marker',
-                    marker: {
-                        width: 30,
-                        height: 30,
-                        symbol: map_data.selected.icon
-                    }
-                });
+                if (map_data.selected && map_data.selected.name) {
+                    // Current Location Marker
+                    window.SCORECARD_MAP.addSeries({
+                        id: 'current',
+                        type: 'mappoint',
+                        name: map_data.selected.name,
+                        data: map_data.selected.data,
+                        zIndex: 9,
+                        className: 'current-marker',
+                        marker: {
+                            width: 30,
+                            height: 30,
+                            symbol: map_data.selected.icon
+                        }
+                    });
+                }
             }
 
             var type = PoliceScorecard.elm.$stateMap.classList[0];

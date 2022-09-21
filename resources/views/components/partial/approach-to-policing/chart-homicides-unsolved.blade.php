@@ -25,6 +25,6 @@
     <div class="progress-bar-wrapper">
         <div class="progress-bar animate-bar {{ progressBar(intval($scorecard['report']['percentile_murders_solved']), 'reverse') }}" data-percent="{{ output(intval($scorecard['report']['percentile_murders_solved']), 0, '%') }}"></div>
     </div>
-    <p class="note">^&nbsp; Solved Fewer Homicides than {{ num($scorecard['report']['percentile_murders_solved'], 0, '%') }} of Depts &nbsp;&nbsp;</p>
+    <p class="note">^&nbsp; Solved Fewer Homicides than {{ num($scorecard['report']['percentile_murders_solved'], 0, '%') }} of {{ $type === 'state' ? 'States' : 'Depts'}} &nbsp;&nbsp;</p>
     @endif
 </div>

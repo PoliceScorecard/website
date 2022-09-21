@@ -86,6 +86,21 @@ class ApiController extends Controller
     }
 
     /**
+     * Fetch State Overview
+     *
+     * <code>
+     * $api = new ApiController();
+     * $scorecard = api->fetchStateOverview('ny');
+     * </code>
+     *
+     * @param $state
+     * @return mixed
+     */
+    public function fetchStateOverview($state) {
+        return $this->makeRequest("scorecard/overview/{$state}");
+    }
+
+    /**
      * Fetch Scorecard Grades for a Given Location
      *
      * <code>

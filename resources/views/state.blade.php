@@ -6,7 +6,7 @@
 @section('content')
     <x-partial.menu />
 
-    <x-partial.hero-report :type="$type" :state="$state" :location="$location" :stateData="$stateData" />
+    <x-partial.hero-state :type="$type" :state="$state" :stateData="$stateData" />
 
     <x-partial.location-selection :type="$type" :scorecard="$scorecard" :state="$state" />
 
@@ -30,7 +30,7 @@
 
             <div class="right">
                 <!-- Funds Taken from Communities -->
-                <x-partial.police-funding.chart-funds-taken  :type="$type":location="$location" :scorecard="$scorecard" />
+                <x-partial.police-funding.chart-funds-taken :type="$type" :location="$location" :scorecard="$scorecard" />
 
                 <!-- Officers Per Population -->
                 <x-partial.police-funding.chart-officers-per-population :type="$type" :location="$location" :scorecard="$scorecard"  />
@@ -150,7 +150,7 @@
 
     <x-partial.whats-next />
 
-    <x-partial.footer :state="$state" :states="$states" />
+    <x-partial.footer :type="$type" :state="$state" :states="$states" />
 @endsection
 
 @section('modal')
@@ -158,5 +158,5 @@
 @endsection
 
 @section('scripts')
-    <x-script.report :grades="$grades" :location="$location" :state="$state" :states="$states" :type="$type" :scorecard="$scorecard" />
+    <x-script.state :grades="$grades" :state="$state" :states="$states" :type="$type" :scorecard="$scorecard" />
 @endsection
