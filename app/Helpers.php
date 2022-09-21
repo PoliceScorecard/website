@@ -278,6 +278,7 @@ if (!function_exists('getNationalGrades')) {
                             'grade_letter' => $department['grade_letter'],
                             'overall_score' => $department['overall_score'],
                             'change_overall_score' => $department['change_overall_score'],
+                            'title' => $department['title'],
                             'url_pretty' => $department['url_pretty'],
                             'url' => $department['url']
                         );
@@ -289,6 +290,7 @@ if (!function_exists('getNationalGrades')) {
                             'grade_letter' => $department['grade_letter'],
                             'overall_score' => $department['overall_score'],
                             'change_overall_score' => $department['change_overall_score'],
+                            'title' => $department['title'],
                             'url_pretty' => $department['url_pretty'],
                             'url' => $department['url']
                         );
@@ -306,6 +308,7 @@ if (!function_exists('getNationalGrades')) {
                             'grade_letter' => $department['grade_letter'],
                             'overall_score' => $department['overall_score'],
                             'change_overall_score' => $department['change_overall_score'],
+                            'title' => $department['title'],
                             'url_pretty' => $department['url_pretty'],
                             'url' => $department['url']
                         );
@@ -317,6 +320,7 @@ if (!function_exists('getNationalGrades')) {
                             'grade_letter' => $department['grade_letter'],
                             'overall_score' => $department['overall_score'],
                             'change_overall_score' => $department['change_overall_score'],
+                            'title' => $department['title'],
                             'url_pretty' => $department['url_pretty'],
                             'url' => $department['url']
                         );
@@ -1047,7 +1051,7 @@ if (!function_exists('getMapData')) {
             if ($type === 'police-department' && !empty($grade['latitude']) && !empty($grade['longitude'])) {
                 $index = getColorIndex($grade['overall_score'], $grade['complete']);
                 $map_scores[$index - 1][] = array(
-                    'className' => 'location-'.$grade['slug'],
+                    'className' => 'type-'.$type.' location-'.$grade['slug'],
                     'colorIndex' => getColorIndex($grade['overall_score'], $grade['complete']),
                     'name' => $grade['agency_name'],
                     'lat' => floatval($grade['latitude']),
@@ -1056,7 +1060,7 @@ if (!function_exists('getMapData')) {
                 );
             } else if ($type === 'sheriff' && !empty($grade['district'])) {
                 $map_data[] = array(
-                    'className' => 'location-'.$grade['slug'],
+                    'className' => 'type-'.$type.' location-'.$grade['slug'],
                     'colorIndex' => getColorIndex($grade['overall_score'], $grade['complete']),
                     'name' => $grade['agency_name'],
                     'hc-key' => $grade['district'],
@@ -1344,43 +1348,43 @@ if (!function_exists('generateUseOfForceChart')) {
             )
         );
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2016']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2016'])) {
+        if (isset($scorecard['police_accountability']['use_of_force_complaints_reported_2016']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2016'])) {
             $output['labels'][] = '2016';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_reported_2016'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_sustained_2016'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2017']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2017'])) {
+        if (isset($scorecard['police_accountability']['use_of_force_complaints_reported_2017']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2017'])) {
             $output['labels'][] = '2017';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_reported_2017'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_sustained_2017'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2018']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2018'])) {
+        if (isset($scorecard['police_accountability']['use_of_force_complaints_reported_2018']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2018'])) {
             $output['labels'][] = '2018';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_reported_2018'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_sustained_2018'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2019']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2019'])) {
+        if (isset($scorecard['police_accountability']['use_of_force_complaints_reported_2019']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2019'])) {
             $output['labels'][] = '2019';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_reported_2019'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_sustained_2019'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2020']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2020'])) {
+        if (isset($scorecard['police_accountability']['use_of_force_complaints_reported_2020']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2020'])) {
             $output['labels'][] = '2020';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_reported_2020'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_sustained_2020'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2021']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2021'])) {
+        if (isset($scorecard['police_accountability']['use_of_force_complaints_reported_2021']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2021'])) {
             $output['labels'][] = '2021';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_reported_2021'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_sustained_2021'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2022']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2022'])) {
+        if (isset($scorecard['police_accountability']['use_of_force_complaints_reported_2022']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2022'])) {
             $output['labels'][] = '2022';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_reported_2022'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_sustained_2022'];
@@ -1420,43 +1424,43 @@ if (!function_exists('generateDiscriminationChart')) {
             )
         );
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2016']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2016'])) {
+        if (isset($scorecard['police_accountability']['discrimination_complaints_reported_2016']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2016'])) {
             $output['labels'][] = '2016';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['discrimination_complaints_reported_2016'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['discrimination_complaints_sustained_2016'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2017']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2017'])) {
+        if (isset($scorecard['police_accountability']['discrimination_complaints_reported_2017']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2017'])) {
             $output['labels'][] = '2017';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['discrimination_complaints_reported_2017'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['discrimination_complaints_sustained_2017'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2018']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2018'])) {
+        if (isset($scorecard['police_accountability']['discrimination_complaints_reported_2018']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2018'])) {
             $output['labels'][] = '2018';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['discrimination_complaints_reported_2018'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['discrimination_complaints_sustained_2018'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2019']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2019'])) {
+        if (isset($scorecard['police_accountability']['discrimination_complaints_reported_2019']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2019'])) {
             $output['labels'][] = '2019';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['discrimination_complaints_reported_2019'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['discrimination_complaints_sustained_2019'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2020']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2020'])) {
+        if (isset($scorecard['police_accountability']['discrimination_complaints_reported_2020']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2020'])) {
             $output['labels'][] = '2020';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['discrimination_complaints_reported_2020'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['discrimination_complaints_sustained_2020'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2021']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2021'])) {
+        if (isset($scorecard['police_accountability']['discrimination_complaints_reported_2021']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2021'])) {
             $output['labels'][] = '2021';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['discrimination_complaints_reported_2021'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['discrimination_complaints_sustained_2021'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2022']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2022'])) {
+        if (isset($scorecard['police_accountability']['discrimination_complaints_reported_2022']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2022'])) {
             $output['labels'][] = '2022';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['discrimination_complaints_reported_2022'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['discrimination_complaints_sustained_2022'];
@@ -1496,43 +1500,43 @@ if (!function_exists('generateCriminalChart')) {
             )
         );
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2016']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2016'])) {
+        if (isset($scorecard['police_accountability']['criminal_complaints_reported_2016']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2016'])) {
             $output['labels'][] = '2016';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['criminal_complaints_reported_2016'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['criminal_complaints_sustained_2016'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2017']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2017'])) {
+        if (isset($scorecard['police_accountability']['criminal_complaints_reported_2017']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2017'])) {
             $output['labels'][] = '2017';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['criminal_complaints_reported_2017'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['criminal_complaints_sustained_2017'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2018']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2018'])) {
+        if (isset($scorecard['police_accountability']['criminal_complaints_reported_2018']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2018'])) {
             $output['labels'][] = '2018';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['criminal_complaints_reported_2018'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['criminal_complaints_sustained_2018'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2019']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2019'])) {
+        if (isset($scorecard['police_accountability']['criminal_complaints_reported_2019']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2019'])) {
             $output['labels'][] = '2019';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['criminal_complaints_reported_2019'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['criminal_complaints_sustained_2019'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2020']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2020'])) {
+        if (isset($scorecard['police_accountability']['criminal_complaints_reported_2020']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2020'])) {
             $output['labels'][] = '2020';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['criminal_complaints_reported_2020'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['criminal_complaints_sustained_2020'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2021']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2021'])) {
+        if (isset($scorecard['police_accountability']['criminal_complaints_reported_2021']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2021'])) {
             $output['labels'][] = '2021';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['criminal_complaints_reported_2021'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['criminal_complaints_sustained_2021'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2022']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2022'])) {
+        if (isset($scorecard['police_accountability']['criminal_complaints_reported_2022']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2022'])) {
             $output['labels'][] = '2022';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['criminal_complaints_reported_2022'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['criminal_complaints_sustained_2022'];
@@ -1572,43 +1576,43 @@ if (!function_exists('generateDetentionChart')) {
             )
         );
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2016']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2016'])) {
+        if (isset($scorecard['police_accountability']['complaints_in_detention_reported_2016']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2016'])) {
             $output['labels'][] = '2016';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['complaints_in_detention_reported_2016'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['complaints_in_detention_sustained_2016'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2017']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2017'])) {
+        if (isset($scorecard['police_accountability']['complaints_in_detention_reported_2017']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2017'])) {
             $output['labels'][] = '2017';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['complaints_in_detention_reported_2017'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['complaints_in_detention_sustained_2017'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2018']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2018'])) {
+        if (isset($scorecard['police_accountability']['complaints_in_detention_reported_2018']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2018'])) {
             $output['labels'][] = '2018';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['complaints_in_detention_reported_2018'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['complaints_in_detention_sustained_2018'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2019']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2019'])) {
+        if (isset($scorecard['police_accountability']['complaints_in_detention_reported_2019']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2019'])) {
             $output['labels'][] = '2019';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['complaints_in_detention_reported_2019'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['complaints_in_detention_sustained_2019'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2020']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2020'])) {
+        if (isset($scorecard['police_accountability']['complaints_in_detention_reported_2020']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2020'])) {
             $output['labels'][] = '2020';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['complaints_in_detention_reported_2020'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['complaints_in_detention_sustained_2020'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2021']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2021'])) {
+        if (isset($scorecard['police_accountability']['complaints_in_detention_reported_2021']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2021'])) {
             $output['labels'][] = '2021';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['complaints_in_detention_reported_2021'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['complaints_in_detention_sustained_2021'];
         }
 
-        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2022']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2022'])) {
+        if (isset($scorecard['police_accountability']['complaints_in_detention_reported_2022']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2022'])) {
             $output['labels'][] = '2022';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['complaints_in_detention_reported_2022'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['complaints_in_detention_sustained_2022'];
@@ -1719,7 +1723,7 @@ if (!function_exists('generateArrestDisparityChart')) {
                 // Complaints in Detention
                 array(
                     'minBarLength' => 0,
-                    'maxBarThickness' => 20,
+                    'maxBarThickness' => 60,
                     'label' => 'Black',
                     'backgroundColor' => '#b02424',
                     'stack' => 'black_low_level_arrest_rate',
@@ -1727,7 +1731,7 @@ if (!function_exists('generateArrestDisparityChart')) {
                 ),
                 array(
                     'minBarLength' => 0,
-                    'maxBarThickness' => 20,
+                    'maxBarThickness' => 60,
                     'label' => 'Hispanic',
                     'backgroundColor' => '#f19975',
                     'stack' => 'hispanic_low_level_arrest_rate',
@@ -1735,7 +1739,7 @@ if (!function_exists('generateArrestDisparityChart')) {
                 ),
                 array(
                     'minBarLength' => 0,
-                    'maxBarThickness' => 20,
+                    'maxBarThickness' => 60,
                     'label' => 'White',
                     'backgroundColor' => '#d4d9e4',
                     'stack' => 'white_low_level_arrest_rate',

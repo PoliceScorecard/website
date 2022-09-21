@@ -13,10 +13,12 @@
             $scorecard['police_funding']['fines_forfeitures_2016'] +
             $scorecard['police_funding']['fines_forfeitures_2017'] +
             $scorecard['police_funding']['fines_forfeitures_2018'] +
-            $scorecard['police_funding']['fines_forfeitures_2019']
+            $scorecard['police_funding']['fines_forfeitures_2019'] +
+            $scorecard['police_funding']['fines_forfeitures_2020']
         ), 2) }}
-        from 2010-19
+        from 2010-20
     </p>
+    <p>More Fines/Forfeitures than {{ $scorecard['police_funding']['percentile_fines_forfeitures_per_resident'] }}% of {{ $type === 'state' ? 'States' : 'Depts'}}</p>
 
     <p>
         <canvas id="bar-chart-funds-taken"></canvas>

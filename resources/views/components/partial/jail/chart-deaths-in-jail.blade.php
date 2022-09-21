@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <p class="note">^&nbsp;Higher Rate of Jail Deaths than {{ num($scorecard['report']['percentile_jail_deaths_per_1k_jail_population'], 0, '%', true) }} of Depts &nbsp;&nbsp;</p>
+    <p class="note">^&nbsp;Higher Rate of Jail Deaths than {{ num($scorecard['report']['percentile_jail_deaths_per_1k_jail_population'], 0, '%', true) }} of {{ $type === 'state' ? 'States' : 'Depts'}} &nbsp;&nbsp;</p>
 </div>
 @endif
 

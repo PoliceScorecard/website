@@ -5,7 +5,7 @@
         @if(isset($scorecard['police_violence']['police_shootings_per_arrest']))
         <p>{{ $scorecard['police_violence']['police_shootings_per_arrest'] }} every 10k arrests</p>
         @endif
-        <p>More Police Shootings per Arrest than {{ num(100 - $scorecard['police_violence']['percentile_police_shootings_per_arrest'], 0, '%') }} of Depts</p>
+        <p>More Police Shootings per Arrest than {{ num(100 - $scorecard['police_violence']['percentile_police_shootings_per_arrest'], 0, '%') }} of {{ $type === 'state' ? 'States' : 'Depts'}}</p>
 
         <p><canvas id="bar-chart-history"></canvas></p>
     @else

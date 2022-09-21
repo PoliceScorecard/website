@@ -3,9 +3,11 @@
   var SCORECARD_STATE = '{{ $state }}';
   var SCORECARD_DATA = {!! json_encode($scorecard) !!};
   var map_data = {
-    city: {!! $type === 'police-department' ? getMapData($state, 'police-department', $grades['all']) : 'null' !!} ,
-    sheriff: {!! $type === 'sheriff' ? getMapData($state, 'sheriff', $grades['all']) : 'null' !!},
-    selected: {!! getMapLocation($type, $scorecard, $location) !!}
+    city: {!! getMapData($state, 'police-department', $grades['all']) !!} ,
+    sheriff: {!! getMapData($state, 'sheriff', $grades['all']) !!},
+    selected: {
+        type: 'state'
+    }
   };
 </script>
 

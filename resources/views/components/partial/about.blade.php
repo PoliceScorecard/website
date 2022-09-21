@@ -36,18 +36,19 @@
                 <div class="left number number-1">
                     <ul>
                         <li>
-                        @if ($type === 'sheriff')
-                            <strong>Contact Your County Sheriff</strong>, share your scorecard with them and urge them to enact policies to address the issues you've identified:
-                        @else
+                        @if ($type === 'state')
+                            <strong>Contact your State's Governor and Attorney General</strong>, share your scorecard with them and urge them to enact policies to address the issues you've identified:
+                        @elseif ($type === 'police-department')
                             <strong>Contact your Mayor and Police Chief</strong>, share your scorecard with them and urge them to enact policies to address the issues you've identified:
-
+                        @elseif ($type === 'sheriff')
+                            <strong>Contact Your County Sheriff</strong>, share your scorecard with them and urge them to enact policies to address the issues you've identified:
                         @endif
 
                         @if (!empty($scorecard['agency']))
                         <ul class="contacts">
                             @if (!empty($scorecard['agency']['mayor_name']))
                             <li>
-                                <strong>Mayor {{ $scorecard['agency']['mayor_name'] }}</strong>
+                                <strong>{{ ($type !== 'state') ? 'Mayor ' : '' }}{{ $scorecard['agency']['mayor_name'] }}</strong>
 
                                 @if (!empty($scorecard['agency']['mayor_phone']))
                                 <br> Phone:&nbsp;
@@ -107,11 +108,11 @@
             </div>
             <div class="tab-pane" tabindex="0" role="tabpanel" id="research-tab" aria-labelledby="research" hidden="">
                 <p>Join a team of researchers, students, data scientists, activists and organizers working to collect, analyze and use data for justice and accountability.</p>
-                <p><a href="https://staywoke.typeform.com/to/jBvCkB?ref=research" class="button" rel="noopener" target="_blank" {!! trackData('External Nav', 'About', 'Join Research') !!}>Join</a></p>
+                <p><a href="https://form.typeform.com/to/jBvCkB?ref=research" class="button" rel="noopener" target="_blank" {!! trackData('External Nav', 'About', 'Join Research') !!}>Join</a></p>
             </div>
             <div class="tab-pane" tabindex="0" role="tabpanel" id="data-visualization-tab" aria-labelledby="data-visualization" hidden="">
                 <p>Create data visualizations and content that raises awareness about solutions to the issues identified by the data.</p>
-                <p><a href="https://staywoke.typeform.com/to/jBvCkB?ref=data-visualization" class="button" rel="noopener" target="_blank" {!! trackData('External Nav', 'About', 'Join Data Visualization') !!}>Join</a></p>
+                <p><a href="https://form.typeform.com/to/jBvCkB?ref=data-visualization" class="button" rel="noopener" target="_blank" {!! trackData('External Nav', 'About', 'Join Data Visualization') !!}>Join</a></p>
             </div>
         </div>
     </div>
