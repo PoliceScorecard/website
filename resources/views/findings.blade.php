@@ -166,7 +166,7 @@
 
             <p>
                 Policing outcomes varied by state. To compare agencies, we calculated scores for each agency using a 0-100% scale whereby departments with <strong>higher scores</strong> use <strong>less force</strong>, make <strong>fewer arrests for low level offenses, solve murder cases more often</strong>, hold officers <strong>more accountable</strong> and <strong>spend less</strong> on policing overall (Read more about our methodology <a href="/about" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'Our Methodology') !!}>here</a>).
-                Based on this methodology, Nevada and New Mexico had among the lowest scores for the average police or sheriff's department in a state while Pennsylvania and Massachusetts had among the highest average scores.
+                Applying this methodological framework to compare states with one another based on the available data on these outcomes, we find some states have substantially better policing outcomes overall than others according to the data that we have obtained to date.
             </p>
 
             <p class="tableau-chart">
