@@ -350,7 +350,7 @@
 
             <p>
                 While police were more likely to arrest Black people for low level offenses, they were <em>less</em> likely to find someone responsible for the most serious offense - homicide - when the victim was Black.
-                Nationwide, police reported finding a suspect in 84% of homicides of white victims from 2013-2020 compared to only 65% of Latinx victims and 58% of Black victims.
+                Nationwide, police reported finding a suspect in 84% of homicides of white victims from 2013-2020 compared to only 54% of Latinx victims and 57% of Black victims.
             </p>
 
             <p class="tableau-chart">
@@ -422,7 +422,7 @@
             </p>
 
             <p>
-                Examining data obtained from big city police agencies on both fatal and nonfatal police shootings incidents from 2013-2020, police in New York and Virginia Beach had among the lowest rates of police shootings per every 10,000 arrests they made. Detroit and Oklahoma City <em>consistently</em> had the highest rates of police shootings - Oklahoma City has had one of the top 3 highest rates of police shootings among big cities for 3 of the past 8 years while Detroit has had the highest rate of all agencies for 7 of the past 8 years. This suggests the need for urgent interventions from the US Department of Justice and/or state Attorney's General to restrict police use of force standards and strengthen independent accountability structures in these cities.
+                Examining data obtained from big city police agencies on both fatal and nonfatal police shootings incidents from 2013-2020, police in New York City, Miami and Oakland had among the lowest rates of police shootings per every 10,000 arrests they made. Detroit, Columbus, Kansas City and Oklahoma City <em>consistently</em> had among the highest rates of police shootings each year. This suggests the need for urgent interventions from the US Department of Justice and/or state Attorney's General to restrict police use of force standards and strengthen independent accountability structures in these cities.
             </p>
 
             <p class="tableau-chart">
@@ -452,7 +452,7 @@
             </p>
 
             <p>
-                We obtained detailed use of force data from more than 500 police agencies indicating the number of uses of police tasers, batons, K-9s, strangleholds, pepper spray and other force involving weapons each year. Police in Long Beach and Vallejo used these forms of “less lethal” force at higher rates than other large departments, while Las Vegas, Durham and Plano, TX had among the lowest rates of “less lethal” force among the cities we obtained use of force data from.
+                We obtained detailed use of force data from more than 1,200 police agencies indicating the number of uses of police tasers, batons, K-9s, strangleholds, pepper spray and other force involving weapons each year. Police in Tallahassee, Orlando, Long Beach and Vallejo used these forms of “less lethal” force at higher rates than other large departments, while Las Vegas, Reno and Plano, TX had among the lowest rates of “less lethal” force among the cities we obtained use of force data from.
             </p>
 
             <p class="tableau-chart">
@@ -482,7 +482,7 @@
             </p>
 
             <p>
-                Of the departments providing use of force data, more than 120 departments explicitly reported using neck restraints against civilians (including Lateral Vascular Neck Restraints, Carotid Restraints and Chokeholds). Of these, the data show that a few departments were consistently outliers in using this tactic against people. Police departments in San Diego, Long Beach and Minneapolis consistently reported using strangleholds against civilians at higher rates per arrest than other large police departments. Following widespread protests over the murder of George Floyd, these cities banned strangleholds in June 2020. Altogether, these three agencies reported 73% fewer neck restraint incidents in 2020 than they reported in 2019.
+                Of the departments providing use of force data, more than 120 departments explicitly reported using neck restraints against civilians (including Lateral Vascular Neck Restraints, Carotid Restraints and Chokeholds). Of these, the data show that a few departments were consistently outliers in using this tactic against people. Police departments in San Diego, Long Beach and Minneapolis consistently reported using strangleholds against civilians at higher rates per arrest than other large police departments. Following widespread protests over the murder of George Floyd, these cities banned strangleholds in June 2020. Altogether, these three agencies reported 74% fewer neck restraint incidents in 2020 than they reported in 2019.
             </p>
 
             <p class="tableau-chart">
@@ -552,18 +552,18 @@
 
             <div class="divider"></div>
 
-            <!-- 8. 75% of jurisdictions increased police funding from 2013-2019 -->
+            <!-- 8. 79% of jurisdictions increased police funding from 2013-2020 -->
 
             <h2 class="subtitle" id="increased-funding">
-                8. 75% of jurisdictions increased police funding from 2013-2019
+                8. 79% of jurisdictions increased police funding from 2013-2020
             </h2>
 
             <p>
-                Local government finances data reported to the US Census Bureau shows residents spend substantially different amounts on policing depending on which jurisdiction they live in - for example, residents in Baltimore City, Oakland and New York City spent 3-4x more per capita on policing than residents in El Paso, Virginia Beach or Indianapolis in 2019 (the latest year of data published by the Census Bureau). Police funding increased in almost every jurisdiction from 2013-2019 - the median jurisdiction increased police spending by 11% after adjusting for inflation.
+                Local government finances data reported to the US Census Bureau shows residents spend substantially different amounts on policing depending on which jurisdiction they live in - for example, residents in Baltimore City, Oakland and New York City spent 3-4x more per capita on policing than residents in El Paso, Virginia Beach or Indianapolis in 2020 (the latest year of data published by the Census Bureau). Police funding increased in almost every jurisdiction from 2013-2020 - the median jurisdiction increased police spending by 14% after adjusting for inflation.
             </p>
 
             <p>
-                25% of all jurisdictions cut police funding from 2013-2019 after accounting for the estimated <a href="https://www.usinflationcalculator.com/" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', '9.7%') !!}>9.7%</a> inflation during this period, according to the Census data. A review of municipal budgetary documents along with the Census data found only one of the nation's largest cities (over 400k population) cut police spending more than 10% from 2013-2019 - Detroit. Detroit's police budget was 15% lower in 2019 than it was in 2013, after adjusting for inflation. The city reduced police funding by 30% between 2014-15, in addition to making cuts to other agency budgets, after filing for municipal bankruptcy. However, the Detroit police budget has continued to grow each year since these initial budget cuts were implemented in 2015.
+                21% of jurisdictions cut police funding from 2013-2020 after accounting for the estimated <a href="https://www.usinflationcalculator.com/" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', '10.4%') !!}>10.4%</a> inflation during this period, according to the Census data. A review of municipal budgetary documents along with the Census data found only one of the nation's largest cities (over 400k population) cut police spending more than 10% from 2013-2020 - Detroit. Detroit's police budget was 12% lower in 2020 than it was in 2013, after adjusting for inflation. The city reduced police funding by 30% between 2014-15, in addition to making cuts to other agency budgets, after filing for municipal bankruptcy. However, the Detroit police budget has continued to grow each year since these initial budget cuts were implemented in 2015.
             </p>
 
             <p class="tableau-chart">

@@ -214,7 +214,6 @@ $class_q = (is_numeric($scorecard['report']['percentile_drug_arrest_disparity'])
                         <td class="table-cell">&nbsp;</td>
                         <td class="table-cell">&nbsp;</td>
                     </tr>
-                    @if ($scorecard['report']['percentile_jail_deaths_per_1k_jail_population'] && $scorecard['report']['percentile_jail_incarceration_per_1k_population'])
                     <tr class="{{ $class_i }}">
                         <td class="table-label">Jail Incarceration Rate</td>
                         <td class="table-cell">&nbsp;</td>
@@ -229,7 +228,6 @@ $class_q = (is_numeric($scorecard['report']['percentile_drug_arrest_disparity'])
                         <td class="table-cell">&nbsp;</td>
                         <td class="table-cell">&nbsp;</td>
                     </tr>
-                    @endif
                 </tbody>
             </table>
 

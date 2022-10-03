@@ -1091,12 +1091,15 @@ if (!function_exists('getMapLocation')) {
             'icon' => getGradeIcon($scorecard['report']['overall_score'], $scorecard['agency']['complete'])
         );
 
+        $latitude = (isset($scorecard['geo']) && isset($scorecard['geo']['city']) && isset($scorecard['geo']['city']['latitude'])) ? floatval($scorecard['geo']['city']['latitude']) : null;
+        $longitude = (isset($scorecard['geo']) && isset($scorecard['geo']['city']) && isset($scorecard['geo']['city']['longitude'])) ? floatval($scorecard['geo']['city']['longitude']) : null;
+
         $map_data['data'][] = array(
             'className' => 'location-'.$location,
             'colorIndex' => getColorIndex($scorecard['report']['overall_score'], $scorecard['agency']['complete']),
             'name' => $scorecard['agency']['name'],
-            'lat' => floatval($scorecard['geo']['city']['latitude']),
-            'lon' => floatval($scorecard['geo']['city']['longitude']),
+            'lat' => $latitude,
+            'lon' => $longitude,
             'value' => intval($scorecard['report']['overall_score'])
         );
 
