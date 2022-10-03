@@ -129,16 +129,72 @@
 @if (isset($scorecard['arrests']['black_low_level_arrest_rate']) || isset($scorecard['arrests']['hispanic_low_level_arrest_rate']) || isset($scorecard['arrests']['white_low_level_arrest_rate']))
 <script>
   window.addEventListener('load', function() {
-    var lowLevelDisparityCTX = document.getElementById('bar-chart-low-level-disparity').getContext('2d');
-    var lowLevelDisparityData = {!! generateArrestDisparityChart($scorecard, $type) !!};
+    var $barChartLowLevelDisparity = document.getElementById('bar-chart-low-level-disparity');
+    if ($barChartLowLevelDisparity) {
+      var lowLevelDisparityCTX = $barChartLowLevelDisparity.getContext('2d');
+      var lowLevelDisparityData = {!! generateArrestDisparityChart($scorecard, $type) !!};
 
-    var renderlowLevelDisparityChart = function(disparityCTX, disparityData){
-      return new Chart(disparityCTX, {
+      var renderlowLevelDisparityChart = function(disparityCTX, disparityData){
+        return new Chart(disparityCTX, {
+          type: 'bar',
+          data: disparityData,
+          options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+            },
+            title: {
+              display: false,
+            },
+            tooltips: {
+              mode: 'index',
+              intersect: false
+            },
+            scales: {
+              xAxes: [{
+                stacked: true,
+                gridLines: {
+                  color: "rgba(0, 0, 0, 0)",
+                }
+              }],
+              yAxes: [{
+                stacked: true,
+                gridLines: {
+                  color: "rgba(0, 0, 0, 0)",
+                },
+                ticks: {
+                  beginAtZero: true,
+                  maxTicksLimit: 5,
+                  callback: function(value, index, values) {
+                    return (value === 0) ? '' : PoliceScorecard.numberWithCommas(value);
+                  }
+                }
+              }]
+            }
+          }
+        });
+      };
+
+      renderlowLevelDisparityChart(lowLevelDisparityCTX, lowLevelDisparityData);
+    }
+  });
+</script>
+@endif
+
+@if (isset($scorecard['arrests']))
+<script>
+  window.addEventListener('load', function() {
+    var $barChartArrests = document.getElementById('bar-chart-arrests');
+    if ($barChartArrests) {
+      var ctx = .getContext('2d');
+      var arrestsData = {!! generateArrestChart($scorecard, $type) !!};
+      window.myBarArrests = new Chart(ctx, {
         type: 'bar',
-        data: disparityData,
+        data: arrestsData,
         options: {
           maintainAspectRatio: false,
-          responsive: true,
+          responsive: document.documentElement.clientWidth > 940 ? false : true,
           legend: {
             display: false,
           },
@@ -147,7 +203,29 @@
           },
           tooltips: {
             mode: 'index',
-            intersect: false
+            intersect: false,
+            callbacks: {
+              afterTitle: function() {
+                  window.total = 0;
+              },
+              label: function(tooltipItem, data) {
+                var label = (data.datasets[tooltipItem.datasetIndex].label) ? ' ' + data.datasets[tooltipItem.datasetIndex].label : '';
+                var val = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+
+                window.total += val;
+
+                if (label) {
+                  label += ': ';
+                }
+
+                label += PoliceScorecard.numberWithCommas(tooltipItem.yLabel);
+
+                return label;
+              },
+              footer: function() {
+                  return 'Total Arrests: ' + PoliceScorecard.numberWithCommas(window.total);
+              }
+            },
           },
           scales: {
             xAxes: [{
@@ -163,7 +241,7 @@
               },
               ticks: {
                 beginAtZero: true,
-                maxTicksLimit: 5,
+                maxTicksLimit: 2,
                 callback: function(value, index, values) {
                   return (value === 0) ? '' : PoliceScorecard.numberWithCommas(value);
                 }
@@ -172,79 +250,7 @@
           }
         }
       });
-    };
-
-    renderlowLevelDisparityChart(lowLevelDisparityCTX, lowLevelDisparityData);
-  });
-</script>
-@endif
-
-@if (isset($scorecard['arrests']))
-<script>
-  window.addEventListener('load', function() {
-    var ctx = document.getElementById('bar-chart-arrests').getContext('2d');
-    var arrestsData = {!! generateArrestChart($scorecard, $type) !!};
-    window.myBarArrests = new Chart(ctx, {
-      type: 'bar',
-      data: arrestsData,
-      options: {
-        maintainAspectRatio: false,
-        responsive: document.documentElement.clientWidth > 940 ? false : true,
-        legend: {
-          display: false,
-        },
-        title: {
-          display: false,
-        },
-        tooltips: {
-          mode: 'index',
-          intersect: false,
-          callbacks: {
-            afterTitle: function() {
-                window.total = 0;
-            },
-            label: function(tooltipItem, data) {
-              var label = (data.datasets[tooltipItem.datasetIndex].label) ? ' ' + data.datasets[tooltipItem.datasetIndex].label : '';
-              var val = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
-
-              window.total += val;
-
-              if (label) {
-                label += ': ';
-              }
-
-              label += PoliceScorecard.numberWithCommas(tooltipItem.yLabel);
-
-              return label;
-            },
-            footer: function() {
-                return 'Total Arrests: ' + PoliceScorecard.numberWithCommas(window.total);
-            }
-          },
-        },
-        scales: {
-          xAxes: [{
-            stacked: true,
-            gridLines: {
-              color: "rgba(0, 0, 0, 0)",
-            }
-          }],
-          yAxes: [{
-            stacked: true,
-            gridLines: {
-              color: "rgba(0, 0, 0, 0)",
-            },
-            ticks: {
-              beginAtZero: true,
-              maxTicksLimit: 2,
-              callback: function(value, index, values) {
-                return (value === 0) ? '' : PoliceScorecard.numberWithCommas(value);
-              }
-            }
-          }]
-        }
-      }
-    });
+    }
   });
 </script>
 @endif
@@ -387,127 +393,133 @@ window.addEventListener('load', function() {
 @if(isset($scorecard['police_funding']))
 <script>
   window.addEventListener('load', function() {
-    var ctxFundsTaken = document.getElementById('bar-chart-funds-taken').getContext('2d');
-    var chartFundsTakenData = {!! generateBarChartFundsTaken($scorecard) !!};
-    window.chartFundsTaken = new Chart(ctxFundsTaken, {
-      type: 'bar',
-      data: chartFundsTakenData,
-      options: {
-        animation: {
-          duration: 0,
-        },
-        maintainAspectRatio: false,
-        responsive: document.documentElement.clientWidth > 940 ? false : true,
-        legend: {
-          display: false,
-        },
-        title: {
-          display: false,
-        },
-        tooltips: {
-          mode: 'index',
-          intersect: false,
-          callbacks: {
-            label: function(tooltipItem, data) {
-              var label = (data.datasets[tooltipItem.datasetIndex].label) ? ' ' + data.datasets[tooltipItem.datasetIndex].label : '';
-
-              if (label) {
-                label += ': ';
-              }
-
-              label += PoliceScorecard.nFormatter(tooltipItem.yLabel);
-
-              return label;
-            }
+    var $barChartFundsTaken = document.getElementById('bar-chart-funds-taken');
+    if ($barChartFundsTaken) {
+      var ctxFundsTaken = $barChartFundsTaken.getContext('2d');
+      var chartFundsTakenData = {!! generateBarChartFundsTaken($scorecard) !!};
+      window.chartFundsTaken = new Chart(ctxFundsTaken, {
+        type: 'bar',
+        data: chartFundsTakenData,
+        options: {
+          animation: {
+            duration: 0,
           },
-        },
-        scales: {
-          xAxes: [{
-            stacked: true,
-            gridLines: {
-              color: "rgba(0, 0, 0, 0)",
-            }
-          }],
-          yAxes: [{
-            reversedStacks: true,
-            stacked: true,
-            gridLines: {
-              color: "rgba(0, 0, 0, 0)",
-            },
-            ticks: {
-              beginAtZero: true,
-              maxTicksLimit: 2,
-              callback: function(value, index, values) {
-                return (value === 0) ? '' : PoliceScorecard.nFormatter(value);
+          maintainAspectRatio: false,
+          responsive: document.documentElement.clientWidth > 940 ? false : true,
+          legend: {
+            display: false,
+          },
+          title: {
+            display: false,
+          },
+          tooltips: {
+            mode: 'index',
+            intersect: false,
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var label = (data.datasets[tooltipItem.datasetIndex].label) ? ' ' + data.datasets[tooltipItem.datasetIndex].label : '';
+
+                if (label) {
+                  label += ': ';
+                }
+
+                label += PoliceScorecard.nFormatter(tooltipItem.yLabel);
+
+                return label;
               }
-            }
-          }]
+            },
+          },
+          scales: {
+            xAxes: [{
+              stacked: true,
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+              }
+            }],
+            yAxes: [{
+              reversedStacks: true,
+              stacked: true,
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+              },
+              ticks: {
+                beginAtZero: true,
+                maxTicksLimit: 2,
+                callback: function(value, index, values) {
+                  return (value === 0) ? '' : PoliceScorecard.nFormatter(value);
+                }
+              }
+            }]
+          }
         }
-      }
-    });
+      });
+    }
   });
 
 </script>
 
 <script>
   window.addEventListener('load', function() {
-    var ctxOfficers = document.getElementById('bar-chart-officers-per-population').getContext('2d');
-    var chartOfficersData = {!! generateBarChartOfficers($scorecard) !!};
-    window.chartFundsTaken = new Chart(ctxOfficers, {
-      type: 'bar',
-      data: chartOfficersData,
-      options: {
-        animation: {
-          duration: 0,
-        },
-        maintainAspectRatio: false,
-        responsive: document.documentElement.clientWidth > 940 ? false : true,
-        legend: {
-          display: false,
-        },
-        title: {
-          display: false,
-        },
-        tooltips: {
-          mode: 'index',
-          intersect: false,
-          callbacks: {
-            label: function(tooltipItem, data) {
-              var label = (data.datasets[tooltipItem.datasetIndex].label) ? ' ' + data.datasets[tooltipItem.datasetIndex].label : '';
-
-              if (label) {
-                label += ': ';
-              }
-
-              label += PoliceScorecard.numberWithCommas(tooltipItem.yLabel);
-
-              return label;
-            }
+    var $barChartOfficersPerPopulation = document.getElementById('bar-chart-officers-per-population');
+    if ($barChartOfficersPerPopulation) {
+      var ctxOfficers = $barChartOfficersPerPopulation.getContext('2d');
+      var chartOfficersData = {!! generateBarChartOfficers($scorecard) !!};
+      window.chartFundsTaken = new Chart(ctxOfficers, {
+        type: 'bar',
+        data: chartOfficersData,
+        options: {
+          animation: {
+            duration: 0,
           },
-        },
-        scales: {
-          xAxes: [{
-            stacked: true,
-            gridLines: {
-              color: "rgba(0, 0, 0, 0)",
-            }
-          }],
-          yAxes: [{
-            stacked: true,
-            gridLines: {
-              color: "rgba(0, 0, 0, 0)",
-            },
-            ticks: {
-              beginAtZero: true,
-              maxTicksLimit: 2,
-              callback: function(value, index, values) {
-                return (value === 0) ? '' : PoliceScorecard.numberWithCommas(value);
+          maintainAspectRatio: false,
+          responsive: document.documentElement.clientWidth > 940 ? false : true,
+          legend: {
+            display: false,
+          },
+          title: {
+            display: false,
+          },
+          tooltips: {
+            mode: 'index',
+            intersect: false,
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var label = (data.datasets[tooltipItem.datasetIndex].label) ? ' ' + data.datasets[tooltipItem.datasetIndex].label : '';
+
+                if (label) {
+                  label += ': ';
+                }
+
+                label += PoliceScorecard.numberWithCommas(tooltipItem.yLabel);
+
+                return label;
               }
-            }
-          }]
+            },
+          },
+          scales: {
+            xAxes: [{
+              stacked: true,
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+              }
+            }],
+            yAxes: [{
+              stacked: true,
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+              },
+              ticks: {
+                beginAtZero: true,
+                maxTicksLimit: 2,
+                callback: function(value, index, values) {
+                  return (value === 0) ? '' : PoliceScorecard.numberWithCommas(value);
+                }
+              }
+            }]
+          }
         }
-      }
-    });
+      });
+    }
   });
 
 </script>
