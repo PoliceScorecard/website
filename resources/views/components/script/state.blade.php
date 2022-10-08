@@ -187,7 +187,7 @@
   window.addEventListener('load', function() {
     var $barChartArrests = document.getElementById('bar-chart-arrests');
     if ($barChartArrests) {
-      var ctx = .getContext('2d');
+      var ctx = $barChartArrests.getContext('2d');
       var arrestsData = {!! generateArrestChart($scorecard, $type) !!};
       window.myBarArrests = new Chart(ctx, {
         type: 'bar',
