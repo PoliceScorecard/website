@@ -39,7 +39,7 @@
             <h1><strong>{{ num($scorecard['total_arrests']) }}</strong> arrests made</h1>
 
             <div class="text">
-                <p>Police in America made <strong>12x as many arrests for low level offenses</strong> as for violent crimes from 2013-2020.</p>
+                <p>Police in America made <strong>12x as many arrests for low level offenses</strong> as for violent crimes from 2013-2021.</p>
             </div>
 
             <div class="chart chart-3">
