@@ -320,13 +320,14 @@
                 An additional 3,139 jurisdictions, representing 13% of the US population, reported Hispanic arrests under the more simplified Uniform Crime Reporting (UCR) system only. Since UCR data does not specify which of these Hispanic arrestees were also included in the white or Black arrest totals, we used Census data in each jurisdiction to estimate the proportion of Hispanic arrestees who are likely categorized racially as white or Black. Since the UCR reported Hispanic arrests data from 2017-2020, we used the proportion of Hispanic arrests relative to overall arrests reported during this period to estimate the number of Hispanic arrests overall, as follows:
             </p>
 
-            <p>
-                Hispanic Arrest Proportion = Hispanic arrests 2017-2020 / Total Arrests 2017-2020
-            </p>
-
-            <p>
-                Overall Hispanic Arrests = Hispanic Arrest Proportion x (White Arrests + Black Arrests).
-            </p>
+            <ul>
+                <li>
+                    Hispanic Arrest Proportion = Hispanic arrests 2017-2020 / Total Arrests 2017-2020
+                </li>
+                <li>
+                    Overall Hispanic Arrests = Hispanic Arrest Proportion x (White Arrests + Black Arrests).
+                </li>
+            <ul>
 
             <p>
                 Importantly, this methodology assumes that Hispanic arrests are either categorized as White or Black in the data reported to the UCR. In practice this may not always be how agencies code Hispanic arrests, but based on race and ethnicity data from larger agencies this appears to be a reasonable assumption. After estimating the number of Hispanic arrests as described above, we estimated the number of those Hispanic arrests who were likely racially classified as White or Black using the Census proportions for the percentage of the population in that jurisdiction who identify as White and Hispanic, or Black and Hispanic. The proportions were calculated as follows:
