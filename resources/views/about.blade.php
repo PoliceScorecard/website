@@ -309,7 +309,7 @@
             </p>
 
             <p>
-                Calculating Racial/Rthnic Disparities in Arrests:
+                Calculating Racial/Ethnic Disparities in Arrests:
             </p>
 
             <p>
