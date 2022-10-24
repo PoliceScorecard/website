@@ -450,7 +450,7 @@
 
             <p class="footnote"><sup>[1]</sup> Since the FBI's UCR arrests database does not distinguish between lower level property crimes such as petty theft or shoplifting and more serious forms of theft, we were not able to include any arrests for petty theft or shoplifting within the low level arrests category. Similarly, arrests for non-DUI related traffic offenses are not reported to the UCR program. This likely results in an undercount of the total number of low level arrests made by each agency.</p>
 
-            <p class="footnote"><sup>[2]</sup> To avoid imprecise or unreliable estimates of this proportion, we excluded departments who had categorized fewer than 25% of their arrests by ethnicity or had fewer than 50 arrests categorized by ethnicity. Then to estimate the total number of Hispanic arrests between 2013-2020, we multiplied the Hispanic Arrest Proportion by the total number of arrests that were categorized by race as “White” or “Black”.</p>
+            <p class="footnote"><sup>[2]</sup> To avoid imprecise or unreliable estimates of this proportion, we excluded departments who had categorized fewer than 25% of their arrests by ethnicity or had fewer than 50 arrests categorized by ethnicity.</p>
         </div>
     </div>
 
