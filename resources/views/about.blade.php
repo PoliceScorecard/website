@@ -327,7 +327,7 @@
                 <li>
                     Overall Hispanic Arrests = Hispanic Arrest Proportion x (White Arrests + Black Arrests).
                 </li>
-            <ul>
+            </ul>
 
             <p>
                 Importantly, this methodology assumes that Hispanic arrests are either categorized as White or Black in the data reported to the UCR. In practice this may not always be how agencies code Hispanic arrests, but based on race and ethnicity data from larger agencies this appears to be a reasonable assumption. After estimating the number of Hispanic arrests as described above, we estimated the number of those Hispanic arrests who were likely racially classified as White or Black using the Census proportions for the percentage of the population in that jurisdiction who identify as White and Hispanic, or Black and Hispanic. The proportions were calculated as follows:
