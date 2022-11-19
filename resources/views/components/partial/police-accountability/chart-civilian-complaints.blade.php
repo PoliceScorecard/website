@@ -22,8 +22,8 @@
     </div>
     <p class="note" style="margin-bottom: 0;">&nbsp;</p>
     <div class="keys">
-        <span class="key key-red tooltip" data-tooltip="Complaints Reported"></span> Complaints Reported
-        <span class="key key-grey tooltip" data-tooltip="Ruled in Favor of Civilians"></span> Ruled in Favor of Civilians
+        <span class="key key-red tooltip" data-tooltip="Complaints Not Sustained"></span> Complaints Not Sustained
+        <span class="key key-grey tooltip" data-tooltip="Complaints Sustained"></span> Complaints Sustained
     </div>
 
     <p style="margin-top: 18px; margin-bottom: 6px;">

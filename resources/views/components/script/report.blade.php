@@ -41,6 +41,9 @@
 
                 if (label && label.toLowerCase().indexOf('reported') !== -1) {
                   window.total += val;
+                } else if (label && label.toLowerCase().indexOf('not sustained') !== -1) {
+                  var sustained = data.datasets[tooltipItem.datasetIndex - 1].data[tooltipItem.index]
+                  window.total += (val + sustained);
                 }
 
                 if (label) {
@@ -52,7 +55,7 @@
                 return label;
               },
               footer: function() {
-                  return 'Total Complaints: ' + PoliceScorecard.numberWithCommas(window.total);
+                  return window.total > 0 ? 'Total Complaints: ' + PoliceScorecard.numberWithCommas(window.total) : null;
               }
             },
           },
