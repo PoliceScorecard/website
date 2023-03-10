@@ -575,6 +575,7 @@ if (!function_exists('getNationalMapData')) {
                     if (!empty($department['latitude']) && !empty($department['longitude']) && $department['complete']) {
                         $index = getColorIndex($department['overall_score'], $department['complete']);
                         $map_scores[$index - 1][] = array(
+                            'slug' => $department['slug'],
                             'className' => 'location-'.$department['slug'],
                             'colorIndex' => getColorIndex($department['overall_score'], $department['complete']),
                             'name' => $department['agency_name'],
@@ -591,6 +592,7 @@ if (!function_exists('getNationalMapData')) {
                 foreach($state['sheriff'] as $department) {
                     if (!empty($department['district']) && $department['complete']) {
                         $map_data[] = array(
+                            'slug' => $department['slug'],
                             'className' => 'location-'.$department['slug'],
                             'colorIndex' => getColorIndex($department['overall_score'], $department['complete']),
                             'name' => $department['agency_name'],
@@ -1051,6 +1053,7 @@ if (!function_exists('getMapData')) {
             if ($type === 'police-department' && !empty($grade['latitude']) && !empty($grade['longitude'])) {
                 $index = getColorIndex($grade['overall_score'], $grade['complete']);
                 $map_scores[$index - 1][] = array(
+                    'slug' => $grade['slug'],
                     'className' => 'type-'.$type.' location-'.$grade['slug'],
                     'colorIndex' => getColorIndex($grade['overall_score'], $grade['complete']),
                     'name' => $grade['agency_name'],
@@ -1060,6 +1063,7 @@ if (!function_exists('getMapData')) {
                 );
             } else if ($type === 'sheriff' && !empty($grade['district'])) {
                 $map_data[] = array(
+                    'slug' => $grade['slug'],
                     'className' => 'type-'.$type.' location-'.$grade['slug'],
                     'colorIndex' => getColorIndex($grade['overall_score'], $grade['complete']),
                     'name' => $grade['agency_name'],
@@ -1095,6 +1099,7 @@ if (!function_exists('getMapLocation')) {
         $longitude = (isset($scorecard['geo']) && isset($scorecard['geo']['city']) && isset($scorecard['geo']['city']['longitude'])) ? floatval($scorecard['geo']['city']['longitude']) : null;
 
         $map_data['data'][] = array(
+            'slug' => $location,
             'className' => 'location-'.$location,
             'colorIndex' => getColorIndex($scorecard['report']['overall_score'], $scorecard['agency']['complete']),
             'name' => $scorecard['agency']['name'],
