@@ -881,8 +881,8 @@ window.PoliceScorecard = window.PoliceScorecard || {
                     zIndex: 0,
                     events: {
                         click: function(e) {
-                            if (e.point && typeof e.point.className !== 'undefined') {
-                                var loc = e.point.className.replace('location-', '');
+                            if (e.point && typeof e.point.slug !== 'undefined') {
+                                var loc = e.point.slug.trim();
 
                                 if (loc && window.leftMouseClicked) {
                                     window.location = '/' + SCORECARD_STATE + '/sheriff/' + loc;
@@ -918,8 +918,8 @@ window.PoliceScorecard = window.PoliceScorecard || {
                     },
                     events: {
                         click: function(e) {
-                            if (e.point && typeof e.point.className !== 'undefined') {
-                                var loc = e.point.className.replace('location-', '');
+                            if (e.point && typeof e.point.slug !== 'undefined') {
+                                var loc = e.point.slug.trim();
 
                                 if (loc && window.leftMouseClicked) {
                                     window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
@@ -951,8 +951,8 @@ window.PoliceScorecard = window.PoliceScorecard || {
                     },
                     events: {
                         click: function(e) {
-                            if (e.point && typeof e.point.className !== 'undefined') {
-                                var loc = e.point.className.replace('location-', '');
+                            if (e.point && typeof e.point.slug !== 'undefined') {
+                                var loc = e.point.slug.trim();
 
                                 if (loc && window.leftMouseClicked) {
                                     window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
@@ -984,8 +984,8 @@ window.PoliceScorecard = window.PoliceScorecard || {
                     },
                     events: {
                         click: function(e) {
-                            if (e.point && typeof e.point.className !== 'undefined') {
-                                var loc = e.point.className.replace('location-', '');
+                            if (e.point && typeof e.point.slug !== 'undefined') {
+                                var loc = e.point.slug.trim();
 
                                 if (loc && window.leftMouseClicked) {
                                     window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
@@ -1017,8 +1017,8 @@ window.PoliceScorecard = window.PoliceScorecard || {
                     },
                     events: {
                         click: function(e) {
-                            if (e.point && typeof e.point.className !== 'undefined') {
-                                var loc = e.point.className.replace('location-', '');
+                            if (e.point && typeof e.point.slug !== 'undefined') {
+                                var loc = e.point.slug.trim();
 
                                 if (loc && window.leftMouseClicked) {
                                     window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
@@ -1050,8 +1050,8 @@ window.PoliceScorecard = window.PoliceScorecard || {
                     },
                     events: {
                         click: function(e) {
-                            if (e.point && typeof e.point.className !== 'undefined') {
-                                var loc = e.point.className.replace('location-', '');
+                            if (e.point && typeof e.point.slug !== 'undefined') {
+                                var loc = e.point.slug.trim();
 
                                 if (loc && window.leftMouseClicked) {
                                     window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
@@ -1083,8 +1083,8 @@ window.PoliceScorecard = window.PoliceScorecard || {
                     },
                     events: {
                         click: function(e) {
-                            if (e.point && typeof e.point.className !== 'undefined') {
-                                var loc = e.point.className.replace('location-', '');
+                            if (e.point && typeof e.point.slug !== 'undefined') {
+                                var loc = e.point.slug.trim();
 
                                 if (loc && window.leftMouseClicked) {
                                     window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
@@ -1116,8 +1116,8 @@ window.PoliceScorecard = window.PoliceScorecard || {
                     },
                     events: {
                         click: function(e) {
-                            if (e.point && typeof e.point.className !== 'undefined') {
-                                var loc = e.point.className.replace('location-', '');
+                            if (e.point && typeof e.point.slug !== 'undefined') {
+                                var loc = e.point.slug.trim();
 
                                 if (loc && window.leftMouseClicked) {
                                     window.location = '/' + SCORECARD_STATE + '/police-department/' + loc;
