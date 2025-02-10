@@ -10,7 +10,7 @@
             <h1><strong>9,911</strong> Killings by Police</h1>
 
             <div class="text">
-                <p>Based on population, a Black person was <strong>2.7x</strong> as likely and a Latinx person was <strong>1.6x</strong> as likely to be killed by police as a White person in America from 2013-21.</p>
+                <p>Based on population, a Black person was <strong>2.7x</strong> as likely and a Latinx person was <strong>1.6x</strong> as likely to be killed by police as a White person in America from 2013-23.</p>
             </div>
 
             <div class="chart chart-1">
@@ -39,7 +39,7 @@
             <h1><strong>{{ num($scorecard['total_arrests']) }}</strong> arrests made</h1>
 
             <div class="text">
-                <p>Police in America made <strong>12x as many arrests for low level offenses</strong> as for violent crimes from 2013-2021.</p>
+                <p>Police in America made <strong>12x as many arrests for low level offenses</strong> as for violent crimes from 2013-2023.</p>
             </div>
 
             <div class="chart chart-3">

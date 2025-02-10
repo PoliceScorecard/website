@@ -12,15 +12,15 @@
 
       <div class="text">
         @if(intval($scorecard['report']['total_people_killed']) === 0)
-        <p>This agency did not reportedly kill anyone from 2013-21.</p>
+        <p>This agency did not reportedly kill anyone from 2013-23.</p>
         @elseif(intval($scorecard['report']['total_people_killed']) === 1)
-        <p>{{ $scorecard['agency']['name'] }} {{ ($type === 'police-department') ? 'Police' : 'Sheriff' }} Department killed 1 person from 2013-21.</p>
+        <p>{{ $scorecard['agency']['name'] }} {{ ($type === 'police-department') ? 'Police' : 'Sheriff' }} Department killed 1 person from 2013-23.</p>
         @elseif(num($scorecard['report']['black_deadly_force_disparity_per_population'], 1, 'x') === '0x' &&  num($scorecard['report']['hispanic_deadly_force_disparity_per_population'], 1, 'x') === '0x')
-        <p>{{ $scorecard['report']['total_people_killed'] }} people killed by {{ $scorecard['agency']['name'] }} {{ ($type === 'police-department') ? 'Police' : 'Sheriff' }} Department from 2013-21</p>
+        <p>{{ $scorecard['report']['total_people_killed'] }} people killed by {{ $scorecard['agency']['name'] }} {{ ($type === 'police-department') ? 'Police' : 'Sheriff' }} Department from 2013-23</p>
         @elseif(!isset($scorecard['report']['black_deadly_force_disparity_per_population']) || !isset($scorecard['report']['hispanic_deadly_force_disparity_per_population']))
         <p>That's a higher rate than <strong>{{ num($scorecard['report']['percentile_killed_by_police'], 0, '%', true) }}</strong> of US {{ ($type === 'police-department') ? (($type === 'state') ? 'State' : 'Police') : 'Sheriff' }} Departments.</p>
         @else
-        <p>Based on population, a Black person was <strong>{{ num($scorecard['report']['black_deadly_force_disparity_per_population'], 1, 'x') }} as likely</strong> and a Latinx person was <strong>{{ num($scorecard['report']['hispanic_deadly_force_disparity_per_population'], 1, 'x') }} as likely</strong> to be killed by police as a White person in {{ $scorecard['agency']['name'] }} from 2013-21.</p>
+        <p>Based on population, a Black person was <strong>{{ num($scorecard['report']['black_deadly_force_disparity_per_population'], 1, 'x') }} as likely</strong> and a Latinx person was <strong>{{ num($scorecard['report']['hispanic_deadly_force_disparity_per_population'], 1, 'x') }} as likely</strong> to be killed by police as a White person in {{ $scorecard['agency']['name'] }} from 2013-23.</p>
         @endif
       </div>
 
@@ -88,7 +88,7 @@
       <h2><strong>{{ num($scorecard['report']['total_arrests']) }}</strong> arrests made</h2>
 
       <div class="text">
-        <p><strong>{{ num($scorecard['report']['percent_misdemeanor_arrests'], 0, '%') }}</strong> of all arrests were for low-level, non-violent offenses from 2013-21.</p>
+        <p><strong>{{ num($scorecard['report']['percent_misdemeanor_arrests'], 0, '%') }}</strong> of all arrests were for low-level, non-violent offenses from 2013-23.</p>
       </div>
 
       <div class="chart chart-3">

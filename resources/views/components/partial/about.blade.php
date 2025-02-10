@@ -85,6 +85,12 @@
                                 @endif
                             </li>
                             @endif
+
+                            @if (empty($scorecard['agency']['mayor_name']) && empty($scorecard['agency']['police_chief_name']))
+                            <li>
+                                <a href="https://www.usa.gov/state-governor" class="button" rel="noopener" target="_blank" {!! trackData('External Nav', 'Contact', 'Find Find State Governors') !!}>Find State Governors</a>
+                            </li>
+                            @endif
                         </ul>
                         @endif
 
@@ -100,8 +106,8 @@
                     <ul>
                         <li>
                             <strong>Look up your state and federal representatives below</strong>, then tell them to take action to hold police accountable in your community.
-                            <br /><br />
-                            <script async src="https://embed.joincampaignzero.org/widget.js" charset="utf-8"></script>
+                            <br />
+                            <a href="https://www.usa.gov/elected-officials" class="button" rel="noopener" target="_blank" {!! trackData('External Nav', 'Contact', 'Find Elected Officials') !!}>Find Elected Officials</a>
                         </li>
                     </ul>
                 </div>

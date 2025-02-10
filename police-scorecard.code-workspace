@@ -23,6 +23,9 @@
 		"explorerExclude.backup": null,
 		"cSpell.words": [
 			"sandiego"
+		],
+		"i18n-ally.localesPaths": [
+			"resources/lang"
 		]
 	}
 }

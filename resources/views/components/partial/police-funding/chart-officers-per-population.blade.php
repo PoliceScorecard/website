@@ -12,6 +12,12 @@
         if (isset($scorecard['police_funding']['total_officers_2021'])) {
             $total_officers = num($scorecard['police_funding']['total_officers_2021']);
         }
+        if (isset($scorecard['police_funding']['total_officers_2022'])) {
+            $total_officers = num($scorecard['police_funding']['total_officers_2022']);
+        }
+        if (isset($scorecard['police_funding']['total_officers_2023'])) {
+            $total_officers = num($scorecard['police_funding']['total_officers_2023']);
+        }
         @endphp
 
         {{ $total_officers }} Officers

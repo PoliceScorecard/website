@@ -245,11 +245,11 @@
             <h2 class="subtitle">KILLINGS BY POLICE</h2>
 
             <p>
-                DEFINITION: PEOPLE KILLED BY LAW ENFORCEMENT OFFICERS FROM 2013-2021.
+                DEFINITION: PEOPLE KILLED BY LAW ENFORCEMENT OFFICERS FROM 2013-2023.
             </p>
 
             <p>
-                We used the Mapping Police Violence database, which combines information on people killed by police from 2013-2021 sourced from public records requests, local media reports and other crowdsourced databases such as the Fatal Encounters database. This database includes information on 9,911 people killed by police nationwide from 2013-2021, 91% of whom were killed by one of the law enforcement agencies currently represented in the Police Scorecard. Importantly, this database allows for a more comprehensive evaluation of killings by police than would be possible using official data, since only about <a href="https://www.marketplace.org/2020/06/01/fbi-police-use-of-force-database/" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', '40% Reported') !!}>40%</a> of the nation's law enforcement reports data to the federal government's Use of Force Data Collection program and that data still has not been released publicly. The Mapping Police Violence database is also more expansive than the Washington Post's police shootings database because it includes cases where people are killed by types of police use of force in addition to fatal police shootings (i.e. killings by tasers, batons, chokeholds and intentional vehicle strikes) as well as cases that occurred prior to 2015. The database also evaluates whether each person killed by police was armed with a gun, armed with another weapon or vehicle, or unarmed at the time of the incident. Using the coding schema in the Mapping Police Violence database, cases were coded as unarmed when the person killed by police did not possess an actual weapon - which includes both people who had no object in their hands and people who had common/household objects like cell phones, spoons or a toy that may have been perceived to be a weapon but ended up not constituting a real threat.
+                We used the Mapping Police Violence database, which combines information on people killed by police from 2013-2023 sourced from public records requests, local media reports and other crowdsourced databases such as the Fatal Encounters database. This database includes information on 9,911 people killed by police nationwide from 2013-2023, 91% of whom were killed by one of the law enforcement agencies currently represented in the Police Scorecard. Importantly, this database allows for a more comprehensive evaluation of killings by police than would be possible using official data, since only about <a href="https://www.marketplace.org/2020/06/01/fbi-police-use-of-force-database/" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', '40% Reported') !!}>40%</a> of the nation's law enforcement reports data to the federal government's Use of Force Data Collection program and that data still has not been released publicly. The Mapping Police Violence database is also more expansive than the Washington Post's police shootings database because it includes cases where people are killed by types of police use of force in addition to fatal police shootings (i.e. killings by tasers, batons, chokeholds and intentional vehicle strikes) as well as cases that occurred prior to 2015. The database also evaluates whether each person killed by police was armed with a gun, armed with another weapon or vehicle, or unarmed at the time of the incident. Using the coding schema in the Mapping Police Violence database, cases were coded as unarmed when the person killed by police did not possess an actual weapon - which includes both people who had no object in their hands and people who had common/household objects like cell phones, spoons or a toy that may have been perceived to be a weapon but ended up not constituting a real threat.
             </p>
 
             <h2 class="subtitle">POLICE SHOOTINGS (BOTH FATAL AND NON-FATAL)</h2>
@@ -265,11 +265,11 @@
             <h2 class="subtitle">LESS LETHAL FORCE</h2>
 
             <p>
-                DEFINITION: THE TOTAL NUMBER OF USES OF TASERS, BATONS, PROJECTILES, PEPPER SPRAY, K-9S, OTHER WEAPONS AND STRANGLEHOLDS AGAINST CIVILIANS FROM 2013-2021
+                DEFINITION: THE TOTAL NUMBER OF USES OF TASERS, BATONS, PROJECTILES, PEPPER SPRAY, K-9S, OTHER WEAPONS AND STRANGLEHOLDS AGAINST CIVILIANS FROM 2013-2023
             </p>
 
             <p>
-                To obtain information on serious police use of force that did not rise to the level of deadly force, we submitted public records requests to the 500 largest police and county sheriff's departments nationwide asking for the total number of uses of force, by type of force used, from 2013-2021. The majority of these agencies sent us their data or published this information online. Detailed data showing use of force by force type for each responsive department can be found here. Each department varied in how they categorized and reported the use of force. For example, some police departments require officers to report all weaponless strikes and control holds used against a civilian, while others only require these types of force to be reported when they cause injury. Similarly, some departments require officers to report whenever they display a firearm or taser, while others only require them to report when these weapons are discharged. Given these reporting inconsistencies, we limited our analysis to more serious forms of force since these were more consistently reported and categorized among the agencies we obtained data from. This included uses of "less lethal" force or force involving weapons such as tasers, batons, impact projectiles, K-9s, OC/pepper spray, and neck restraints like carotid restraints or lateral vascular neck restraints.
+                To obtain information on serious police use of force that did not rise to the level of deadly force, we submitted public records requests to the 500 largest police and county sheriff's departments nationwide asking for the total number of uses of force, by type of force used, from 2013-2023. The majority of these agencies sent us their data or published this information online. Detailed data showing use of force by force type for each responsive department can be found here. Each department varied in how they categorized and reported the use of force. For example, some police departments require officers to report all weaponless strikes and control holds used against a civilian, while others only require these types of force to be reported when they cause injury. Similarly, some departments require officers to report whenever they display a firearm or taser, while others only require them to report when these weapons are discharged. Given these reporting inconsistencies, we limited our analysis to more serious forms of force since these were more consistently reported and categorized among the agencies we obtained data from. This included uses of "less lethal" force or force involving weapons such as tasers, batons, impact projectiles, K-9s, OC/pepper spray, and neck restraints like carotid restraints or lateral vascular neck restraints.
             </p>
 
             <p>
@@ -301,7 +301,7 @@
             <h2 class="subtitle">ARRESTS</h2>
 
             <p>
-                DEFINITION: THE TOTAL NUMBER OF ARRESTS REPORTED BY POLICE FROM 2013-2021.
+                DEFINITION: THE TOTAL NUMBER OF ARRESTS REPORTED BY POLICE FROM 2013-2023.
             <p>
 
             <p>
@@ -366,7 +366,7 @@
             </p>
 
             <p>
-                The remaining 6,651 agencies in the Police Scorecard did not report any Hispanic arrests to the federal government from 2013-2021. While most of these agencies have relatively small Hispanic populations, 715 of the non-reporting agencies have jurisdictions where 15% or more of the population is Hispanic according to the 2020 Census. These 715 jurisdictions, representing 4% of all agencies within the Police Scorecard, are excluded from analyses of arrests disparities because they have an unspecified but potentially substantial number of Hispanic arrestees categorized racially as white. A breakdown of these jurisdictions by state is provided below.
+                The remaining 6,651 agencies in the Police Scorecard did not report any Hispanic arrests to the federal government from 2013-2023. While most of these agencies have relatively small Hispanic populations, 715 of the non-reporting agencies have jurisdictions where 15% or more of the population is Hispanic according to the 2020 Census. These 715 jurisdictions, representing 4% of all agencies within the Police Scorecard, are excluded from analyses of arrests disparities because they have an unspecified but potentially substantial number of Hispanic arrestees categorized racially as white. A breakdown of these jurisdictions by state is provided below.
             </p>
 
             <p>
@@ -378,15 +378,15 @@
             <h2 class="subtitle">HOMICIDES REPORTED AND HOMICIDES SOLVED</h2>
 
             <p>
-                DEFINITION: THE TOTAL NUMBER OF CRIMINAL HOMICIDES REPORTED AND THE TOTAL NUMBER CLEARED BY ARREST OR EXCEPTIONAL MEANS FROM 2013-2021
+                DEFINITION: THE TOTAL NUMBER OF CRIMINAL HOMICIDES REPORTED AND THE TOTAL NUMBER CLEARED BY ARREST OR EXCEPTIONAL MEANS FROM 2013-2023
             </p>
 
             <p>
-                We obtained data on the number of criminal homicides reported and those that were cleared from 2013-2021 from the FBI Uniform Crime Report and Supplementary Homicide Report databases. Consistent with the definitions used by these databases, criminal homicides are classified as murder and non-negligent manslaughter but exclude suicides, accidents, "justifiable homicides" and deaths caused by negligence. Homicides were classified as "cleared" when they resulted in either an arrest or were cleared through "exceptional means" (These are cases in which there is sufficient evidence but an arrest is reportedly not possible, for example, if the person suspected has died). We recognize that homicides cleared by arrest or exceptional means is an imperfect measure of murders "solved," for a variety of reasons (for example, not everyone arrested ends up being guilty of the offense). However, the Uniform Crime Report does not distinguish between these outcomes and, as such, we are limited by the data that are currently available.
+                We obtained data on the number of criminal homicides reported and those that were cleared from 2013-2023 from the FBI Uniform Crime Report and Supplementary Homicide Report databases. Consistent with the definitions used by these databases, criminal homicides are classified as murder and non-negligent manslaughter but exclude suicides, accidents, "justifiable homicides" and deaths caused by negligence. Homicides were classified as "cleared" when they resulted in either an arrest or were cleared through "exceptional means" (These are cases in which there is sufficient evidence but an arrest is reportedly not possible, for example, if the person suspected has died). We recognize that homicides cleared by arrest or exceptional means is an imperfect measure of murders "solved," for a variety of reasons (for example, not everyone arrested ends up being guilty of the offense). However, the Uniform Crime Report does not distinguish between these outcomes and, as such, we are limited by the data that are currently available.
             </p>
 
             <p>
-                We also included in the scorecard statistics on proportion of homicides cleared by race of the victim. Since the Uniform Crime Report did not disaggregate agency-level homicide clearance rates by race of victim, we relied on the Supplementary Homicide Report (SHR) database with enhanced case-level data from the Murder Accountability Project (MAP) to determine the percent of homicides "solved" by race of the victim for each jurisdiction from 2013-2021. Importantly, since homicides tend to be reported to the SHR database an average of 5 months after each incident (depending on jurisdiction), fewer homicides are reported as solved in this dataset compared to the end-of-year Uniform Crime reports. According to MAP, 5-10% of homicides reported as unsolved at the time of reporting to the SHR were cleared later. As such, the SHR data should be interpreted as the proportion of homicides solved within a shorter time frame than the UCR, which is useful for evaluating police efficacy at solving homicides given the race of the victim.
+                We also included in the scorecard statistics on proportion of homicides cleared by race of the victim. Since the Uniform Crime Report did not disaggregate agency-level homicide clearance rates by race of victim, we relied on the Supplementary Homicide Report (SHR) database with enhanced case-level data from the Murder Accountability Project (MAP) to determine the percent of homicides "solved" by race of the victim for each jurisdiction from 2013-2023. Importantly, since homicides tend to be reported to the SHR database an average of 5 months after each incident (depending on jurisdiction), fewer homicides are reported as solved in this dataset compared to the end-of-year Uniform Crime reports. According to MAP, 5-10% of homicides reported as unsolved at the time of reporting to the SHR were cleared later. As such, the SHR data should be interpreted as the proportion of homicides solved within a shorter time frame than the UCR, which is useful for evaluating police efficacy at solving homicides given the race of the victim.
             </p>
 
             <h2 class="subtitle">POLICE FUNDING</h2>
@@ -428,7 +428,7 @@
             <h2 class="subtitle">TOTAL NUMBER OF OFFICERS</h2>
 
             <p>
-                DEFINITION: THE NUMBER OF SWORN LAW ENFORCEMENT OFFICERS EMPLOYED AT EACH AGENCY, 2013-2021
+                DEFINITION: THE NUMBER OF SWORN LAW ENFORCEMENT OFFICERS EMPLOYED AT EACH AGENCY, 2013-2023
             </p>
 
             <p>

@@ -314,7 +314,7 @@
         &>div.left {
             display: inline-block;
             width: 50%;
-            padding-right: 5%;
+            padding-right: 20px;
             vertical-align: top;
 
             &.v-center {
@@ -325,7 +325,7 @@
         &>div.right {
             display: inline-block;
             width: 49%;
-            padding-left: 5%;
+            padding-left: 20px;
             vertical-align: top;
 
             &.v-center {
@@ -2161,7 +2161,6 @@
         }
 
         ul.contacts {
-            margin-top: 14px;
             list-style: none;
             margin-left: 0;
 
