@@ -196,11 +196,11 @@
             </p>
 
             <p>
-                <strong>3. Percent of Civilian Complaints in Detention Sustained from 2016-2021</strong>
+                <strong>3. Percent of Civilian Complaints in Detention Sustained from 2016-2022</strong>
             </p>
 
             <p>
-                This indicator displays the percentage of reported complaints in detention that were sustained from 2016-2021, as determined by the California Department of Justice's CCOPA database and data obtained from county agencies via public records requests.
+                This indicator displays the percentage of reported complaints in detention that were sustained from 2016-2022, as determined by the California Department of Justice's CCOPA database and data obtained from county agencies via public records requests.
             </p>
 
             <p>
@@ -227,7 +227,7 @@
             <p>
 <pre>(
     Percentile Low Level Arrests per Population +
-    Percentile Racial Disparities in Drug Possession Arrests +
+    Percentile Racial Disparities in Drug Arrests +
     Percent Homicides Cleared +
     Percentile Jail Incarceration Rate +
     Percentile Jail Deaths per Jail Population
@@ -265,11 +265,11 @@
             <h2 class="subtitle">LESS LETHAL FORCE</h2>
 
             <p>
-                DEFINITION: THE TOTAL NUMBER OF USES OF TASERS, BATONS, PROJECTILES, PEPPER SPRAY, K-9S, OTHER WEAPONS AND STRANGLEHOLDS AGAINST CIVILIANS FROM 2013-2023
+                DEFINITION: THE TOTAL NUMBER OF USES OF TASERS, BATONS, PROJECTILES, PEPPER SPRAY, K-9S, OTHER WEAPONS AND STRANGLEHOLDS AGAINST CIVILIANS FROM 2013-2022
             </p>
 
             <p>
-                To obtain information on serious police use of force that did not rise to the level of deadly force, we submitted public records requests to the 500 largest police and county sheriff's departments nationwide asking for the total number of uses of force, by type of force used, from 2013-2023. The majority of these agencies sent us their data or published this information online. Detailed data showing use of force by force type for each responsive department can be found here. Each department varied in how they categorized and reported the use of force. For example, some police departments require officers to report all weaponless strikes and control holds used against a civilian, while others only require these types of force to be reported when they cause injury. Similarly, some departments require officers to report whenever they display a firearm or taser, while others only require them to report when these weapons are discharged. Given these reporting inconsistencies, we limited our analysis to more serious forms of force since these were more consistently reported and categorized among the agencies we obtained data from. This included uses of "less lethal" force or force involving weapons such as tasers, batons, impact projectiles, K-9s, OC/pepper spray, and neck restraints like carotid restraints or lateral vascular neck restraints.
+                To obtain information on serious police use of force that did not rise to the level of deadly force, we submitted public records requests to the 500 largest police and county sheriff's departments nationwide asking for the total number of uses of force, by type of force used, from 2013-2022. The majority of these agencies sent us their data or published this information online. Detailed data showing use of force by force type for each responsive department can be found here. Each department varied in how they categorized and reported the use of force. For example, some police departments require officers to report all weaponless strikes and control holds used against a civilian, while others only require these types of force to be reported when they cause injury. Similarly, some departments require officers to report whenever they display a firearm or taser, while others only require them to report when these weapons are discharged. Given these reporting inconsistencies, we limited our analysis to more serious forms of force since these were more consistently reported and categorized among the agencies we obtained data from. This included uses of "less lethal" force or force involving weapons such as tasers, batons, impact projectiles, K-9s, OC/pepper spray, and neck restraints like carotid restraints or lateral vascular neck restraints.
             </p>
 
             <p>
@@ -283,11 +283,11 @@
             <h2 class="subtitle">CIVILIAN COMPLAINTS</h2>
 
             <p>
-                DEFINITION: THE TOTAL NUMBER OF COMPLAINTS, BY TYPE OF COMPLAINT, REPORTED BY CIVILIANS AGAINST LAW ENFORCEMENT PERSONNEL FROM 2016-2021
+                DEFINITION: THE TOTAL NUMBER OF COMPLAINTS, BY TYPE OF COMPLAINT, REPORTED BY CIVILIANS AGAINST LAW ENFORCEMENT PERSONNEL FROM 2016-2022
             </p>
 
             <p>
-                The Police Scorecard includes the total number of complaints reported each year from 2016-2021, the number of those complaints that were sustained (i.e. upheld by investigators), with breakdowns for the total number of use of force complaints, complaints of police discrimination, and criminal complaints that were reported and the number of each that were sustained during that time period. To obtain these data, we submitted public records requests to local police and sheriff's departments and also requested data from state criminal justice agencies in the states that currently collect information on civilian complaints.
+                The Police Scorecard includes the total number of complaints reported each year from 2016-2022, the number of those complaints that were sustained (i.e. upheld by investigators), with breakdowns for the total number of use of force complaints, complaints of police discrimination, and criminal complaints that were reported and the number of each that were sustained during that time period. To obtain these data, we submitted public records requests to local police and sheriff's departments and also requested data from state criminal justice agencies in the states that currently collect information on civilian complaints.
             </p>
 
             <p>
@@ -366,7 +366,7 @@
             </p>
 
             <p>
-                The remaining 6,651 agencies in the Police Scorecard did not report any Hispanic arrests to the federal government from 2013-2023. While most of these agencies have relatively small Hispanic populations, 715 of the non-reporting agencies have jurisdictions where 15% or more of the population is Hispanic according to the 2020 Census. These 715 jurisdictions, representing 4% of all agencies within the Police Scorecard, are excluded from analyses of arrests disparities because they have an unspecified but potentially substantial number of Hispanic arrestees categorized racially as white. A breakdown of these jurisdictions by state is provided below.
+                The remaining 6,651 agencies in the Police Scorecard did not report any Hispanic arrests to the federal government. While most of these agencies have relatively small Hispanic populations, 715 of the non-reporting agencies have jurisdictions where 15% or more of the population is Hispanic according to the 2020 Census. These 715 jurisdictions, representing 4% of all agencies within the Police Scorecard, are excluded from analyses of arrests disparities because they have an unspecified but potentially substantial number of Hispanic arrestees categorized racially as white. A breakdown of these jurisdictions by state is provided below.
             </p>
 
             <p>
@@ -392,11 +392,11 @@
             <h2 class="subtitle">POLICE FUNDING</h2>
 
             <p>
-                DEFINITION: THE TOTAL AMOUNT OF MONEY SPENT ON POLICING BY EACH CITY OR COUNTY FROM 2010-2020
+                DEFINITION: THE TOTAL AMOUNT OF MONEY SPENT ON POLICING BY EACH CITY OR COUNTY FROM 2010-2022
             </p>
 
             <p>
-                This includes data on the total amount of city budget expenditures spent on policing in each city or county from 2010-2020 as reported to the Census Bureau's <a href="https://www.census.gov/data/datasets/2017/econ/local/public-use-datasets.html" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Annual Survey of State and Local Government Finances') !!}>Annual Survey of State and Local Government Finances</a>. For many cities, we were also able to obtain more recent data (2021) from budgetary documents on local governments' websites and the <a href="https://www.vera.org/publications/what-policing-costs-in-americas-biggest-cities" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Police Funding Data for 72 Large Cities') !!}>police funding data for 72 large cities</a> created by the Vera Institute. The Scorecard also includes data on each local government's expenditures on other issues that impact public safety - such as funding for Health and for Housing and Community Development. In some cases, we found discrepancies between the Census Bureau's data and the data included in a city or county's budget documents. Where such discrepancies were found, we used the data in the city or county budget documents in our analysis, given they often provide more detail.
+                This includes data on the total amount of city budget expenditures spent on policing in each city or county from 2010-2022 as reported to the Census Bureau's <a href="https://www.census.gov/data/datasets/2017/econ/local/public-use-datasets.html" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Annual Survey of State and Local Government Finances') !!}>Annual Survey of State and Local Government Finances</a>. For many cities, we were also able to obtain more recent data (2021) from budgetary documents on local governments' websites and the <a href="https://www.vera.org/publications/what-policing-costs-in-americas-biggest-cities" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Police Funding Data for 72 Large Cities') !!}>police funding data for 72 large cities</a> created by the Vera Institute. The Scorecard also includes data on each local government's expenditures on other issues that impact public safety - such as funding for Health and for Housing and Community Development. In some cases, we found discrepancies between the Census Bureau's data and the data included in a city or county's budget documents. Where such discrepancies were found, we used the data in the city or county budget documents in our analysis, given they often provide more detail.
             </p>
 
             <p>
@@ -418,11 +418,11 @@
             <h2 class="subtitle">FINES AND FORFEITURES</h2>
 
             <p>
-                DEFINITION: THE TOTAL VALUE OF PROPERTY AND CASH CONFISCATED THROUGH ASSET FORFEITURE OR COLLECTED BY FINES, 2010-2020
+                DEFINITION: THE TOTAL VALUE OF PROPERTY AND CASH CONFISCATED THROUGH ASSET FORFEITURE OR COLLECTED BY FINES, 20
             </p>
 
             <p>
-                This includes data on the total amount of city budget revenues collected through fines or forfeitures in each city or county from 2010-2020 as reported to the Census Bureau's <a href="https://www.census.gov/data/datasets/2017/econ/local/public-use-datasets.html" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Annual Survey of State and Local Government Finances') !!}>Annual Survey of State and Local Government Finances</a>. This measure can be used to assess potential excessive use of ticketing, civil asset forfeiture and other policing practices that often supplement police budgets by imposing an additional economic burden on communities.
+                This includes data on the total amount of city budget revenues collected through fines or forfeitures in each city or county from 2010-2022 as reported to the Census Bureau's <a href="https://www.census.gov/data/datasets/2017/econ/local/public-use-datasets.html" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Annual Survey of State and Local Government Finances') !!}>Annual Survey of State and Local Government Finances</a>. This measure can be used to assess potential excessive use of ticketing, civil asset forfeiture and other policing practices that often supplement police budgets by imposing an additional economic burden on communities.
             </p>
 
             <h2 class="subtitle">TOTAL NUMBER OF OFFICERS</h2>

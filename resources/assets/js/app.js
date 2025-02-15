@@ -1,7 +1,6 @@
 /**
  * Police Scorecard
- * (c) 2020 JoinCampaignZero.org
- * License: https://github.com/campaignzero/police-scorecard/blob/master/README
+ * License: https://github.com/PoliceScorecard/website/blob/master/README
  */
 window.PoliceScorecard = window.PoliceScorecard || {
     /**

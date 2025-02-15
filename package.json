@@ -4,7 +4,6 @@
     "description": "Nationwide Police Scorecard",
     "author": "",
     "keywords": [
-        "CampaignZero",
         "Nationwide",
         "Police",
         "Scorecard"
@@ -48,12 +47,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/campaignzero/police-scorecard.git"
+        "url": "git+https://github.com/PoliceScorecard/website.git"
     },
     "bugs": {
-        "url": "https://github.com/campaignzero/police-scorecard/issues"
+        "url": "https://github.com/PoliceScorecard/website/issues"
     },
-    "homepage": "https://github.com/campaignzero/police-scorecard#readme",
+    "homepage": "https://github.com/PoliceScorecard/website#readme",
     "devDependencies": {
         "axios": "^0.19",
         "cross-env": "^7.0",
