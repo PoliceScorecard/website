@@ -293,7 +293,7 @@
             </h2>
 
             <p>
-                <strong>Black people were arrested at higher rates than white people in 90% of police jurisdictions</strong> reporting 100 or more arrests in 2020 - including every police department with a jurisdiction of over 400,000 population. Despite research <a href="https://www.cdc.gov/nchs/data/hus/2018/020.pdf" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'Drug Rate Research') !!}>showing</a> Black and white people use drugs at similar rates, <strong>three-quarters of police departments arrested Black people for drug possession at higher rates than white people</strong>. Moreover, despite an overall decline in drug possession arrests in big cities, Black-white arrest disparities in these arrests have <em>grown</em> in many cities since 2013, a trend that has been <a href="https://datacollaborativeforjustice.org/wp-content/uploads/2020/04/Marijuana-Report.pdf" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'Cited Trend') !!}>cited</a> in previous <a href="https://drugpolicy.org/legalization-status-report" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'Previous Research') !!}>research</a>.
+                <strong>Black people were arrested at higher rates than white people in 90% of police jurisdictions</strong> reporting 100 or more arrests in 2020 - including every police department with a jurisdiction of over 400,000 population. Despite research <a href="https://www.cdc.gov/nchs/data/hus/2018/020.pdf" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'Drug Rate Research') !!}>showing</a> Black and white people use drugs at similar rates, <strong>three-quarters of police departments arrested Black people for drug possession at higher rates than white people</strong>. Moreover, despite an overall decline in drug arrests in big cities, Black-white arrest disparities in these arrests have <em>grown</em> in many cities since 2013, a trend that has been <a href="https://datacollaborativeforjustice.org/wp-content/uploads/2020/04/Marijuana-Report.pdf" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'Cited Trend') !!}>cited</a> in previous <a href="https://drugpolicy.org/legalization-status-report" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'Previous Research') !!}>research</a>.
             </p>
 
             <p>
@@ -422,7 +422,7 @@
             </p>
 
             <p>
-                Examining data obtained from big city police agencies on both fatal and nonfatal police shootings incidents from 2013-2021, police in New York City, Miami and Oakland had among the lowest rates of police shootings per every 10,000 arrests they made. Detroit, Columbus, Kansas City and Oklahoma City <em>consistently</em> had among the highest rates of police shootings each year. This suggests the need for urgent interventions from the US Department of Justice and/or state Attorney's General to restrict police use of force standards and strengthen independent accountability structures in these cities.
+                Examining data obtained from big city police agencies on both fatal and nonfatal police shootings incidents from 2013-2023, police in New York City, Miami and Oakland had among the lowest rates of police shootings per every 10,000 arrests they made. Detroit, Columbus, Kansas City and Oklahoma City <em>consistently</em> had among the highest rates of police shootings each year. This suggests the need for urgent interventions from the US Department of Justice and/or state Attorney's General to restrict police use of force standards and strengthen independent accountability structures in these cities.
             </p>
 
             <p class="tableau-chart">
@@ -547,7 +547,7 @@
 
             <p>
                 Among the types of allegations reported, more serious allegations like excessive force or discrimination allegations were even less likely to be ruled in favor civilians than other complaints. Civilians reporting police <strong>discrimination</strong> had only a <strong>1 in 54 chance</strong> of their complaint being upheld and civilians reporting <strong>use of force</strong> complaints had only a <strong>1 in 31 chance</strong> of being upheld. This lack of administrative accountability for police violence mirrors the criminal justice system's approach towards police violence.
-                Only 2% of all killings by police from 2013-2021 have resulted in an officer being charged with a crime and 1% of killings resulted in a criminal conviction.
+                Only 2% of all killings by police from 2013-2023 have resulted in an officer being charged with a crime and 1% of killings resulted in a criminal conviction.
             </p>
 
             <div class="divider"></div>

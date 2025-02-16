@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="description" content="@yield('description')">
-    <meta name="author" content="CampaignZero">
+    <meta name="author" content="Police Scorecard">
 
     <meta name="apple-mobile-web-app-title" content="Police Scorecard">
     <meta name="application-name" content="Police Scorecard">
@@ -22,7 +22,7 @@
     <meta property="twitter:site" content="@samswey">
     <meta property="twitter:title" content="@yield('title')">
     <meta property="twitter:description" content="@yield('description')">
-    <meta property="twitter:creator" content="@mrmidi">
+    <meta property="twitter:creator" content="@samswey">
     <meta property="twitter:image:src" content="{{ asset('/images/card.jpg') }}">
     <meta property="twitter:domain" content="https://policescorecard.org">
 

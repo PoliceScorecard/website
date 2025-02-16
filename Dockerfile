@@ -1,4 +1,4 @@
-FROM php:7.2-fpm
+FROM --platform=linux/x86_64 php:7.2-fpm
 
 # Copy composer.lock and composer.json
 COPY composer.lock composer.json /var/www/
@@ -29,7 +29,8 @@ RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --wi
 RUN docker-php-ext-install gd
 
 # Install xdebug
-RUN pecl install xdebug
+RUN pecl channel-update pecl.php.net
+RUN pecl install xdebug-3.1.6
 RUN docker-php-ext-enable xdebug
 
 # Install composer
