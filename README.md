@@ -2,6 +2,8 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/PoliceScorecard/website/master/LICENSE) [![GitHub contributors](https://img.shields.io/github/contributors/PoliceScorecard/website.svg)](https://github.com/PoliceScorecard/website/graphs/contributors) [![GitHub issues](https://img.shields.io/github/issues/PoliceScorecard/website.svg)](https://github.com/PoliceScorecard/website/graphs/issues)
 
+![Website Image](docs/img/card.jpg "Website Image")
+
 ## Developer Overview
 
 1. [Downloading Website](docs/downloading-website.md)
