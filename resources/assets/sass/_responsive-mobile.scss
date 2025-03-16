@@ -515,9 +515,25 @@
                 }
             }
         }
+    }
 
-        .section.grades table td {
-            max-width: calc(100vw - 80px);
+    .section.grades {
+        .content > .left {
+            float: unset;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .content > .right {
+            float: unset;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .content > .left, .content > .right {
+            table td {
+                max-width: calc(100vw - 80px);
+            }
         }
     }
 
