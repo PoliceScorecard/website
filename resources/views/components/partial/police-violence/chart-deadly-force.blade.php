@@ -6,10 +6,10 @@
     <h3>Deadly Force</h3>
 
     @if (output($scorecard['police_violence']['all_deadly_force_incidents']) === '0')
-    <p class="good-job">No Deadly Force Incidents identified from 2013-21</p>
+    <p class="good-job">No Deadly Force Incidents identified from 2013-23</p>
     @else
     <p>
-        {{ num($scorecard['report']['total_people_killed']) }} Killings by Police from 2013-21
+        {{ num($scorecard['report']['total_people_killed']) }} Killings by Police from 2013-23
         <span class="divider">&nbsp;|&nbsp;</span>
         {{ num($scorecard['report']['killed_by_police_per_10k_arrests'], 1) }} every 10k arrests
     </p>

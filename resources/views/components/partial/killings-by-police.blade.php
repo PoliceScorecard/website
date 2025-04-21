@@ -7,10 +7,10 @@
 
     <div class="content">
         <div class="one-third home-page">
-            <h1><strong>9,911</strong> Killings by Police</h1>
+            <h1><strong>12,365</strong> Killings by Police</h1>
 
             <div class="text">
-                <p>Based on population, a Black person was <strong>2.7x</strong> as likely and a Latinx person was <strong>1.6x</strong> as likely to be killed by police as a White person in America from 2013-21.</p>
+                <p>Based on population, a Black person was <strong>2.7x</strong> as likely and a Latinx person was <strong>1.6x</strong> as likely to be killed by police as a White person in America from 2013-23.</p>
             </div>
 
             <div class="chart chart-1">
@@ -22,7 +22,7 @@
             <h1><strong>{{ num($scorecard['total_complaints_reported']) }}</strong> civilian complaints of police misconduct</h1>
 
             <div class="text">
-                <p>Only <strong>1 in every {{ round($scorecard['total_complaints_reported'] / $scorecard['total_complaints_sustained']) }} complaints</strong> were ruled in favor of civilians from 2016-21.</p>
+                <p>Only <strong>1 in every {{ round($scorecard['total_complaints_reported'] / $scorecard['total_complaints_sustained']) }} complaints</strong> were ruled in favor of civilians from 2016-2022.</p>
             </div>
 
             <div class="chart chart-2">
@@ -36,10 +36,10 @@
         </div>
 
         <div class="one-third home-page">
-            <h1><strong>{{ num($scorecard['total_arrests']) }}</strong> arrests made</h1>
+            <h1><strong>92,812,897</strong> arrests made</h1>
 
             <div class="text">
-                <p>Police in America made <strong>12x as many arrests for low level offenses</strong> as for violent crimes from 2013-2021.</p>
+                <p>Police in America made <strong>13x as many arrests for low level offenses</strong> as for violent crimes from 2013-2023.</p>
             </div>
 
             <div class="chart chart-3">

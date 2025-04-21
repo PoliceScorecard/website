@@ -259,7 +259,7 @@
             <p>
                 Larger jurisdictions appear to be shifting their approach to law enforcement more quickly than other parts of the country. <strong>Agencies representing jurisdictions with over 400,000 residents reported 46% fewer arrests overall and 53% fewer arrests for low level offenses in 2020 than they did in 2013</strong> - exceeding the 34% reduction in arrests and 36% reduction in low level arrests reported by other agencies during this time period.
 
-                Cities like New York, Houston, Minneapolis, Miami, Boston, Raleigh, Milwaukee, Nashville and Fort Worth led other big cities in reducing arrests for low level offenses - cutting these arrests by more than 60% from 2013-2020. These declines in the enforcement of low level offenses did not appear to change how agencies approached violent crime - jurisdictions with over 400,000 population made a similar number of arrests for violent crime in 2020 that they made in 2013, while smaller jurisdictions reduced violent crime arrests during this period.
+                Cities like New York, Houston, Minneapolis, Miami, Boston, Raleigh, Milwaukee, Nashville and Fort Worth led other big cities in reducing arrests for low level offenses - cutting these arrests by more than 60% from 2013-2020. These declines in overall enforcement, and enforcement of low level offenses in particular, did not appear to reverse even after the pandemic - maintaining historically low rates through at least 2023.
             </p>
 
             <p class="tableau-chart">
@@ -293,7 +293,7 @@
             </h2>
 
             <p>
-                <strong>Black people were arrested at higher rates than white people in 90% of police jurisdictions</strong> reporting 100 or more arrests in 2020 - including every police department with a jurisdiction of over 400,000 population. Despite research <a href="https://www.cdc.gov/nchs/data/hus/2018/020.pdf" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'Drug Rate Research') !!}>showing</a> Black and white people use drugs at similar rates, <strong>three-quarters of police departments arrested Black people for drug possession at higher rates than white people</strong>. Moreover, despite an overall decline in drug possession arrests in big cities, Black-white arrest disparities in these arrests have <em>grown</em> in many cities since 2013, a trend that has been <a href="https://datacollaborativeforjustice.org/wp-content/uploads/2020/04/Marijuana-Report.pdf" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'Cited Trend') !!}>cited</a> in previous <a href="https://drugpolicy.org/legalization-status-report" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'Previous Research') !!}>research</a>.
+                <strong>Black people were arrested at higher rates than white people in nearly 9 in every 10 police jurisdictions</strong> reporting 100 or more arrests in 2023 - including every police department with a jurisdiction of over 400,000 population. Despite research <a href="https://www.cdc.gov/nchs/data/hus/2018/020.pdf" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'Drug Rate Research') !!}>showing</a> Black and white people use drugs at similar rates, <strong>three-quarters of police departments arrested Black people for drug possession at higher rates than white people</strong>. Moreover, despite an overall decline in drug arrests in big cities, Black-white arrest disparities in these arrests have <em>grown</em> in many cities since 2013, a trend that has been <a href="https://datacollaborativeforjustice.org/wp-content/uploads/2020/04/Marijuana-Report.pdf" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'Cited Trend') !!}>cited</a> in previous <a href="https://drugpolicy.org/legalization-status-report" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'Previous Research') !!}>research</a>.
             </p>
 
             <p>
@@ -349,8 +349,7 @@
             </p>
 
             <p>
-                While police were more likely to arrest Black people for low level offenses, they were <em>less</em> likely to find someone responsible for the most serious offense - homicide - when the victim was Black.
-                Nationwide, police reported finding a suspect in 84% of homicides of white victims from 2013-2020 compared to only 64% of Latinx victims and 57% of Black victims.
+            While police were more likely to arrest Black people for low level offenses, they were <em>less</em> likely to find someone responsible for the most serious offense - homicide - when the victim was Black. Nationwide, police reported finding a suspect in 86% of homicides of white victims from 2013-2023 compared to only 68% of Latinx victims and 60% of Black victims.
             </p>
 
             <p class="tableau-chart">
@@ -422,7 +421,7 @@
             </p>
 
             <p>
-                Examining data obtained from big city police agencies on both fatal and nonfatal police shootings incidents from 2013-2021, police in New York City, Miami and Oakland had among the lowest rates of police shootings per every 10,000 arrests they made. Detroit, Columbus, Kansas City and Oklahoma City <em>consistently</em> had among the highest rates of police shootings each year. This suggests the need for urgent interventions from the US Department of Justice and/or state Attorney's General to restrict police use of force standards and strengthen independent accountability structures in these cities.
+            Examining data obtained from big city police agencies on both fatal and nonfatal police shootings incidents from 2013-2022, police in New York City, Miami and Oakland had among the lowest rates of police shootings per every 10,000 arrests they made. Detroit, Columbus, Detroit and Oklahoma City <em>consistently</em> had among the highest rates of police shootings each year. This suggests the need for urgent interventions from the US Department of Justice and/or state Attorney's General to restrict police use of force standards and strengthen independent accountability structures in these cities.
             </p>
 
             <p class="tableau-chart">
@@ -452,7 +451,7 @@
             </p>
 
             <p>
-                We obtained detailed use of force data from more than 1,200 police agencies indicating the number of uses of police tasers, batons, K-9s, strangleholds, pepper spray and other force involving weapons each year. Police in Tallahassee, Orlando, Long Beach and Vallejo used these forms of “less lethal” force at higher rates than other large departments, while Las Vegas, Reno and Plano, TX had among the lowest rates of “less lethal” force among the cities we obtained use of force data from.
+            We obtained detailed use of force data from more than 1,200 police agencies indicating the number of uses of police tasers, batons, K-9s, strangleholds, pepper spray and other force involving weapons each year. Police in Fort Wayne, Columbus, and Cincinnati used these forms of “less lethal” force at higher rates than other large departments, while Las Vegas, Reno and Plano, TX had among the lowest rates of “less lethal” force among the cities we obtained use of force data from.
             </p>
 
             <p class="tableau-chart">
@@ -482,7 +481,7 @@
             </p>
 
             <p>
-                Of the departments providing use of force data, more than 120 departments explicitly reported using neck restraints against civilians (including Lateral Vascular Neck Restraints, Carotid Restraints and Chokeholds). Of these, the data show that a few departments were consistently outliers in using this tactic against people. Police departments in San Diego, Long Beach and Minneapolis consistently reported using strangleholds against civilians at higher rates per arrest than other large police departments. Following widespread protests over the murder of George Floyd, these cities banned strangleholds in June 2020. Altogether, these three agencies reported 74% fewer neck restraint incidents in 2020 than they reported in 2019.
+            Of the departments providing use of force data, more than 120 departments explicitly reported using neck restraints against civilians (including Lateral Vascular Neck Restraints, Carotid Restraints and Chokeholds). Of these, the data show that a few departments were consistently outliers in using this tactic against people. San Diego and Minneapolis police departments consistently reported using strangleholds against civilians at higher rates per arrest than other large police departments. Following widespread protests over the murder of George Floyd, these cities banned strangleholds in June 2020. These two agencies reported 68% fewer neck restraint incidents in 2020 than they reported in 2019, mirroring substantial reductions reported among other agencies banning or restricting these tactics in 2020 and 2021. Altogether, reported neck restraints reduced by over 90% among reporting agencies from 2019 through 2022.
             </p>
 
             <p class="tableau-chart">
@@ -516,11 +515,7 @@
             </h2>
 
             <p>
-                When people come forward to report police misconduct, it rarely leads to accountability. Among the over 1,500 departments we obtained civilian complaint data from, <strong>only 1 in every 9 civilian complaints</strong>  of police misconduct was ruled in favor of civilians. Of the 510 jurisdictions that reported 25 or more complaints, only 19 jurisdictions (4%) sustained the majority of civilian complaints reported to them.
-                Among larger cities, Houston, Miami-Dade and Raleigh police sustained complaints in nearly half of all cases, suggesting the need for further examination of potential best-practices used by investigators in these jurisdictions to substantiate misconduct.
-                Consistent with <a href="https://nixthe6.org/research/" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'NixThe6 Past Research') !!}>past research</a> finding that police union contracts undermine accountability, departments were more likely to sustain misconduct complaints against officers in states like GA, TN, SC and NC that do not allow police unions to negotiate these contracts.
-                By contrast, departments in <a href="https://nixthe6.org/" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'NixThe6 States') !!}>states</a> with "Police Bill of Rights" laws were less likely to sustain complaints of police misconduct - suggesting that these laws may also be barriers to police accountability.
-                Importantly, since no nationwide database exists to track police disciplinary consequences resulting from substantiated complaints, we do not know the full extent to which officers are held accountable even in many of the agencies with higher rates of sustained complaints.
+                When people come forward to report police misconduct, it rarely leads to accountability. Among the over 2,500 departments we obtained civilian complaint data from, <strong>fewer than 1 in every 7 civilian complaints</strong> of police misconduct was ruled in favor of civilians. Of the 879 jurisdictions that reported 25 or more complaints, only 54 jurisdictions (6%) sustained the majority of civilian complaints reported to them. Among larger cities, Houston, Miami-Dade and Raleigh police sustained complaints in nearly half of all cases, suggesting the need for further examination of potential best-practices used by investigators in these jurisdictions to substantiate misconduct. Consistent with <a href="https://nixthe6.org/research/" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'NixThe6 Past Research') !!}>past research</a> finding that police union contracts undermine accountability, departments were more likely to sustain misconduct complaints against officers in states like GA, TN, SC and NC that do not allow police unions to negotiate these contracts. By contrast, departments in <a href="https://nixthe6.org/" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', 'NixThe6 States') !!}>states</a> with "Police Bill of Rights" laws were less likely to sustain complaints of police misconduct - suggesting that these laws may also be barriers to police accountability. Importantly, since no nationwide database exists to track police disciplinary consequences resulting from substantiated complaints, we do not know the full extent to which officers are held accountable even in many of the agencies with higher rates of sustained complaints.
             </p>
 
             <p class="tableau-chart">
@@ -546,24 +541,24 @@
             </p>
 
             <p>
-                Among the types of allegations reported, more serious allegations like excessive force or discrimination allegations were even less likely to be ruled in favor civilians than other complaints. Civilians reporting police <strong>discrimination</strong> had only a <strong>1 in 54 chance</strong> of their complaint being upheld and civilians reporting <strong>use of force</strong> complaints had only a <strong>1 in 31 chance</strong> of being upheld. This lack of administrative accountability for police violence mirrors the criminal justice system's approach towards police violence.
-                Only 2% of all killings by police from 2013-2021 have resulted in an officer being charged with a crime and 1% of killings resulted in a criminal conviction.
+            Among the types of allegations reported, more serious allegations like excessive force or discrimination allegations were even less likely to be ruled in favor of civilians than other complaints. Civilians reporting police <strong>discrimination</strong> had only a <strong>1 in 49 chance</strong> of their complaint being upheld and civilians reporting <strong>use of force</strong> complaints had only a <strong>1 in 17 chance</strong> of being upheld. This lack of administrative accountability for police violence mirrors the criminal justice system's approach towards police violence. Only 2% of all killings by police from 2013-2023 have resulted in an officer being charged with a crime and 1% of killings resulted in a criminal conviction.
+
             </p>
 
             <div class="divider"></div>
 
-            <!-- 8. 79% of jurisdictions increased police funding from 2013-2020 -->
+            <!-- 8. Nearly two-thirds of jurisdictions increased police funding from 2013-2022 -->
 
             <h2 class="subtitle" id="increased-funding">
-                8. 79% of jurisdictions increased police funding from 2013-2020
+                8. Nearly two-thirds of jurisdictions increased police funding from 2013-2022
             </h2>
 
             <p>
-                Local government finances data reported to the US Census Bureau shows residents spend substantially different amounts on policing depending on which jurisdiction they live in - for example, residents in Baltimore City, Oakland and New York City spent 3-4x more per capita on policing than residents in El Paso, Virginia Beach or Indianapolis in 2020 (the latest year of data published by the Census Bureau). Police funding increased in almost every jurisdiction from 2013-2020 - the median jurisdiction increased police spending by 14% after adjusting for inflation.
+                Local government finances data reported to the US Census Bureau shows residents spend substantially different amounts on policing depending on which jurisdiction they live in - for example, residents in Baltimore City, Oakland and New York City spent 3-4x more per capita on policing than residents in El Paso, Virginia Beach or Indianapolis in 2022 (the latest year of data published by the Census Bureau). Police funding increased in 63% of all jurisdictions reporting financial data from 2013-2022 - the median jurisdiction increased police spending by 6% after adjusting for inflation.
             </p>
 
             <p>
-                21% of jurisdictions cut police funding from 2013-2020 after accounting for the estimated <a href="https://www.usinflationcalculator.com/" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', '10.4%') !!}>10.4%</a> inflation during this period, according to the Census data. A review of municipal budgetary documents along with the Census data found only one of the nation's largest cities (over 400k population) cut police spending more than 10% from 2013-2020 - Detroit. Detroit's police budget was 12% lower in 2020 than it was in 2013, after adjusting for inflation. The city reduced police funding by 30% between 2014-15, in addition to making cuts to other agency budgets, after filing for municipal bankruptcy. However, the Detroit police budget has continued to grow each year since these initial budget cuts were implemented in 2015.
+            37% of jurisdictions cut police funding from 2013-2022 after accounting for the estimated <a href="https://www.usinflationcalculator.com/" target="_blank" rel="noopener" {!! trackData('External Nav', 'Findings', '26%') !!}>26%</a> inflation during this period, according to the Census data. A review of municipal budgetary documents along with the Census data found Detroit cut police spending the most among the nation's largest cities (over 400k population). Detroit's police budget was 22% lower in 2022 than it was in 2013, after adjusting for inflation. The city reduced police funding by 30% between 2014-15, in addition to making cuts to other agency budgets, after filing for municipal bankruptcy. However, the Detroit police budget has continued to grow since these initial budget cuts were implemented in 2015.
             </p>
 
             <p class="tableau-chart">
@@ -601,7 +596,7 @@
             </p>
 
             <p>
-                The data also reveals that the nation's largest law enforcement agencies reduced police shootings by 25% and cut arrests for low level offenses by more than half since 2013. At the same time, Black communities continue to be disproportionately impacted by these policing practices and, even in many of these same cities, racial disparities are <em>increasing</em>. And the data also identify police departments that consistently demonstrate worse outcomes than other agencies - using force at multiple times the rate of the average agency of their size. These findings suggest the need for urgent investigations and interventions prioritizing the lowest-performing departments - especially smaller towns and big cities where racial disparities are most severe/increasing most rapidly. This includes interventions from local policymakers and pattern/practice investigations by state and federal attorneys general.
+                The data also reveals that the nation's largest law enforcement agencies reduced police shootings by 20% and that arrests for low level offenses, which comprise the vast majority of all arrests, reduced by nearly 40% across law enforcement agencies of all sizes since 2013. However, this progress has already begun to be reversed in some places. At the same time, Black communities continue to be disproportionately impacted by these policing practices and, even in many of these same cities, racial disparities are increasing. And the data also reveals police departments that consistently demonstrate worse outcomes than other agencies - using force at multiple times the rate of the average agency of their size. These findings suggest the need for urgent investigations and interventions prioritizing the lowest-performing departments - especially smaller towns and big cities where racial disparities are most severe/increasing most rapidly. This includes interventions from local policymakers and pattern/practice investigations by state and federal attorneys general.
             </p>
 
             <a href="#main" class="back-to-top">

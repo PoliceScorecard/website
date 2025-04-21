@@ -12,7 +12,7 @@
 <script src="/maps/us-{{ strtolower($state) }}-all.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
-@if (isset($scorecard['police_accountability']['civilian_complaints_reported_2016']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2017']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2018']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2019']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2020']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2021']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2022']))
+@if (isset($scorecard['police_accountability']['civilian_complaints_reported_2016']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2017']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2018']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2019']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2020']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2021']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2022']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2023']))
 <script>
   window.addEventListener('load', function() {
     var renderComplaintsChart = function(complaintsCTX, complaintsData){

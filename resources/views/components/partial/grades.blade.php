@@ -144,6 +144,7 @@
                 @endif @endforeach
             </table>
         </div>
+        <div class="clearfix"></div>
     </div>
 
     <div class="content{{ count($grades['all']) <= 10 ? ' hide-mobile' : '' }}{{ count($grades['all']) <= 20 ? ' hide-desktop' : '' }}">

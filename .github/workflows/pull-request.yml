@@ -37,4 +37,4 @@ jobs:
         run: npm run -s test-unit
 
       - name: Clean Up Build Files
-        run: rm -fr /home/staywoke/actions-runner/_work/police-scorecard/police-scorecard/{*,.*} > /dev/null 2>&1 &
+        run: rm -fr /home/policescorecard/actions-runner/_work/police-scorecard/police-scorecard/{*,.*} > /dev/null 2>&1 &
