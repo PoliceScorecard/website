@@ -17,6 +17,7 @@
 
 ### Additional Information
 
+* [Deploy Update](docs/deploy-update.md)
 * [Development Process](docs/development-process.md)
 * [Remote Device Testing](docs/device-testing.md)
 * [Laravel Docs](https://laravel.com/docs/7.x)
