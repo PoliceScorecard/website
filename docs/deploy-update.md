@@ -9,7 +9,7 @@ Deploy Update
 
 ```bash
 # SSH into Police Scorecard
-ssh staywoke@policescorecard.org
+ssh psadmin@policescorecard.org
 
 # To update https://dev.policescorecard.org using `develop` branch
 /usr/local/bin/deploy-development
