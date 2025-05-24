@@ -592,7 +592,7 @@
             </h2>
 
             <p>
-                When these outcomes are evaluated together, it reveals a disturbing picture of policing across the nation. While the federal government collects and publishes data on crime, arrests and police personnel from the vast majority of America's police agencies, only a fraction of these agencies make data available on police use of force, misconduct complaints, or settlements. Where such data are available, they show racially disparate policing outcomes and low rates of upholding police misconduct complaints in almost every location. Altogether, <strong>most departments received a score lower than 50% and almost no departments scored higher than 70%, suggesting the need to thoroughly reimagine and transform the way the vast majority of cities and counties in the United States approach public safety.</strong>
+                When these outcomes are evaluated together, it reveals a disturbing picture of policing across the nation. While the federal government collects and publishes data on crime, arrests and police personnel from the vast majority of America's police agencies, only a fraction of these agencies make data available on police use of force, misconduct complaints, or settlements. Where such data are available, they show racially disparate policing outcomes and low rates of upholding police misconduct complaints in almost every location. Altogether, <strong>most departments received a score lower than 50% and no departments scored higher than 70%, suggesting the need to thoroughly reimagine and transform the way the vast majority of cities and counties in the United States approach public safety.</strong>
             </p>
 
             <p>
