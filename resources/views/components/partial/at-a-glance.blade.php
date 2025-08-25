@@ -2,7 +2,7 @@
 $class_a = (is_numeric($scorecard['report']['percentile_less_lethal_force'])) ? 'key animate-score percent-' . round($scorecard['report']['percentile_less_lethal_force']) : 'incomplete';
 $class_b = (is_numeric($scorecard['report']['percentile_killed_by_police'])) ? 'key animate-score percent-' . round($scorecard['report']['percentile_killed_by_police']) : 'incomplete';
 $class_c = (is_numeric($scorecard['report']['percentile_unarmed_killed_by_police'])) ? 'key animate-score percent-' . round($scorecard['report']['percentile_unarmed_killed_by_police']) : 'incomplete';
-$class_d = (is_numeric($scorecard['report']['overall_disparity_index'])) ? 'key animate-score percent-' . round($scorecard['report']['overall_disparity_index']) : 'incomplete';
+$class_d = (is_numeric($scorecard['report']['percentile_overall_disparity_index'])) ? 'key animate-score percent-' . round($scorecard['report']['percentile_overall_disparity_index']) : 'incomplete';
 $class_e = (is_numeric($scorecard['report']['percentile_complaints_sustained'])) ? 'key animate-score percent-' . round($scorecard['report']['percentile_complaints_sustained']) : 'incomplete';
 $class_f = (is_numeric($scorecard['report']['percent_criminal_complaints_sustained'])) ? 'key animate-score percent-' . round($scorecard['report']['percent_criminal_complaints_sustained']) : 'incomplete';
 $class_g = (is_numeric($scorecard['report']['percentile_low_level_arrests_per_1k_population'])) ? 'key animate-score percent-' . round($scorecard['report']['percentile_low_level_arrests_per_1k_population']) : 'incomplete';
