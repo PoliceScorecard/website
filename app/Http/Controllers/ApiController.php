@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
+    const CACHE_GZIP_PREFIX = 'gz:';
+    const CACHE_COMPRESSION_THRESHOLD = 1048576;
+
     /**
      * @var Http API Client
      */
@@ -45,7 +48,7 @@ class ApiController extends Controller
      */
     protected function makeRequest($endpoint, $query=[]) {
         $cache_key = $this->getCacheKey($endpoint, $query);
-        $cached_response = Cache::get($cache_key);
+        $cached_response = $this->decodeCachedResponse(Cache::get($cache_key));
 
         if ($cached_response) {
             $api_data = json_decode($cached_response, true);
@@ -60,10 +63,61 @@ class ApiController extends Controller
             } else if (isset($api_data['errors']) && count($api_data['errors']) > 0) {
                 abort(403, $api_data['errors'][0]);
             } else {
-                Cache::add($cache_key, $response, config('api.cache_expire'));
+                $this->cacheResponse($cache_key, $response);
                 return isset($api_data['data']) ? $api_data['data'] : $api_data;
             }
         }
+    }
+
+    /**
+     * Store large API responses in a compressed cache format.
+     *
+     * @param string $cache_key
+     * @param string $response
+     * @return void
+     */
+    protected function cacheResponse($cache_key, $response) {
+        $cached_response = $this->encodeCacheResponse($response);
+
+        if (!is_null($cached_response)) {
+            Cache::add($cache_key, $cached_response, config('api.cache_expire'));
+        }
+    }
+
+    /**
+     * @param mixed $response
+     * @return mixed
+     */
+    protected function encodeCacheResponse($response) {
+        if (!is_string($response) || strlen($response) < self::CACHE_COMPRESSION_THRESHOLD) {
+            return $response;
+        }
+
+        if (!function_exists('gzencode')) {
+            return null;
+        }
+
+        $compressed = gzencode($response, 6);
+
+        return ($compressed !== false) ? self::CACHE_GZIP_PREFIX . $compressed : null;
+    }
+
+    /**
+     * @param mixed $cached_response
+     * @return mixed
+     */
+    protected function decodeCachedResponse($cached_response) {
+        if (!is_string($cached_response) || strpos($cached_response, self::CACHE_GZIP_PREFIX) !== 0) {
+            return $cached_response;
+        }
+
+        if (!function_exists('gzdecode')) {
+            return null;
+        }
+
+        $decoded = gzdecode(substr($cached_response, strlen(self::CACHE_GZIP_PREFIX)));
+
+        return ($decoded !== false) ? $decoded : null;
     }
 
     /**
