@@ -9,7 +9,7 @@
         </p>
         <p>&nbsp;</p>
         <p>
-            <strong>Police Scorecard is an independent 501(c)(3) organization, learn more about our team <a href="/about" {!! trackData('Nav', 'About', 'Team') !!}>here</a>.</strong> If you have feedback, questions about the project, or need support with an advocacy campaign, contact our Founder, <a href="mailto:samswey1@gmail.com" rel="noopener" target="_blank" {!! trackData('External Nav', 'About', 'Contact Founder') !!}>Samuel Sinyangwe</a>.
+            <strong>Police Scorecard is an independent 501(c)(3) organization, learn more about our team <a href="/about" {!! trackData('Nav', 'About', 'Team') !!}>here</a>.</strong> If you have feedback, questions about the project, or need support with an advocacy campaign, contact our Founder, <a href="mailto:info@policedata.org" rel="noopener" target="_blank" {!! trackData('External Nav', 'About', 'Contact Founder') !!}>Samuel Sinyangwe</a>.
         </p>
         <p>
             <a href="/about" class="button" {!! trackData('Nav', 'About', 'Methodology') !!}>methodology</a>
