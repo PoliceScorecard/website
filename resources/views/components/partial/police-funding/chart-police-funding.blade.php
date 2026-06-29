@@ -1,8 +1,18 @@
-@if (isset($scorecard['police_funding']['police_budget_2020']) || isset($scorecard['police_funding']['police_budget_2019']) || isset($scorecard['police_funding']['police_budget_2018']) || isset($scorecard['police_funding']['police_budget_2017']))
+@if (isset($scorecard['police_funding']['police_budget_2025']) || isset($scorecard['police_funding']['police_budget_2024']) || isset($scorecard['police_funding']['police_budget_2023']) || isset($scorecard['police_funding']['police_budget_2022']) || isset($scorecard['police_funding']['police_budget_2021']) || isset($scorecard['police_funding']['police_budget_2020']) || isset($scorecard['police_funding']['police_budget_2019']) || isset($scorecard['police_funding']['police_budget_2018']) || isset($scorecard['police_funding']['police_budget_2017']))
 <div class="stat-wrapper">
     <h3>Police Funding By Year</h3>
     <p>
-    @if (isset($scorecard['police_funding']['police_budget_2020']))
+    @if (isset($scorecard['police_funding']['police_budget_2025']))
+        {{ nFormatter($scorecard['police_funding']['police_budget_2025'], 2) }}
+    @elseif (isset($scorecard['police_funding']['police_budget_2024']))
+        {{ nFormatter($scorecard['police_funding']['police_budget_2024'], 2) }}
+    @elseif (isset($scorecard['police_funding']['police_budget_2023']))
+        {{ nFormatter($scorecard['police_funding']['police_budget_2023'], 2) }}
+    @elseif (isset($scorecard['police_funding']['police_budget_2022']))
+        {{ nFormatter($scorecard['police_funding']['police_budget_2022'], 2) }}
+    @elseif (isset($scorecard['police_funding']['police_budget_2021']))
+        {{ nFormatter($scorecard['police_funding']['police_budget_2021'], 2) }}
+    @elseif (isset($scorecard['police_funding']['police_budget_2020']))
         {{ nFormatter($scorecard['police_funding']['police_budget_2020'], 2) }}
     @elseif (isset($scorecard['police_funding']['police_budget_2019']))
         {{ nFormatter($scorecard['police_funding']['police_budget_2019'], 2) }}
