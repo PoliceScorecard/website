@@ -454,8 +454,8 @@ if (!function_exists('getNationalSummary')) {
             $total_arrests_2021 += $state['total_arrests_2021'];
             $total_arrests_2022 += $state['total_arrests_2022'];
             $total_arrests_2023 += $state['total_arrests_2023'];
-            $total_arrests_2024 += isset($state['total_arrests_2024']) ? $state['total_arrests_2024'] : 0;
-            $total_arrests_2025 += isset($state['total_arrests_2025']) ? $state['total_arrests_2025'] : 0;
+            $total_arrests_2024 += $state['total_arrests_2024'];
+            $total_arrests_2025 += $state['total_arrests_2025'];
         }
 
         return array(
@@ -1279,7 +1279,7 @@ if (!function_exists('generateArrestChart')) {
             $output['datasets'][0]['data'][] = $low_level_arrests_2023;
         }
 
-        if (isset($scorecard['arrests']['arrests_2024']) && isset($scorecard['arrests']['low_level_arrests_2024'])) {
+        if (isset($scorecard['arrests']['arrests_2024'])) {
             $arrests_2024 = intval($scorecard['arrests']['arrests_2024']);
             $low_level_arrests_2024 = intval($scorecard['arrests']['low_level_arrests_2024']);
 
@@ -1288,7 +1288,7 @@ if (!function_exists('generateArrestChart')) {
             $output['datasets'][0]['data'][] = $low_level_arrests_2024;
         }
 
-        if (isset($scorecard['arrests']['arrests_2025']) && isset($scorecard['arrests']['low_level_arrests_2025'])) {
+        if (isset($scorecard['arrests']['arrests_2025'])) {
             $arrests_2025 = intval($scorecard['arrests']['arrests_2025']);
             $low_level_arrests_2025 = intval($scorecard['arrests']['low_level_arrests_2025']);
 
@@ -1386,6 +1386,12 @@ if (!function_exists('generateCivilianChart')) {
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['civilian_complaints_sustained_2024'];
         }
 
+        if (isset($scorecard['police_accountability']['civilian_complaints_reported_2025']) && isset($scorecard['police_accountability']['civilian_complaints_sustained_2025'])) {
+            $output['labels'][] = '2025';
+            $output['datasets'][1]['data'][] = $scorecard['police_accountability']['civilian_complaints_reported_2025'] - $scorecard['police_accountability']['civilian_complaints_sustained_2025'];
+            $output['datasets'][0]['data'][] = $scorecard['police_accountability']['civilian_complaints_sustained_2025'];
+        }
+
         return json_encode($output);
     }
 }
@@ -1472,6 +1478,12 @@ if (!function_exists('generateUseOfForceChart')) {
             $output['labels'][] = '2024';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_reported_2024'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_sustained_2024'];
+        }
+
+        if (isset($scorecard['police_accountability']['use_of_force_complaints_reported_2025']) && isset($scorecard['police_accountability']['use_of_force_complaints_sustained_2025'])) {
+            $output['labels'][] = '2025';
+            $output['datasets'][1]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_reported_2025'];
+            $output['datasets'][0]['data'][] = $scorecard['police_accountability']['use_of_force_complaints_sustained_2025'];
         }
 
         return json_encode($output);
@@ -1562,6 +1574,12 @@ if (!function_exists('generateDiscriminationChart')) {
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['discrimination_complaints_sustained_2024'];
         }
 
+        if (isset($scorecard['police_accountability']['discrimination_complaints_reported_2025']) && isset($scorecard['police_accountability']['discrimination_complaints_sustained_2025'])) {
+            $output['labels'][] = '2025';
+            $output['datasets'][1]['data'][] = $scorecard['police_accountability']['discrimination_complaints_reported_2025'];
+            $output['datasets'][0]['data'][] = $scorecard['police_accountability']['discrimination_complaints_sustained_2025'];
+        }
+
         return json_encode($output);
     }
 }
@@ -1650,6 +1668,12 @@ if (!function_exists('generateCriminalChart')) {
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['criminal_complaints_sustained_2024'];
         }
 
+        if (isset($scorecard['police_accountability']['criminal_complaints_reported_2024']) && isset($scorecard['police_accountability']['criminal_complaints_sustained_2025'])) {
+            $output['labels'][] = '2025';
+            $output['datasets'][1]['data'][] = $scorecard['police_accountability']['criminal_complaints_reported_2025'];
+            $output['datasets'][0]['data'][] = $scorecard['police_accountability']['criminal_complaints_sustained_2025'];
+        }
+
         return json_encode($output);
     }
 }
@@ -1736,6 +1760,12 @@ if (!function_exists('generateDetentionChart')) {
             $output['labels'][] = '2024';
             $output['datasets'][1]['data'][] = $scorecard['police_accountability']['complaints_in_detention_reported_2024'];
             $output['datasets'][0]['data'][] = $scorecard['police_accountability']['complaints_in_detention_sustained_2024'];
+        }
+
+        if (isset($scorecard['police_accountability']['complaints_in_detention_reported_2024']) && isset($scorecard['police_accountability']['complaints_in_detention_sustained_2025'])) {
+            $output['labels'][] = '2025';
+            $output['datasets'][1]['data'][] = $scorecard['police_accountability']['complaints_in_detention_reported_2025'];
+            $output['datasets'][0]['data'][] = $scorecard['police_accountability']['complaints_in_detention_sustained_2025'];
         }
 
         return json_encode($output);

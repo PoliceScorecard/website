@@ -18,10 +18,12 @@
 
     <div class="content">
         <div class="one-third home-page">
-            <h1><strong>{{ num($scorecard['total_people_killed']) }}</strong> Killings by Police</h1>
+            <!-- <h1><strong>{{ num($scorecard['total_people_killed']) }}</strong> Killings by Police</h1> -->
+            <h1><strong>14,838</strong> Killings by Police</h1>
 
             <div class="text">
-                <p>Based on population, a Black person was <strong>{{ num($scorecard['black_deadly_force_disparity_per_population'], 1, 'x') }}</strong> as likely and a Latinx person was <strong>{{ num($scorecard['hispanic_deadly_force_disparity_per_population'], 1, 'x') }}</strong> as likely to be killed by police as a White person in America from 2013-25.</p>
+                <!-- <p>Based on population, a Black person was <strong>{{ num($scorecard['black_deadly_force_disparity_per_population'], 1, 'x') }}</strong> as likely and a Latinx person was <strong>{{ num($scorecard['hispanic_deadly_force_disparity_per_population'], 1, 'x') }}</strong> as likely to be killed by police as a White person in America from 2013-25.</p> -->
+                <p>Based on population, a Black person was <strong>2.8x</strong> as likely and a Latinx person was <strong>1.3x</strong> as likely to be killed by police as a White person in America from 2013-25.</p>
             </div>
 
             <div class="chart chart-1">

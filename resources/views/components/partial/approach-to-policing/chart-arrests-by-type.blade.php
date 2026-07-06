@@ -6,7 +6,7 @@
         <div class="progress-bar animate-bar dark-grey" data-percent="{{ output(intval($scorecard['report']['percent_misdemeanor_arrests']), 0, '%') }}"></div>
     </div>
 
-    <p>Drug Possession ( {{ num($scorecard['report']['percent_drug_possession_arrests'], 0, '%') }} )</p>
+    <p>Drug Arrests ( {{ num($scorecard['report']['percent_drug_possession_arrests'], 0, '%') }} )</p>
     <div class="progress-bar-wrapper">
         <div class="progress-bar animate-bar dark-grey" data-percent="{{ output(intval($scorecard['report']['percent_drug_possession_arrests']), 0, '%') }}"></div>
     </div>
