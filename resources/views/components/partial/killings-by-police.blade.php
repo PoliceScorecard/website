@@ -49,7 +49,8 @@
         </div>
 
         <div class="one-third home-page">
-            <h1><strong>{{ num($scorecard['total_arrests']) }}</strong> arrests made</h1>
+            <!-- <h1><strong>{{ num($scorecard['total_arrests']) }}</strong> arrests made</h1> -->
+            <h1><strong>97,390,271</strong> arrests made</h1>
 
             <div class="text">
                 <p>Police in America made <strong>{{ num($scorecard['times_more_misdemeanor_arrests_than_violent_crime'], 0, 'x') }} as many arrests for low level offenses</strong> as for violent crimes from 2013-2025.</p>
