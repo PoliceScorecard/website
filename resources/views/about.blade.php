@@ -301,11 +301,11 @@
             <h2 class="subtitle">ARRESTS</h2>
 
             <p>
-                DEFINITION: THE TOTAL NUMBER OF ARRESTS REPORTED BY POLICE FROM 2013-2024.
+                DEFINITION: THE TOTAL NUMBER OF ARRESTS REPORTED BY POLICE FROM 2013-2025.
             <p>
 
             <p>
-                Data on the number of each agency's arrests was obtained from the FBI Uniform Crime Report (UCR) for arrests made from 2013-2024. From 2023 onwards, we incorporate arrests data from the FBI National Incident-Based Reporting System (NIBRS), which replaced the UCR as the federal government's primary arrests database.
+                Data on the number of each agency's arrests was obtained from the FBI Uniform Crime Report (UCR) for arrests made from 2013-2022. From 2023 onwards, we incorporate arrests data from the FBI National Incident-Based Reporting System (NIBRS), which replaced the UCR as the federal government's primary arrests database.
             </p>
 
             <p>
