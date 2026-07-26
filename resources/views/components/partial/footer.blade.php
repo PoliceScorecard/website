@@ -16,8 +16,8 @@
             </a>
         </div>
         <div class="right">
-            <a href="https://www.paypal.com/donate?hosted_button_id=U32Y7FCWBULNG" class="donate" title="Donate to Police Scorecard" rel="noopener" target="_blank" {!! trackData('External Nav', 'Footer', 'Donate') !!}>Donate</a>
-            <a href="mailto:samswey1@gmail.com?subject=Police%20Scorecard%20-%20Get%20Involved" class="get-involved" rel="noopener" target="_blank" {!! trackData('External Nav', 'Footer', 'Get Involved') !!}>Get Involved</a>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=US2VCAMJNBUXY" class="donate" title="Donate to Police Scorecard" rel="noopener" target="_blank" {!! trackData('External Nav', 'Footer', 'Donate') !!}>Donate</a>
+            <a href="mailto:info@policedata.org?subject=Police%20Scorecard%20-%20Get%20Involved" class="get-involved" rel="noopener" target="_blank" {!! trackData('External Nav', 'Footer', 'Get Involved') !!}>Get Involved</a>
         </div>
     </div>
 

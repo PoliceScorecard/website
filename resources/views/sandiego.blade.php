@@ -57,7 +57,7 @@
             <div class="right">
                 <a href="{{ asset('/san-diego/police-scorecard-san-diego-report.pdf') }}" target="_blank" class="read-methodology">
                     Read the Full Report<br>
-                    <img src="{{ asset('/san-diego/report-screenshot.jpg') }}" />
+                    <img src="{{ asset('/san-diego/report-screenshot.jpg') }}" alt="" />
                 </a>
             </div>
         </div>
@@ -183,8 +183,8 @@
             </div>
             <div class="right">
                 <div class="right">
-                    <a href="/assets/san-diego/arrests-1.png" target="_blank"> <img src="{{ asset('/san-diego/arrests-1.png') }}" alt="Arrests Grid SDPD.png" /> </a>
-                    <a href="/assets/san-diego/arrests-2.png" target="_blank"> <img src="{{ asset('/san-diego/arrests-2.png') }}" alt="Arrests Grid SDSD.png" /> </a>
+                    <a href="{{ asset('/san-diego/arrests-1.png') }}" target="_blank"> <img src="{{ asset('/san-diego/arrests-1.png') }}" alt="Arrests Grid SDPD.png" /> </a>
+                    <a href="{{ asset('/san-diego/arrests-2.png') }}" target="_blank"> <img src="{{ asset('/san-diego/arrests-2.png') }}" alt="Arrests Grid SDSD.png" /> </a>
                 </div>
             </div>
         </div>
@@ -352,8 +352,7 @@
                 </p>
             </div>
             <div class="right">
-                <iframe title="Jail Deaths" aria-label="Column Chart" id="datawrapper-chart-FlTtW" src="//datawrapper.dwcdn.net/FlTtW/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>
-                <script type="text/javascript">! function() {"use strict";window.addEventListener("message", function(a) {if (void 0 !== a.data["datawrapper-height"])for (var e in a.data["datawrapper-height"]) {var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']");t && (t.style.height = a.data["datawrapper-height"][e] + "px")}})}();</script>
+                <a href="{{ asset('/san-diego/deaths-in-jail.png') }}" target="_blank"><img src="{{ asset('/san-diego/deaths-in-jail.png') }}" alt="Deaths in Jail" /></a>
             </div>
         </div>
     </div>
@@ -408,8 +407,8 @@
                 </p>
             </div>
             <div class="right">
-                <a href="/assets/san-diego/recommendation-1.png" target="_blank"><img src="{{ asset('/san-diego/recommendation-1.png') }}" alt="Recommendation Grid SDPD.png" /></a>
-                <a href="/assets/san-diego/recommendation-2.png" target="_blank"><img src="{{ asset('/san-diego/recommendation-2.png') }}" alt="Recommendation Grid SDSD.png" /></a>
+                <a href="{{ asset('/san-diego/recommendation-1.png') }}" target="_blank"><img src="{{ asset('/san-diego/recommendation-1.png') }}" alt="Recommendation Grid SDPD.png" /></a>
+                <a href="{{ asset('/san-diego/recommendation-2.png') }}" target="_blank"><img src="{{ asset('/san-diego/recommendation-2.png') }}" alt="Recommendation Grid SDSD.png" /></a>
             </div>
         </div>
         <div class="content chart-summary padded no-pad-top number-list">

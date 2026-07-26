@@ -37,9 +37,9 @@
             type: '{{ $type }}'
         };
         var barChartData = {
-            black: {{ (!isset($scorecard['total_black_population']) || $scorecard['total_black_population'] === 0) ? 0: round(($scorecard['total_black_people_killed'] / $scorecard['total_black_population']) * 100, 2) }},
-            latinx: {{ (!isset($scorecard['total_hispanic_population']) || $scorecard['total_hispanic_population'] === 0) ? 0: round(($scorecard['total_hispanic_people_killed'] / $scorecard['total_hispanic_population']) * 100, 2) }},
-            white: {{ (!isset($scorecard['total_white_population']) || $scorecard['total_white_population'] === 0) ? 0: round(($scorecard['total_white_people_killed'] / $scorecard['total_white_population']) * 100, 2) }}
+            black: {{ (!isset($scorecard['total_black_population']) || $scorecard['total_black_population'] === 0) ? 0: round(($scorecard['total_black_people_killed'] / $scorecard['total_black_population']) * 100000, 2) }},
+            latinx: {{ (!isset($scorecard['total_hispanic_population']) || $scorecard['total_hispanic_population'] === 0) ? 0: round(($scorecard['total_hispanic_people_killed'] / $scorecard['total_hispanic_population']) * 100000, 2) }},
+            white: {{ (!isset($scorecard['total_white_population']) || $scorecard['total_white_population'] === 0) ? 0: round(($scorecard['total_white_people_killed'] / $scorecard['total_white_population']) * 100000, 2) }}
         };
     </script>
 

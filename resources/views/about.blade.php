@@ -59,7 +59,7 @@
             </h2>
 
             <p>
-                The Police Scorecard integrates data on police arrests, personnel, funding, incarceration rates and homicide clearance rates from official federal and state databases such as the FBI Uniform Crime Report (UCR), the Bureau of Justice Statistics' Annual Survey of Jails, the US Census Bureau's Survey of State and Local Government Finances and the California Department of Justice's OpenJustice database. Where agencies did not report data to one of these programs, data were sourced from local agency publications and media reports. Data on killings by police were obtained via the Mapping Police Violence database, which documents each case in which police directly caused the death of another person through the use of a firearm or any other type of force. Finally, data on non-fatal police use of force incidents and police misconduct complaints were obtained directly from police agencies via public records requests, annual reports and departments' open data sites. The full list and descriptions of each data source used in this project can be found in Appendix A below.
+                The Police Scorecard integrates data on police arrests, personnel, funding, incarceration rates and homicide clearance rates from official federal and state databases such as the FBI Uniform Crime Report (UCR), the Bureau of Justice Statistics' Annual Survey of Jails, the US Census Bureau's Survey of State and Local Government Finances and the California Department of Justice's OpenJustice database. Where agencies did not report data to one of these programs, data were sourced from local agency publications and media reports. We also obtained data on killings by police from media reports, crowdsourced databases and official reports, documenting each case in which police directly caused the death of another person through the use of a firearm or any other type of force. Finally, data on non-fatal police use of force incidents and police misconduct complaints were obtained directly from police agencies via public records requests, annual reports and departments' open data sites. The full list and descriptions of each data source used in this project can be found in Appendix A below.
             </p>
 
             <h2 class="subtitle">
@@ -196,7 +196,7 @@
             </p>
 
             <p>
-                <strong>3. Percent of Civilian Complaints in Detention Sustained from 2016-2022</strong>
+                <strong>3. Percent of Civilian Complaints in Detention Sustained from 2016-2024</strong>
             </p>
 
             <p>
@@ -245,11 +245,11 @@
             <h2 class="subtitle">KILLINGS BY POLICE</h2>
 
             <p>
-                DEFINITION: PEOPLE KILLED BY LAW ENFORCEMENT OFFICERS FROM 2013-2023.
+                DEFINITION: PEOPLE KILLED BY LAW ENFORCEMENT OFFICERS FROM 2013-2025.
             </p>
 
             <p>
-                We used the Mapping Police Violence database, which combines information on people killed by police from 2013-2023 sourced from public records requests, local media reports and other crowdsourced databases such as the Fatal Encounters database. This database includes information on 9,911 people killed by police nationwide from 2013-2023, 91% of whom were killed by one of the law enforcement agencies currently represented in the Police Scorecard. Importantly, this database allows for a more comprehensive evaluation of killings by police than would be possible using official data, since only about <a href="https://www.marketplace.org/2020/06/01/fbi-police-use-of-force-database/" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', '40% Reported') !!}>40%</a> of the nation's law enforcement reports data to the federal government's Use of Force Data Collection program and that data still has not been released publicly. The Mapping Police Violence database is also more expansive than the Washington Post's police shootings database because it includes cases where people are killed by types of police use of force in addition to fatal police shootings (i.e. killings by tasers, batons, chokeholds and intentional vehicle strikes) as well as cases that occurred prior to 2015. The database also evaluates whether each person killed by police was armed with a gun, armed with another weapon or vehicle, or unarmed at the time of the incident. Using the coding schema in the Mapping Police Violence database, cases were coded as unarmed when the person killed by police did not possess an actual weapon - which includes both people who had no object in their hands and people who had common/household objects like cell phones, spoons or a toy that may have been perceived to be a weapon but ended up not constituting a real threat.
+                We obtained information on people killed by police from 2013-2025 sourced from public records requests, local media reports and other crowdsourced databases such as the Fatal Encounters database. This includes information on nearly 15,000 people killed by police nationwide from 2013-2025, 91% of whom were killed by one of the law enforcement agencies currently represented in the Police Scorecard. Importantly, sourcing information from media reports and crowdsourced databases in addition to official databases allows for a more comprehensive evaluation of killings by police than would be possible using official data alone, since only about <a href="https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/le/uof" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', '60% Reported') !!}>60%</a> of the nation's law enforcement reports data to the federal government's Use of Force Data Collection program and that data still has not been released publicly. Our approach is also more expansive than the Washington Post's police shootings database because it includes cases where people are killed by types of police use of force in addition to fatal police shootings (i.e. killings by tasers, batons, chokeholds and intentional vehicle strikes) as well as cases that occurred prior to 2015. The database also evaluates whether each person killed by police was armed with a gun, armed with another weapon or vehicle, or unarmed at the time of the incident. Cases were coded as unarmed when the person killed by police did not possess an actual weapon - which includes both people who had no object in their hands and people who had common/household objects like cell phones, spoons or a toy that may have been perceived to be a weapon but ended up not constituting a real threat.
             </p>
 
             <h2 class="subtitle">POLICE SHOOTINGS (BOTH FATAL AND NON-FATAL)</h2>
@@ -265,11 +265,11 @@
             <h2 class="subtitle">LESS LETHAL FORCE</h2>
 
             <p>
-                DEFINITION: THE TOTAL NUMBER OF USES OF TASERS, BATONS, PROJECTILES, PEPPER SPRAY, K-9S, OTHER WEAPONS AND STRANGLEHOLDS AGAINST CIVILIANS FROM 2013-2022
+                DEFINITION: THE TOTAL NUMBER OF USES OF TASERS, BATONS, PROJECTILES, PEPPER SPRAY, K-9S, OTHER WEAPONS AND STRANGLEHOLDS AGAINST CIVILIANS FROM 2013-2025
             </p>
 
             <p>
-                To obtain information on serious police use of force that did not rise to the level of deadly force, we submitted public records requests to the 500 largest police and county sheriff's departments nationwide asking for the total number of uses of force, by type of force used, from 2013-2022. The majority of these agencies sent us their data or published this information online. Detailed data showing use of force by force type for each responsive department can be found here. Each department varied in how they categorized and reported the use of force. For example, some police departments require officers to report all weaponless strikes and control holds used against a civilian, while others only require these types of force to be reported when they cause injury. Similarly, some departments require officers to report whenever they display a firearm or taser, while others only require them to report when these weapons are discharged. Given these reporting inconsistencies, we limited our analysis to more serious forms of force since these were more consistently reported and categorized among the agencies we obtained data from. This included uses of "less lethal" force or force involving weapons such as tasers, batons, impact projectiles, K-9s, OC/pepper spray, and neck restraints like carotid restraints or lateral vascular neck restraints.
+                To obtain information on serious police use of force that did not rise to the level of deadly force, we submitted public records requests to the 500 largest police and county sheriff's departments nationwide asking for the total number of uses of force, by type of force used, from 2013-2025. The majority of these agencies sent us their data or published this information online. Detailed data showing use of force by force type for each responsive department can be found here. Each department varied in how they categorized and reported the use of force. For example, some police departments require officers to report all weaponless strikes and control holds used against a civilian, while others only require these types of force to be reported when they cause injury. Similarly, some departments require officers to report whenever they display a firearm or taser, while others only require them to report when these weapons are discharged. Given these reporting inconsistencies, we limited our analysis to more serious forms of force since these were more consistently reported and categorized among the agencies we obtained data from. This included uses of "less lethal" force or force involving weapons such as tasers, batons, impact projectiles, K-9s, OC/pepper spray, and neck restraints like carotid restraints or lateral vascular neck restraints.
             </p>
 
             <p>
@@ -283,11 +283,11 @@
             <h2 class="subtitle">CIVILIAN COMPLAINTS</h2>
 
             <p>
-                DEFINITION: THE TOTAL NUMBER OF COMPLAINTS, BY TYPE OF COMPLAINT, REPORTED BY CIVILIANS AGAINST LAW ENFORCEMENT PERSONNEL FROM 2016-2022
+                DEFINITION: THE TOTAL NUMBER OF COMPLAINTS, BY TYPE OF COMPLAINT, REPORTED BY CIVILIANS AGAINST LAW ENFORCEMENT PERSONNEL FROM 2016-2024
             </p>
 
             <p>
-                The Police Scorecard includes the total number of complaints reported each year from 2016-2022, the number of those complaints that were sustained (i.e. upheld by investigators), with breakdowns for the total number of use of force complaints, complaints of police discrimination, and criminal complaints that were reported and the number of each that were sustained during that time period. To obtain these data, we submitted public records requests to local police and sheriff's departments and also requested data from state criminal justice agencies in the states that currently collect information on civilian complaints.
+                The Police Scorecard includes the total number of complaints reported each year from 2016-2024, the number of those complaints that were sustained (i.e. upheld by investigators), with breakdowns for the total number of use of force complaints, complaints of police discrimination, and criminal complaints that were reported and the number of each that were sustained during that time period. To obtain these data, we submitted public records requests to local police and sheriff's departments and also requested data from state criminal justice agencies in the states that currently collect information on civilian complaints.
             </p>
 
             <p>
@@ -301,11 +301,11 @@
             <h2 class="subtitle">ARRESTS</h2>
 
             <p>
-                DEFINITION: THE TOTAL NUMBER OF ARRESTS REPORTED BY POLICE FROM 2013-2023.
+                DEFINITION: THE TOTAL NUMBER OF ARRESTS REPORTED BY POLICE FROM 2013-2025.
             <p>
 
             <p>
-                Data on the number of each agency's arrests was obtained from the FBI Uniform Crime Report (UCR) for arrests made from 2013-2020. From 2021 onwards, we incorporate arrests data from the FBI National Incident-Based Reporting System (NIBRS), which replaced the UCR in 2021 as the federal government's primary arrests database.
+                Data on the number of each agency's arrests was obtained from the FBI Uniform Crime Report (UCR) for arrests made from 2013-2022. From 2023 onwards, we incorporate arrests data from the FBI National Incident-Based Reporting System (NIBRS), which replaced the UCR as the federal government's primary arrests database.
             </p>
 
             <p>
@@ -317,12 +317,12 @@
             </p>
 
             <p>
-                An additional 3,139 jurisdictions, representing 13% of the US population, reported Hispanic arrests under the more simplified Uniform Crime Reporting (UCR) system only. Since UCR data does not specify which of these Hispanic arrestees were also included in the white or Black arrest totals, we used Census data in each jurisdiction to estimate the proportion of Hispanic arrestees who are likely categorized racially as white or Black. Since the UCR reported Hispanic arrests data from 2017-2020, we used the proportion of Hispanic arrests relative to overall arrests reported during this period to estimate the number of Hispanic arrests overall, as follows:
+                An additional 3,139 jurisdictions, representing 13% of the US population, reported Hispanic arrests under the more simplified Uniform Crime Reporting (UCR) system only. Since UCR data does not specify which of these Hispanic arrestees were also included in the white or Black arrest totals, we used Census data in each jurisdiction to estimate the proportion of Hispanic arrestees who are likely categorized racially as white or Black. Since the UCR reported Hispanic arrests data from 2017-2022, we used the proportion of Hispanic arrests relative to overall arrests reported during this period to estimate the number of Hispanic arrests overall, as follows:
             </p>
 
             <ul>
                 <li>
-                    Hispanic Arrest Proportion = Hispanic arrests 2017-2020 / Total Arrests 2017-2020
+                    Hispanic Arrest Proportion = Hispanic arrests 2017-2022 / Total Arrests 2017-2022
                 </li>
                 <li>
                     Overall Hispanic Arrests = Hispanic Arrest Proportion x (White Arrests + Black Arrests).
@@ -378,25 +378,25 @@
             <h2 class="subtitle">HOMICIDES REPORTED AND HOMICIDES SOLVED</h2>
 
             <p>
-                DEFINITION: THE TOTAL NUMBER OF CRIMINAL HOMICIDES REPORTED AND THE TOTAL NUMBER CLEARED BY ARREST OR EXCEPTIONAL MEANS FROM 2013-2023
+                DEFINITION: THE TOTAL NUMBER OF CRIMINAL HOMICIDES REPORTED AND THE TOTAL NUMBER CLEARED BY ARREST OR EXCEPTIONAL MEANS FROM 2013-2024
             </p>
 
             <p>
-                We obtained data on the number of criminal homicides reported and those that were cleared from 2013-2023 from the FBI Uniform Crime Report and Supplementary Homicide Report databases. Consistent with the definitions used by these databases, criminal homicides are classified as murder and non-negligent manslaughter but exclude suicides, accidents, "justifiable homicides" and deaths caused by negligence. Homicides were classified as "cleared" when they resulted in either an arrest or were cleared through "exceptional means" (These are cases in which there is sufficient evidence but an arrest is reportedly not possible, for example, if the person suspected has died). We recognize that homicides cleared by arrest or exceptional means is an imperfect measure of murders "solved," for a variety of reasons (for example, not everyone arrested ends up being guilty of the offense). However, the Uniform Crime Report does not distinguish between these outcomes and, as such, we are limited by the data that are currently available.
+                We obtained data on the number of criminal homicides reported and those that were cleared from 2013-2024 from the FBI Uniform Crime Report and Supplementary Homicide Report databases. Consistent with the definitions used by these databases, criminal homicides are classified as murder and non-negligent manslaughter but exclude suicides, accidents, "justifiable homicides" and deaths caused by negligence. Homicides were classified as "cleared" when they resulted in either an arrest or were cleared through "exceptional means" (These are cases in which there is sufficient evidence but an arrest is reportedly not possible, for example, if the person suspected has died). We recognize that homicides cleared by arrest or exceptional means is an imperfect measure of murders "solved," for a variety of reasons (for example, not everyone arrested ends up being guilty of the offense). However, the Uniform Crime Report does not distinguish between these outcomes and, as such, we are limited by the data that are currently available.
             </p>
 
             <p>
-                We also included in the scorecard statistics on proportion of homicides cleared by race of the victim. Since the Uniform Crime Report did not disaggregate agency-level homicide clearance rates by race of victim, we relied on the Supplementary Homicide Report (SHR) database with enhanced case-level data from the Murder Accountability Project (MAP) to determine the percent of homicides "solved" by race of the victim for each jurisdiction from 2013-2023. Importantly, since homicides tend to be reported to the SHR database an average of 5 months after each incident (depending on jurisdiction), fewer homicides are reported as solved in this dataset compared to the end-of-year Uniform Crime reports. According to MAP, 5-10% of homicides reported as unsolved at the time of reporting to the SHR were cleared later. As such, the SHR data should be interpreted as the proportion of homicides solved within a shorter time frame than the UCR, which is useful for evaluating police efficacy at solving homicides given the race of the victim.
+                We also included in the scorecard statistics on proportion of homicides cleared by race of the victim. Since the Uniform Crime Report did not disaggregate agency-level homicide clearance rates by race of victim, we relied on the Supplementary Homicide Report (SHR) database with enhanced case-level data from the Murder Accountability Project (MAP) to determine the percent of homicides "solved" by race of the victim for each jurisdiction from 2013-2024. Importantly, since homicides tend to be reported to the SHR database an average of 5 months after each incident (depending on jurisdiction), fewer homicides are reported as solved in this dataset compared to the end-of-year Uniform Crime reports. According to MAP, 5-10% of homicides reported as unsolved at the time of reporting to the SHR were cleared later. As such, the SHR data should be interpreted as the proportion of homicides solved within a shorter time frame than the UCR, which is useful for evaluating police efficacy at solving homicides given the race of the victim.
             </p>
 
             <h2 class="subtitle">POLICE FUNDING</h2>
 
             <p>
-                DEFINITION: THE TOTAL AMOUNT OF MONEY SPENT ON POLICING BY EACH CITY OR COUNTY FROM 2010-2022
+                DEFINITION: THE TOTAL AMOUNT OF MONEY SPENT ON POLICING BY EACH CITY OR COUNTY FROM 2010-2023
             </p>
 
             <p>
-                This includes data on the total amount of city budget expenditures spent on policing in each city or county from 2010-2022 as reported to the Census Bureau's <a href="https://www.census.gov/data/datasets/2017/econ/local/public-use-datasets.html" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Annual Survey of State and Local Government Finances') !!}>Annual Survey of State and Local Government Finances</a>. For many cities, we were also able to obtain more recent data (2021) from budgetary documents on local governments' websites and the <a href="https://www.vera.org/publications/what-policing-costs-in-americas-biggest-cities" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Police Funding Data for 72 Large Cities') !!}>police funding data for 72 large cities</a> created by the Vera Institute. The Scorecard also includes data on each local government's expenditures on other issues that impact public safety - such as funding for Health and for Housing and Community Development. In some cases, we found discrepancies between the Census Bureau's data and the data included in a city or county's budget documents. Where such discrepancies were found, we used the data in the city or county budget documents in our analysis, given they often provide more detail.
+                This includes data on the total amount of city budget expenditures spent on policing in each city or county from 2010-2023 as reported to the Census Bureau's <a href="https://www.census.gov/data/datasets/2017/econ/local/public-use-datasets.html" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Annual Survey of State and Local Government Finances') !!}>Annual Survey of State and Local Government Finances</a>. For many cities, we were also able to obtain data from budgetary documents on local governments' websites and the <a href="https://www.vera.org/publications/what-policing-costs-in-americas-biggest-cities" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Police Funding Data for 72 Large Cities') !!}>police funding data for 72 large cities</a> created by the Vera Institute. The Scorecard also includes data on each local government's expenditures on other issues that impact public safety - such as funding for Health and for Housing and Community Development. In some cases, we found discrepancies between the Census Bureau's data and the data included in a city or county's budget documents. Where such discrepancies were found, we used the data in the city or county budget documents in our analysis, given they often provide more detail.
             </p>
 
             <p>
@@ -418,17 +418,17 @@
             <h2 class="subtitle">FINES AND FORFEITURES</h2>
 
             <p>
-                DEFINITION: THE TOTAL VALUE OF PROPERTY AND CASH CONFISCATED THROUGH ASSET FORFEITURE OR COLLECTED BY FINES, 20
+                DEFINITION: THE TOTAL VALUE OF PROPERTY AND CASH CONFISCATED THROUGH ASSET FORFEITURE OR COLLECTED BY FINES, 2010-2023
             </p>
 
             <p>
-                This includes data on the total amount of city budget revenues collected through fines or forfeitures in each city or county from 2010-2022 as reported to the Census Bureau's <a href="https://www.census.gov/data/datasets/2017/econ/local/public-use-datasets.html" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Annual Survey of State and Local Government Finances') !!}>Annual Survey of State and Local Government Finances</a>. This measure can be used to assess potential excessive use of ticketing, civil asset forfeiture and other policing practices that often supplement police budgets by imposing an additional economic burden on communities.
+                This includes data on the total amount of city budget revenues collected through fines or forfeitures in each city or county from 2010-2023 as reported to the Census Bureau's <a href="https://www.census.gov/data/datasets/2017/econ/local/public-use-datasets.html" target="_blank" rel="noopener" {!! trackData('External Nav', 'About', 'Annual Survey of State and Local Government Finances') !!}>Annual Survey of State and Local Government Finances</a>. This measure can be used to assess potential excessive use of ticketing, civil asset forfeiture and other policing practices that often supplement police budgets by imposing an additional economic burden on communities.
             </p>
 
             <h2 class="subtitle">TOTAL NUMBER OF OFFICERS</h2>
 
             <p>
-                DEFINITION: THE NUMBER OF SWORN LAW ENFORCEMENT OFFICERS EMPLOYED AT EACH AGENCY, 2013-2023
+                DEFINITION: THE NUMBER OF SWORN LAW ENFORCEMENT OFFICERS EMPLOYED AT EACH AGENCY, 2013-2025
             </p>
 
             <p>

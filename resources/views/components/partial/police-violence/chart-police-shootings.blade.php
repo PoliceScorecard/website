@@ -7,9 +7,19 @@
     $police_shootings_2021 = isset($scorecard['police_violence']['police_shootings_2021']) ? $scorecard['police_violence']['police_shootings_2021'] : 0;
     $police_shootings_2022 = isset($scorecard['police_violence']['police_shootings_2022']) ? $scorecard['police_violence']['police_shootings_2022'] : 0;
     $police_shootings_2023 = isset($scorecard['police_violence']['police_shootings_2023']) ? $scorecard['police_violence']['police_shootings_2023'] : 0;
+    $police_shootings_2024 = isset($scorecard['police_violence']['police_shootings_2024']) ? $scorecard['police_violence']['police_shootings_2024'] : 0;
+    $police_shootings_2025 = isset($scorecard['police_violence']['police_shootings_2025']) ? $scorecard['police_violence']['police_shootings_2025'] : 0;
     $shot_first = isset($scorecard['police_violence']['shot_first']) ? $scorecard['police_violence']['shot_first'] : 0;
+    $police_shootings_end_year = '2023';
 
-    $police_shootings_incidents = ($police_shootings_2016 + $police_shootings_2017 + $police_shootings_2018 + $police_shootings_2019 + $police_shootings_2020 + $police_shootings_2021 + $police_shootings_2022 + $police_shootings_2023);
+    if (isset($scorecard['police_violence']['police_shootings_2024'])) {
+        $police_shootings_end_year = '2024';
+    }
+    if (isset($scorecard['police_violence']['police_shootings_2025'])) {
+        $police_shootings_end_year = '2025';
+    }
+
+    $police_shootings_incidents = ($police_shootings_2016 + $police_shootings_2017 + $police_shootings_2018 + $police_shootings_2019 + $police_shootings_2020 + $police_shootings_2021 + $police_shootings_2022 + $police_shootings_2023 + $police_shootings_2024 + $police_shootings_2025);
     $percent_shot_first = $police_shootings_incidents > 0 ? ($shot_first / $police_shootings_incidents) * 100 : 0;
 @endphp
 
@@ -19,7 +29,7 @@
 
     <p>
         {{ num($percent_shot_first, 0, '%') }}
-        of Shootings from 2016-23
+        of Shootings from 2016-{{ substr($police_shootings_end_year, -2) }}
         ({{ $shot_first }}/{{ $police_shootings_incidents }})
     </p>
 

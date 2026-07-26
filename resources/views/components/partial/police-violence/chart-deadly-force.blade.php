@@ -6,10 +6,10 @@
     <h3>Deadly Force</h3>
 
     @if (output($scorecard['police_violence']['all_deadly_force_incidents']) === '0')
-    <p class="good-job">No Deadly Force Incidents identified from 2013-23</p>
+    <p class="good-job">No Deadly Force Incidents identified from 2013-25</p>
     @else
     <p>
-        {{ num($scorecard['report']['total_people_killed']) }} Killings by Police from 2013-23
+        {{ num($scorecard['report']['total_people_killed']) }} Killings by Police from 2013-25
         <span class="divider">&nbsp;|&nbsp;</span>
         {{ num($scorecard['report']['killed_by_police_per_10k_arrests'], 1) }} every 10k arrests
     </p>
@@ -33,8 +33,8 @@
 
     <p class="source-link-wrapper">
         Source:
-        <a href="https://mappingpoliceviolence.us" class="source-link" rel="noopener" target="_blank" {!! trackData('External Nav', 'Deadly Force', 'Mapping Police Violence') !!}>
-            Mapping Police Violence
+        <a href="http://policeviolencereport.org" class="source-link" rel="noopener" target="_blank" {!! trackData('External Nav', 'Deadly Force', 'Police Violence Report') !!}>
+            Police Violence Report
         </a>
     </p>
 </div>

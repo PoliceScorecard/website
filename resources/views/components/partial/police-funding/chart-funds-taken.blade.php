@@ -2,21 +2,26 @@
 <div class="stat-wrapper">
     <h3>Funds taken from communities in fines and forfeitures</h3>
 
+    @php
+        $funds_taken = 0;
+        $funds_taken_end_year = '2020';
+
+        for ($year = 2010; $year <= 2025; $year++) {
+            $key = "fines_forfeitures_{$year}";
+
+            if (isset($scorecard['police_funding'][$key])) {
+                $funds_taken += $scorecard['police_funding'][$key];
+
+                if ($year > 2020) {
+                    $funds_taken_end_year = (string) $year;
+                }
+            }
+        }
+    @endphp
+
     <p>
-        Total: {{ nFormatter((
-            $scorecard['police_funding']['fines_forfeitures_2010'] +
-            $scorecard['police_funding']['fines_forfeitures_2011'] +
-            $scorecard['police_funding']['fines_forfeitures_2012'] +
-            $scorecard['police_funding']['fines_forfeitures_2013'] +
-            $scorecard['police_funding']['fines_forfeitures_2014'] +
-            $scorecard['police_funding']['fines_forfeitures_2015'] +
-            $scorecard['police_funding']['fines_forfeitures_2016'] +
-            $scorecard['police_funding']['fines_forfeitures_2017'] +
-            $scorecard['police_funding']['fines_forfeitures_2018'] +
-            $scorecard['police_funding']['fines_forfeitures_2019'] +
-            $scorecard['police_funding']['fines_forfeitures_2020']
-        ), 2) }}
-        from 2010-20
+        Total: {{ nFormatter($funds_taken, 2) }}
+        from 2010-{{ substr($funds_taken_end_year, -2) }}
     </p>
     <p>More Fines/Forfeitures than {{ $scorecard['police_funding']['percentile_fines_forfeitures_per_resident'] }}% of {{ $type === 'state' ? 'States' : 'Depts'}}</p>
 

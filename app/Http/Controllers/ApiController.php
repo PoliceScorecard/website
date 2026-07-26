@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
+    const CACHE_GZIP_PREFIX = 'gz:';
+    const CACHE_LARGE_RESPONSE_THRESHOLD = 1048576;
+    const CACHE_LARGE_RESPONSE_DIR = 'framework/cache/data/api';
+
     /**
      * @var Http API Client
      */
@@ -45,9 +49,9 @@ class ApiController extends Controller
      */
     protected function makeRequest($endpoint, $query=[]) {
         $cache_key = $this->getCacheKey($endpoint, $query);
-        $cached_response = Cache::get($cache_key);
+        $cached_response = $this->getCachedResponse($cache_key);
 
-        if ($cached_response) {
+        if (!is_null($cached_response)) {
             $api_data = json_decode($cached_response, true);
             return isset($api_data['data']) ? $api_data['data'] : $api_data;
         } else {
@@ -60,10 +64,133 @@ class ApiController extends Controller
             } else if (isset($api_data['errors']) && count($api_data['errors']) > 0) {
                 abort(403, $api_data['errors'][0]);
             } else {
-                Cache::add($cache_key, $response, config('api.cache_expire'));
+                $this->cacheResponse($cache_key, $response);
                 return isset($api_data['data']) ? $api_data['data'] : $api_data;
             }
         }
+    }
+
+    /**
+     * @param string $cache_key
+     * @return mixed
+     */
+    protected function getCachedResponse($cache_key) {
+        $large_cached_response = $this->getLargeCachedResponse($cache_key);
+
+        if (!is_null($large_cached_response)) {
+            return $large_cached_response;
+        }
+
+        return $this->decodeCachedResponse(Cache::get($cache_key));
+    }
+
+    /**
+     * Store large API responses outside Laravel cache to avoid serialization.
+     *
+     * @param string $cache_key
+     * @param string $response
+     * @return void
+     */
+    protected function cacheResponse($cache_key, $response) {
+        if (is_string($response) && strlen($response) >= self::CACHE_LARGE_RESPONSE_THRESHOLD) {
+            $this->cacheLargeResponse($cache_key, $response);
+            Cache::forget($cache_key);
+
+            return;
+        }
+
+        Cache::add($cache_key, $response, config('api.cache_expire'));
+    }
+
+    /**
+     * @param string $cache_key
+     * @param string $response
+     * @return mixed
+     */
+    protected function cacheLargeResponse($cache_key, $response) {
+        $path = $this->largeResponseCachePath($cache_key);
+        $directory = dirname($path);
+
+        if (!is_dir($directory) && !mkdir($directory, 0775, true) && !is_dir($directory)) {
+            return false;
+        }
+
+        $temporary_path = $path . '.' . getmypid() . '.' . uniqid('', true) . '.tmp';
+        $handle = fopen($temporary_path, 'wb');
+
+        if (!$handle) {
+            return false;
+        }
+
+        $expires = time() + intval(config('api.cache_expire'));
+        $written = fwrite($handle, $expires . "\n") !== false && fwrite($handle, $response) !== false;
+        fclose($handle);
+
+        if (!$written || !rename($temporary_path, $path)) {
+            @unlink($temporary_path);
+
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * @param string $cache_key
+     * @return mixed
+     */
+    protected function getLargeCachedResponse($cache_key) {
+        $path = $this->largeResponseCachePath($cache_key);
+
+        if (!is_file($path)) {
+            return null;
+        }
+
+        $handle = fopen($path, 'rb');
+
+        if (!$handle) {
+            return null;
+        }
+
+        $expires = intval(trim(fgets($handle)));
+
+        if ($expires < time()) {
+            fclose($handle);
+            @unlink($path);
+
+            return null;
+        }
+
+        $response = stream_get_contents($handle);
+        fclose($handle);
+
+        return ($response !== false) ? $response : null;
+    }
+
+    /**
+     * @param string $cache_key
+     * @return string
+     */
+    protected function largeResponseCachePath($cache_key) {
+        return storage_path(self::CACHE_LARGE_RESPONSE_DIR . '/' . sha1($cache_key) . '.json');
+    }
+
+    /**
+     * @param mixed $cached_response
+     * @return mixed
+     */
+    protected function decodeCachedResponse($cached_response) {
+        if (!is_string($cached_response) || strpos($cached_response, self::CACHE_GZIP_PREFIX) !== 0) {
+            return $cached_response;
+        }
+
+        if (!function_exists('gzdecode')) {
+            return null;
+        }
+
+        $decoded = gzdecode(substr($cached_response, strlen(self::CACHE_GZIP_PREFIX)));
+
+        return ($decoded !== false) ? $decoded : null;
     }
 
     /**

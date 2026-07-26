@@ -14,7 +14,7 @@
 <script src="/maps/us-{{ strtolower($state) }}-all.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
-@if (isset($scorecard['police_accountability']['civilian_complaints_reported_2016']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2017']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2018']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2019']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2020']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2021']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2022']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2023']))
+@if (isset($scorecard['police_accountability']['civilian_complaints_reported_2016']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2017']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2018']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2019']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2020']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2021']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2022']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2023']) || isset($scorecard['police_accountability']['civilian_complaints_reported_2024']))
 <script>
   window.addEventListener('load', function() {
     var renderComplaintsChart = function(complaintsCTX, complaintsData){
@@ -774,9 +774,9 @@ window.addEventListener('load', function() {
         },
         series: [{
           data: [
-            ['Black', {{ (!isset($scorecard['agency']['black_population']) || $scorecard['agency']['black_population'] === 0) ? 0.1 : round(0.1 + ($scorecard['police_violence']['black_people_killed'] / $scorecard['agency']['black_population']) * 100, 2) }}],
-            ['Latinx', {{ (!isset($scorecard['agency']['hispanic_population']) || $scorecard['agency']['hispanic_population'] === 0) ? 0.1 : round(0.1 + ($scorecard['police_violence']['hispanic_people_killed'] / $scorecard['agency']['hispanic_population']) * 100, 2) }}],
-            ['White', {{ (!isset($scorecard['agency']['white_population']) || $scorecard['agency']['white_population'] === 0) ? 0.1 : round(0.1 + ($scorecard['police_violence']['white_people_killed'] / $scorecard['agency']['white_population']) * 100, 2) }}]
+            ['Black', {{ (!isset($scorecard['agency']['black_population']) || $scorecard['agency']['black_population'] === 0) ? 0 : round(($scorecard['police_violence']['black_people_killed'] / $scorecard['agency']['black_population']) * 100000, 2) }}],
+            ['Latinx', {{ (!isset($scorecard['agency']['hispanic_population']) || $scorecard['agency']['hispanic_population'] === 0) ? 0 : round(($scorecard['police_violence']['hispanic_people_killed'] / $scorecard['agency']['hispanic_population']) * 100000, 2) }}],
+            ['White', {{ (!isset($scorecard['agency']['white_population']) || $scorecard['agency']['white_population'] === 0) ? 0 : round(($scorecard['police_violence']['white_people_killed'] / $scorecard['agency']['white_population']) * 100000, 2) }}]
           ]
         }]
       });
