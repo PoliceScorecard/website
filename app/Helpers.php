@@ -273,6 +273,7 @@ if (!function_exists('getNationalGrades')) {
                     if ($department['complete']) {
                         $complete[] = array(
                             'agency_name' => $department['agency_name'] . ', '.$abbr,
+                            'population' => $department['population'] ?? 0,
                             'complete' => $department['complete'],
                             'grade_class' => $department['grade_class'],
                             'grade_letter' => $department['grade_letter'],
@@ -303,6 +304,7 @@ if (!function_exists('getNationalGrades')) {
                     if ($department['complete']) {
                         $complete[] = array(
                             'agency_name' => $department['agency_name'] . ', '.$abbr,
+                            'population' => $department['population'] ?? 0,
                             'complete' => $department['complete'],
                             'grade_class' => $department['grade_class'],
                             'grade_letter' => $department['grade_letter'],
@@ -329,8 +331,19 @@ if (!function_exists('getNationalGrades')) {
             }
         }
 
+        // Select the largest complete agencies before ranking them by score.
+        if (count($complete) > 500) {
+            usort($complete, function($a, $b) {
+                $population_order = $b['population'] <=> $a['population'];
+
+                return $population_order ?: strcmp($a['url_pretty'], $b['url_pretty']);
+            });
+
+            $complete = array_slice($complete, 0, 500);
+        }
+
         usort($complete, function($a, $b) {
-            return $a['overall_score'] > $b['overall_score'];
+            return $a['overall_score'] <=> $b['overall_score'];
         });
 
         usort($incomplete, function($a, $b) {
