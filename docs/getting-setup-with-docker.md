@@ -16,6 +16,9 @@ Requirements
 Setup Development Environment
 ---
 
+For the PHP 8.4 / Laravel 13 branch, follow [PHP upgrade testing](php-upgrade.md).
+
+
 You can use your local laptop to do development, we are just using Docker to host the website.  So let's get your local machine ready.
 
 ```bash

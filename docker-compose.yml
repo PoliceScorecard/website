@@ -1,6 +1,5 @@
 services:
   app:
-    platform: linux/x86_64
     build:
       context: .
       dockerfile: Dockerfile
@@ -11,16 +10,17 @@ services:
     environment:
       SERVICE_NAME: app
       SERVICE_TAGS: dev
+      POLICE_SCORECARD_API_BASE: ${DOCKER_API_BASE:-${POLICE_SCORECARD_API_BASE:-http://host.docker.internal:5001}}
     working_dir: /var/www
     volumes:
       - ./:/var/www
+      - ./.docker/php/zz-local-pool.conf:/usr/local/etc/php-fpm.d/zz-local-pool.conf
       - ./.docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
       - ./.docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
       - ./.docker/php/opcache.ini:/usr/local/etc/php/conf.d/opcache.ini
     networks:
       - app-network
   webserver:
-    platform: linux/x86_64
     image: nginx:alpine
     container_name: webserver
     restart: unless-stopped
@@ -28,7 +28,7 @@ services:
     expose:
       - "9000"
     ports:
-      - "8000:80"
+      - "127.0.0.1:${WEBSITE_PORT:-8000}:80"
     volumes:
       - ./:/var/www
       - ./.docker/nginx/conf.d/:/etc/nginx/conf.d/

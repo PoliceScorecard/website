@@ -156,7 +156,7 @@ if (!function_exists('removeEmpty')) {
         $arr = (array) $data;
         foreach ($arr as $key => $item) {
             $arr = (array) $item;
-            $check = trim($arr[$key_name]);
+            $check = trim((string) ($arr[$key_name] ?? ''));
 
             if (isset($arr[$key_name]) && !empty($check) && strlen($check) > 0) {
                 $clean[] = $item;
@@ -347,7 +347,7 @@ if (!function_exists('getNationalGrades')) {
         });
 
         usort($incomplete, function($a, $b) {
-            return $a['overall_score'] > $b['overall_score'];
+            return $a['overall_score'] <=> $b['overall_score'];
         });
 
         return array(
@@ -679,7 +679,7 @@ if (!function_exists('generateStateLink')) {
         $activeClass = (strtoupper($key) === strtoupper($state)) ? 'active' : '';
         $stateCode = strtolower($key);
 
-        return "<a href=\"/${stateCode}\" class=\"state-link ${activeClass}\" title=\"View Report for ${stateName}'s Largest Police Department\">${stateName}</a>";
+        return "<a href=\"/{$stateCode}\" class=\"state-link {$activeClass}\" title=\"View Report for {$stateName}'s Largest Police Department\">{$stateName}</a>";
     }
 }
 
@@ -2604,11 +2604,11 @@ if (!function_exists('sortGrades')) {
         }
 
         usort($complete, function($a, $b) {
-            return $a['overall_score'] > $b['overall_score'];
+            return $a['overall_score'] <=> $b['overall_score'];
         });
 
         usort($incomplete, function($a, $b) {
-            return $a['overall_score'] > $b['overall_score'];
+            return $a['overall_score'] <=> $b['overall_score'];
         });
 
         return array(

@@ -1,0 +1,12 @@
+.git
+.env
+.env.*
+!.env.example
+.aws
+.codex
+.agents
+node_modules
+vendor
+reports
+storage/logs/*
+bootstrap/cache/*.php
