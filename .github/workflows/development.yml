@@ -31,6 +31,12 @@ jobs:
           "$PHP84_BINARY" "$COMPOSER84_PHAR" check-platform-reqs
           "$PHP84_BINARY" artisan key:generate
 
+      - name: Install Node Dependencies
+        run: npm ci --no-optional
+
+      - name: Build Development Assets
+        run: npm run -s dev
+
       - name: Run Lint Tests
         run: npm run -s test-lint
 

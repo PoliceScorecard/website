@@ -153,7 +153,8 @@ account from a separate clean Git checkout of the committed upgrade branch.
 Its environment argument is development or production. The deploy account
 must be able to create the site's releases directory and read its live .env.
 The helper archives only committed source, copies .env with mode 0600,
-installs dependencies from lockfiles, runs PHPUnit and the asset build, and
+installs dependencies from lockfiles, builds assets before the page-rendering
+tests, runs PHPUnit, and
 creates Laravel caches. It uses the private PHP/Composer and stops on error.
 A failed candidate is retained for inspection. It deliberately does not run
 artisan down/up, reset/clean the live checkout, modify system PHP, or restart

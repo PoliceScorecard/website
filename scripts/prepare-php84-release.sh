@@ -46,9 +46,9 @@ mkdir -p bootstrap/cache storage/framework/cache/data storage/framework/sessions
 
 "$php84" "$composer84" install --prefer-dist --no-interaction --no-ansi --no-progress
 "$php84" "$composer84" check-platform-reqs
-"$php84" vendor/bin/phpunit --display-all-issues
 npm ci --no-optional
 npm run -s "$build"
+"$php84" vendor/bin/phpunit --display-all-issues
 "$php84" artisan config:cache
 "$php84" artisan route:cache
 "$php84" artisan view:cache
