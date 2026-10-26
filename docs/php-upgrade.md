@@ -138,10 +138,14 @@ Node 12.12.0 and npm 6.11.3 match the repository's legacy .nvmrc/build setup.
 The release helper retains these versions for this migration; modernizing the
 frontend build toolchain is separate work. The old deploy scripts use bare
 php/composer, obsolete artisan options and OPcache package commands, and do
-not stop on errors. Keep them unused during migration. Pushing develop/master
-still triggers those scripts through the existing workflows; first publish the
-reviewed upgrade commit on a separate branch, without opening a PR that would
-run the legacy self-hosted workflow. Existing automation has NOT been updated.
+not stop on errors. Keep them unused during migration. The development push workflow has been
+updated to validate with the private PHP 8.4 and Composer 2 paths. Its old
+automatic deployment step is removed during migration: pushing develop runs
+checks but does not update the live development root. Prepare a fresh candidate
+through SSH and test it before cutover. Production, staging, and pull-request
+workflows still use the legacy runtime/deployment setup and need separate
+updates before use with this branch. A self-hosted runner must have access to
+the private runtime paths before development validation can pass.
 
 `scripts/prepare-php84-release.sh` prepares a candidate on this same server
 without updating a live checkout or Nginx. Run it with bash as the deploy
@@ -350,7 +354,8 @@ Do not stop either existing FPM service until its consumers are established.
 
 Freeze automatic deployments before changing production. The repository's
 production workflow runs on pushes to master using a self-hosted Linux X64
-runner. Preserve the current release and vendor directory intact. Back up
+runner. The development workflow now validates PHP 8.4 but pauses deployment
+until the fresh-release migration is completed. Preserve the current release and vendor directory intact. Back up
 Nginx/FPM configuration, deployment scripts, .env/APP_KEY, persistent files,
 and any local database. Create a DigitalOcean snapshot with application/data
 consistency appropriate to hosted services; separately back up external data.
