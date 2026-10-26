@@ -174,8 +174,59 @@ pool with a loopback Nginx server; do not point existing public Laravel 7
 checkouts at PHP 8.4. Production candidates initially include dev dependencies
 for validation; remove them with Composer --no-dev and repeat final validation
 before promotion. Measure the unoptimized build under representative load
-before changing a production root/upstream. Final automation replacement,
-public cutover, and removal of the old runtimes remain pending.
+before changing a production root/upstream. The development cutover is recorded
+below. Final automation replacement, production cutover, and removal of the
+old runtimes remain pending.
+
+Development cutover verified in place
+=====================================
+
+The operator chose to rebuild the existing development directory rather than
+prepare a separate release directory. The optional fresh-release helper above
+was not used for this deployment. Production remains on PHP 7.3.
+
+Completed development steps:
+
+1. Backed up and compared .env outside the web root, and backed up the dev
+   Nginx configuration under /root/policescorecard-deploy-backups.
+2. Added a temporary server-level static 503 response to both development
+   Nginx server blocks; validated configuration and reloaded Nginx.
+3. Fetched develop, reset tracked files to origin/develop, and cleaned ignored
+   and untracked files with `git clean -fdx -e .env`. Permission failures in
+   old www-data-owned caches were resolved by assigning the development tree
+   to psadmin:www-data and repeating cleanup. The .env file was preserved.
+4. Recreated storage/bootstrap cache directories and installed dependencies
+   using /opt/policescorecard/php84/bin/php and its Composer 2 PHAR.
+5. Ran `npm ci --no-optional` and `npm run -s dev` with the private PHP bin
+   directory first in PATH. Frontend assets must exist before page-rendering
+   tests, otherwise mix-manifest.json is missing.
+6. Passed Composer platform checks and all 12 application tests (36 assertions)
+   on the native PHP 8.4.27 build after generating frontend assets.
+7. Gave www-data group access to .env, storage, and bootstrap/cache; restricted
+   .env to mode 640; prepared config, route, and Blade caches with private PHP.
+8. Copied snippets/basic.conf to snippets/basic-php84.conf and changed only
+   the copy to use /opt/policescorecard/php84/var/run/php84-fpm.sock, with
+   FastCGI connect/send/read timeouts of 60/900/900 seconds. Updated only dev's
+   include to use that copy and removed the two temporary 503 responses.
+9. Validated/reloaded Nginx. The operator completed a full manual site test
+   and reported the development site working as expected.
+
+The original snippets/basic.conf still points to PHP 7.3 for production and
+staging. Do not change it globally until every consumer's code is ready for
+PHP 8.4. The old server-side deploy scripts are still obsolete and should not
+be run against the new development checkout. The develop workflow validates
+but does not deploy automatically. Development was checked out at 87f1349,
+then updated to fb01992 for the asset-before-tests ordering fix.
+
+Remove temporary phpinfo pages after verification; they are not needed for
+normal operation. Enable policescorecard-php84 with systemctl when retaining
+this runtime across reboots. The native build remains unoptimized and uses one
+FPM worker for initial testing. Successful manual testing is not a production
+load test. Before production cutover, size the worker/memory budget, consider
+separate development and production pools, prepare the matching application
+code and deployment automation, and retain the .env backup/rollback plan.
+The suspicious upload script warrants host/credential investigation separately;
+resetting a checkout does not establish that the server is uncompromised.
 
 Production PHP upgrade on the existing DigitalOcean Droplet
 ===========================================================
@@ -304,10 +355,10 @@ private dependencies where necessary. That path is a proposed destination,
 not an existing executable. Keep /usr/bin/php, both existing FPM services,
 and shared Nginx basic.conf untouched during installation and testing.
 Do not execute generic PHP 8.4 apt installation commands on Xenial yet.
-The actual build/install commands remain pending this compatibility check;
-this preflight block is not an installation procedure.
+These checks preceded the private build verified above. They are retained for
+rebuild planning and are not an installation procedure.
 
-Before an executable install procedure can be written, obtain one of:
+For a different Xenial installation, establish one of these installation methods:
 
 - A provider-maintained PHP 8.4 CLI/FPM build explicitly compatible with Ubuntu
   16.04, including required extensions, security updates, and service integration.
@@ -315,10 +366,11 @@ Before an executable install procedure can be written, obtain one of:
   isolated installation prefix, CLI/FPM configuration, systemd service, required
   extensions, and an owner/process for future security rebuilds.
 
-Ask the hosting provider whether it can supply the first option. Availability
-has not been confirmed. A source build is possible in principle, but the exact
-procedure depends on Xenial's libraries and compiler; this runbook does not claim
-that a stock PHP source configure/make command will work. Do not replace system
+On this host the private source-build method was used, as recorded above.
+Provider package availability has not been confirmed. For another host, the
+exact source-build procedure depends on its libraries and compiler; a stock
+PHP source configure/make command is not sufficient for the recorded Xenial
+packages and compiler. Do not replace system
 OpenSSL or other shared libraries to force a build. Install any custom runtime
 and dependencies in isolated paths and test them before production use.
 
