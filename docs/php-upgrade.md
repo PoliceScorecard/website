@@ -537,7 +537,29 @@ References
 - [DigitalOcean snapshots](https://docs.digitalocean.com/products/snapshots/how-to/snapshot-droplets/)
 - [PHP security advisory](https://www.php.net/archive/2026.php#2026-10-21-5)
 
-Production maintenance window
+Production cutover and cleanup recorded October 26, 2026
+=======================================================
+
+The operator completed the in-place production cutover at da9678d, with the
+production checkout subsequently attached to master tracking origin/master.
+Native application tests passed (12 tests, 36 assertions); production asset
+build and Composer platform checks passed. Public production is online through
+basic-php84-production.conf and its separate PHP 8.4 production pool. Two
+concurrent warm homepage requests returned HTTP 200 in about 1.74 seconds each;
+this is a smoke check, not a load test. The production pool has two workers,
+development one; the PHP process memory limit remains 1024M. Monitor memory and
+latency, especially with cold API caches on the unoptimized native build.
+
+The operator confirmed removal of phpinfo files. Both temporary loopback Nginx
+test configurations were moved to /root/policescorecard-deploy-backups; ports
+8084/8085 are closed. The PHP 8.4 service is enabled for reboot. Staging is left
+unchanged and still references PHP 7.3; retain that service until its consumers
+are resolved. Earlier descriptions below record the migration plan and should
+not be read as the current production state. Deployment script installation
+and investigation of the upload script remain follow-up work. See
+deploy-update.md for the replacement deployment procedure.
+
+Production maintenance window (migration plan)
 -----------------------------
 
 The operator confirmed production is already offline for planned maintenance
