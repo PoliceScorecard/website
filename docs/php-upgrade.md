@@ -142,9 +142,10 @@ not stop on errors. Keep them unused during migration. The development push work
 updated to validate with the private PHP 8.4 and Composer 2 paths. Its old
 automatic deployment step is removed during migration: pushing develop runs
 checks but does not update the live development root. Prepare a fresh candidate
-through SSH and test it before cutover. Production, staging, and pull-request
-workflows still use the legacy runtime/deployment setup and need separate
-updates before use with this branch. A self-hosted runner must have access to
+through SSH and test it before cutover. The production workflow in this upgrade branch also validates with PHP 8.4,
+builds production assets before tests, and pauses automatic deployment. That
+workflow takes effect on master only once promoted there. Staging and
+pull-request workflows still need runtime updates before use with this branch. A self-hosted runner must have access to
 the private runtime paths before development validation can pass.
 
 `scripts/prepare-php84-release.sh` prepares a candidate on this same server
@@ -535,3 +536,17 @@ References
 - [Composer installation](https://getcomposer.org/download/)
 - [DigitalOcean snapshots](https://docs.digitalocean.com/products/snapshots/how-to/snapshot-droplets/)
 - [PHP security advisory](https://www.php.net/archive/2026.php#2026-10-21-5)
+
+Production maintenance window
+-----------------------------
+
+The operator confirmed production is already offline for planned maintenance
+and authorized rebuilding both application directories in place while preserving
+their .env files. Before resetting production files, enforce a static Nginx 503
+for its server blocks: Laravel's storage/framework/down is removed by cleanup.
+Keep maintenance active through the code reset, dependency/production asset
+build, native application tests, permissions/caches, FPM configuration, and
+loopback checks. Remove only the production maintenance markers after checks
+pass. The production workflow on this branch no longer invokes the obsolete
+server deployment script; it validates the native runtime and production build.
+The operator's actual production runtime and source have not yet been switched.

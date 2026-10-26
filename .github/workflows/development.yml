@@ -43,7 +43,7 @@ jobs:
       - name: Run Unit Tests
         run: '"$PHP84_BINARY" vendor/bin/phpunit --display-all-issues'
 
-      # During migration, prepare and validate a fresh release through SSH.
+      # During migration, prepare and validate the release through SSH.
       # The existing /usr/local/bin/deploy-development still uses PHP 7.3.
       - name: Manual Release Preparation Required
-        run: echo 'Validation complete. Prepare the development candidate with scripts/prepare-php84-release.sh; automatic deployment is paused during migration.'
+        run: echo 'Validation complete. Development deployment is handled through SSH during the in-place migration; automatic deployment is paused.'
